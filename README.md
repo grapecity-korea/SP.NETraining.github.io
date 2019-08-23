@@ -1,1 +1,0 @@
-# SP.NETraining.github.io
