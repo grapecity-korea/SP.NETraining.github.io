@@ -18,7 +18,7 @@ entries:
             output: pdf
             type: frontmatter
 
-      - title: 라이선스 인증, 배포, 마이그레이션
+      - title: Overview
         output: web, pdf
         folderitems:
           - title: Welcome
@@ -27,7 +27,7 @@ entries:
             type: homepage
 
           - title: 온라인 라이선스 인증 및 해제
-            url: /mydoc_introduction.html
+            url: /license_online_active.html
             output: web, pdf
 
           - title: 오프라인 라이선스 인증 및 해제
@@ -38,6 +38,6 @@ entries:
             url: /mydoc_about.html
             output: web, pdf
 
-          - title: Support
+          - title: 마이그레이션
             url: /mydoc_support.html
             output: web, pdf
