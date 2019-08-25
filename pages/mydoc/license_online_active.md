@@ -1,6 +1,6 @@
 ---
 title: 온라인 라이선스 인증
-tags: [online_activation, active, 라이선스 인증, 라이선스]
+tags: [online_activation, active, 라이선스인증, 라이선스]
 keywords: online active, spread.net license, spread.net 라이선스, 라이선스 인증
 last_updated: Aug 08, 2019
 summary: "Spread.NET의 라이선스를 인터넷이 연결되어 있는 환경에서 활성화 하는 방법입니다."
