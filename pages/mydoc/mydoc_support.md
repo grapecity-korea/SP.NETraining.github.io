@@ -1,6 +1,6 @@
 ---
 title: Support
-tags: [getting_started, troubleshooting]
+tags: [getting_started, troubleshooting, activation]
 keywords: questions, troubleshooting, contact, support
 last_updated: July 3, 2016
 summary: "Contact me for any support issues."
@@ -9,4 +9,3 @@ permalink: mydoc_support.html
 folder: mydoc
 topnav: topnav
 ---
-
