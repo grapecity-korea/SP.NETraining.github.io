@@ -1,7 +1,6 @@
 ---
 title: "Welcome to Spread.Net Tutorial"
 keywords: Spread.Net Main
-tags: [welcome_page]
 sidebar: mydoc_sidebar
 permalink: index.html
 summary: 해당 트레이닝 센터에서는 ComponentOne의 라이선스 인증 방법 부터 배포까지의 내용 뿐만 아니라, 그리드, 차트, 메뉴, 레이아웃, 입력폼 등의 다양한 UI 및 데이터 시각화 컨트롤들을 .NET 플랫폼 별로 구현하는 방법을 학습해 볼 수 있습니다.
