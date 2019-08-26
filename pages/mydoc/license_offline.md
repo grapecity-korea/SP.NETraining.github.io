@@ -1,5 +1,5 @@
 ---
-title: 온라인 라이선스 인증
+title: 오프라인 라이선스 인증 및 해제
 tags: [라이선스, license, activation]
 keywords: online active, spread.net license, spread.net 라이선스, 라이선스 인증
 last_updated: Aug 08, 2019
@@ -9,13 +9,65 @@ permalink: license_offline.html
 folder: mydoc
 ---
 
-1. 정품 인증 프로그램은 ComponentOne시작 메뉴에 등록 된 제품 그룹 "c:\Windows\Program Files(x86)\ComponentOne\C1StartMenu"에서 "C1LicenseDeActivation"을 클릭합니다.
-   ![](https://www.grapecity.co.kr/images/metalsmith/training/componentone/deactivation/tc_winforms1-3-1.png)
+## 오프라인 상태 인증 방법
 
-2. 중간에 “?”버튼을 클릭하여 정품 인증 해제할 제품 시리얼 번호를 선택한 후 “Next” 버튼을 클릭합니다.
-   ![](https://www.grapecity.co.kr/images/metalsmith/training/componentone/deactivation/tc_winforms1-3-2.png)
+유무선 인터넷 연결을 해제하시고 아래 방법대로 오프라인 인증을 하셔야 합니다.
 
-3. “확인”버튼을 클릭하여 정품 인증 해제 작업을 완료합니다.
-   ![](https://www.grapecity.co.kr/images/metalsmith/training/componentone/deactivation/tc_winforms1-3-3.png)
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\GrapeCity\License Manager 로 들어가서  
+License Manager를 실행하면 아래와 같은 화면이 나옵니다. "Activate"를 클릭합니다.
 
-시리얼 넘버는 사용자 하드웨어의 손-망실을 대비하여 한 개에 총 3회까지 활성화를 허용하고 있습니다. 활성화 횟수를 초과하여 어려움을 겪지 않도록 주의 바랍니다.
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/activation/tc_winforms1-2-1.png)
+
+두 번째 항목인 "Use a browser on another machine with internet connectivity"를 선택하고  
+"Next"버튼을 클릭합니다.
+
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/activation/tc_winforms1-2-2.png)
+
+화면에 나온 Product Key와 Authentication Number를 기록합니다.
+
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/activation/tc_winforms1-2-3.png)
+
+인터넷이 연결된 PC에서 [Activation 사이트](http://sas.grapecity.com/activation/)에 접속하여 주소의 Activation화면에 기록해두었던 Product Key와 Authentication Number를 입력 한 후 "Send Request"버튼을 클릭합니다.
+
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/activation/tc_winforms1-2-4.png)
+
+아래와 같이 새로운 license key를 발급받을 수 있습니다.
+
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/activation/tc_winforms1-2-5.png)
+
+위에서 받은 license Key를 Spread Studio 활성화 화면에 입력 한 후 Next버튼을 클릭합니다.
+
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/activation/tc_winforms1-2-6.png)
+
+아래와 같이 인증에 성공한 화면을 볼 수 있습니다.
+
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/activation/tc_winforms1-2-7.png)
+
+## 오프라인 상태 인증 해제 방법
+
+유무선 인터넷 연결을 해제하시고 아래 방법대로 오프라인 인증을 하셔야 합니다.
+
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\GrapeCity\License Manager 로 들어가서  
+License Manager를 실행하면 아래와 같은 화면이 나옵니다. "Deactivate"를 클릭합니다.
+
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/deactivation/tc_winforms1-3-5.png)
+
+두번째의 "Use a browser on another machine with Internet connectivity"를 선택하고  
+"Next"버튼을 클릭합니다.
+
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/deactivation/tc_winforms1-3-6.png)
+
+아래의 ProductKey와 Deativation Key를 기록합니다.
+
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/deactivation/tc_winforms1-3-7.png)
+
+인터넷이 연결된 PC에서 [Deactivation 사이트](http://sas.grapecity.com/deactivation/)의 Deactivation 화면에  
+Product Key와 Deactivation Key를 입력 합니다.
+
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/deactivation/tc_winforms1-3-8.png)
+
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/deactivation/tc_winforms1-3-9.png)
+
+라이선스 해제가 아래와 같이 성공적으로 끝났습니다.
+
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/deactivation/tc_winforms1-3-10.png)

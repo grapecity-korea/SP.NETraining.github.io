@@ -35,9 +35,25 @@ entries:
             output: web, pdf
 
           - title: 배포
-            url: /spnet_deply.html
+            url: /spnet_deploy.html
             output: web, pdf
 
           - title: 마이그레이션
             url: /spnet_migration.html
             output: web, pdf
+
+      - title: Winfroms(윈폼)
+        output: web, pdf
+        folderitems:
+          - title: 시작하기
+            url: /spwin_start.html
+            output: web, pdf
+            type: homepage
+
+      - title: ASP.NET (웹폼)
+        output: web, pdf
+        folderitems:
+          - title: 시작하기
+            url: /spasp_start.html
+            output: web, pdf
+            type: homepage

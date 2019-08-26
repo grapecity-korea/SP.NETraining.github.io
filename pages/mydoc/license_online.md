@@ -1,5 +1,5 @@
 ---
-title: 온라인 라이선스 인증
+title: 온라인 라이선스 인증 및 해제
 tags: [라이선스, license, activation]
 keywords: online active, spread.net license, spread.net 라이선스, 라이선스 인증
 last_updated: Aug 08, 2019
@@ -9,13 +9,40 @@ permalink: license_online.html
 folder: mydoc
 ---
 
-1. 정품 인증 프로그램은 ComponentOne시작 메뉴에 등록 된 제품 그룹 "c:\Windows\Program Files(x86)\ComponentOne\C1StartMenu"에서 "C1LicenseDeActivation"을 클릭합니다.
-   ![](https://www.grapecity.co.kr/images/metalsmith/training/componentone/deactivation/tc_winforms1-3-1.png)
+## 인터넷 연결이 되는 경우의 인증 방법
 
-2. 중간에 “?”버튼을 클릭하여 정품 인증 해제할 제품 시리얼 번호를 선택한 후 “Next” 버튼을 클릭합니다.
-   ![](https://www.grapecity.co.kr/images/metalsmith/training/componentone/deactivation/tc_winforms1-3-2.png)
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\GrapeCity\License Manager 로 들어가서  
+License Manager를 실행하면 아래와 같은 화면이 나옵니다. "Activate"를 클릭합니다.
 
-3. “확인”버튼을 클릭하여 정품 인증 해제 작업을 완료합니다.
-   ![](https://www.grapecity.co.kr/images/metalsmith/training/componentone/deactivation/tc_winforms1-3-3.png)
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/activation/tc_winforms1-2-1.png)
 
-시리얼 넘버는 사용자 하드웨어의 손-망실을 대비하여 한 개에 총 3회까지 활성화를 허용하고 있습니다. 활성화 횟수를 초과하여 어려움을 겪지 않도록 주의 바랍니다.
+"Next" 버튼을 클릭합니다.
+
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/activation/tc_winforms1-2-2.png)
+
+구매 시 받은 Product Key를 정확이 입력한 후 "Next"버튼을 클릭합니다.
+
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/activation/tc_winforms1-2-3.png)
+
+아래와 같이 인증 성공한 화면을 볼 수 있습니다.
+
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/activation/tc_winforms1-2-4.png)
+
+## 인터넷 연결이 되는 경우의 인증 해제 방법
+
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\GrapeCity\License Manager 로 들어가서  
+License Manager를 실행하면 아래와 같은 화면이 나옵니다. "Deactivate"를 클릭합니다.
+
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/deactivation/tc_winforms1-3-1.png)
+
+"Next" 버튼을 클릭합니다.
+
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/deactivation/tc_winforms1-3-2.png)
+
+다시 한번 Deactivation 여부를 물어 봅니다. "Next"버튼을 클릭합니다.
+
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/deactivation/tc_winforms1-3-3.png)
+
+아래와 같이 인증 해제를 성공하였습니다.
+
+![](https://www.grapecity.co.kr/images/metalsmith/training/spread/winform/deactivation/tc_winforms1-3-4.png)
