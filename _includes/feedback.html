@@ -8,6 +8,6 @@
 {% if site.feedback_link %}
   <a class="email" title="Submit feedback" href="{{site.feedback_link}}">{{feedback_text}}</a>
 {% else %}
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:{{site.feedback_email}}?subject={{site.feedback_subject_line}} &body=ComponentOne 사용중에 제품 또는 기술에 대한 문의 있으실 경우, 메일을 보내주시면 회신드리겠습니다.'"><i class="fa fa-envelope-o"></i> {{feedback_text}}</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:{{+site.feedback_email}}?subject={{site.feedback_subject_line}} &body=Spread.NET 사용중에 제품 또는 기술에 대한 문의 있으실 경우, 메일을 보내주시면 회신드리겠습니다.'"><i class="fa fa-envelope-o"></i> {{feedback_text}}</a>
 {% endif %}
 </li>
