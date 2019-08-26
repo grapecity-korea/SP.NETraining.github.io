@@ -42,7 +42,7 @@ entries:
             url: /spnet_migration.html
             output: web, pdf
 
-      - title: Winfroms(윈폼)
+      - title: Winforms(윈폼)
         output: web, pdf
         folderitems:
           - title: 시작하기
@@ -55,8 +55,3 @@ entries:
           - title: 시작하기
             url: /spasp_start.html
             output: web, pdf
-      
-      - title: 다운로드
-        items:
-        - title: 다운로드
-          url: https://www.grapecity.co.kr/download/spreadnet
