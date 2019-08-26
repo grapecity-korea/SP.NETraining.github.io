@@ -6,156 +6,91 @@ permalink: 2019v12_whatsnew.html
 folder: news
 ---
 
-# ComponentOne Enterprise
+# Spread.NET - V12 새로운 기능
 
-ComponentOne Enterprise 라이센스를 2019년 새로 구매하거나 갱신할 경우 Xamarin과 Wijmo Core사용 가능한 ComponentOne Studio가 제공됩니다. MVC을 위한 특정 웹 컨트롤은 (OLAP, FlexSheet, MultiRow 및 Financial Chart포함) ComponentOne Ultimate으로 이동됩니다. 해당 사항은 2019년 이후 라이센스에만 독점 제공됩니다.
+Excel과 유사하게 전문적이고 유연한 .NET 테이블 컨트롤 Spread.NET의 V12 버전이 출시되었습니다! 이번 새 버전에서는 다양한 성능이 크게 향상되었을 뿐만 아니라 VSTO 기반의 API 및 기능이 향상되었습니다.
 
-# C1 Ultimate
+## 성능 최적화： 데이터 바인딩, 디자인 타임, Excel 파일 암호화
 
-C1 Ultimate의 가격대가 250만원 수준까지 올라가고 있으며 이번 버전부터MVC와 자바스크립트를 위한 고급 웹 컨트롤이 포함됩니다 (OLAP, FlexSheet, MultiRow 및 Financial Chart포함). Wijmo Enterprise와 우선 지원은 계속 제공됩니다.
+이전 버전에서 성능 향상, 특히 대규모 Excel 파일에 초점을 맞추기 시작했습니다. V11 XLSX 가져오기 및 내보내기 성능은 이전 버전의 Spread.NET보다 훨씬 빨라졌으며 V12의 성능은 계속 조정하고 있습니다. 이번 버전에서는 성능 향상을 위해 3가지 핵심 사용 사례에 집중했습니다.
 
-# ComponentOne Control Panel
+- **데이터 바인딩**： 데이터 바인딩 지원, 내부 논리 개선사항으로 바인딩된 데이터를 사용하는 계산과 관련된 일반적인 사용 사례 성능 향상입니다.
+- **디자인 타임**： 양식 리소스에 통합 문서를 저장할 때 컨트롤의 기본 직렬화 논리를 전환했습니다. 이로 인해 특히 Spread Designer 도구로 대규모 또는 복잡한 패널을 사용할 때 디자인 타임의 성능을 향상할 수 있습니다.
+- **XLSX 암호화**： 커널 논리 개선으로 암호화/암호 해제 지원을 핵심 스프레드시트 모델로 이동시켜 암호화로 보호된 Excel 문서를 가져오거나 내보낼 때 성능을 향상할 수 있습니다.
 
-ComponentOne Control Panel을 사용하여 ComponentOne라이브러리를 설치, 버전관리, 업데이트, 라이센싱 및 유지할 수 있는 새로운 방법이 추가되었습니다. 당사 소프트웨어를 위한 샘플, 판매 및 지원 등에 빠르게 엑세스 할 수 있게 도움을 주기도 합니다.
+## 교환 가능한 파일 형식으로 성능 향상
 
-![ComponentOne Control Panel](https://www.grapecity.co.kr/images/metalsmith/developer/componentone-enterprise/whatsnew/2019V1/c1controlpanel.png "ComponentOne Control Panel")
+Spread.NET V12에서는 교환 가능한 새로운 XLSX 파일 형식으로 기능을 강화했습니다. Spread Designer 또는 런타임 코드로 XLSX 파일을 저장하거나 로드할 때 사용 가능한 ExcelSaveFlag와 ExcelOpenFlag로 이전에 Excel 형식으로 내보내 손실된 모든 사용자 정의 Spread 개체(예： 셀 유형 및 열 바닥글)가 포함됩니다. 새로운 Exchangeable XLSX 파일 형식으로 모든 사용자 정의 Spread 설정이 사용자 정의 스트림으로 XLSX에 저장되며, 다시 로드할 때 다른 내용과 함께 로드됩니다. 앞으로 이러한 새로운 파일 형식이 컨트롤에서 지원하는 XML 직렬화를 대체할 것이며, 파일 크기를 줄이는 것이 더 효율적일 것입니다.
 
-# Visual Studio 2019지원
+## Excel과 더 유사해진 Spread.NET
 
-모든 컨트롤은 Visual Studio 2019를 전면 지원하도록 테스트를 완료하였습니다.
+Spread.NET V12에서는 새로운 인스턴스 컨트롤의 기본 동작이 변경되었습니다. Spread.NET Windows Forms 12에서 지원하는 새로운 기본 동작은 다음과 같습니다.
 
-- [WinForms： DataFilter, CollectionView, BulletGraph, Data Slicer](#winforms)
-- [ASP.NET MVC： OLAP Slicer, Multi-Column Combo Sample, Control Wizard](#aspnet-mvc)
-- [WPF & UWP： SimplifiedRibbon, FlexGrid](#wpf)
-- [Xamarin： FlexGrid, Gauges, Input, C1Icon](#xamarin)
+- 셀 범위 끌어서 놓기
+- 셀 범위 끌어서 채우기
+- 연속 탭에서 시트 탭 이동
+- 여러 범위 선택
+- 셀에 수식 입력
+- Excel과 같이 크기 자동 조정
+- Excel과 같이 수식 계산(날짜 관련 함수에서는 이중 값이 반환됨)
+- 셀 테두리를 축소하여 Excel과 같이 테두리 선 렌더링
+- 확장된 셀 스타일을 위한 새로운 핵심 스타일 통합 및 DefaultCellType 렌더링
+- Excel과 같이 워크 시트에 대한 보호 설정이 False로 초기화되고 모든 셀에 대한 잠김 설정이 True로 초기화됨
+- 크기가 0인 표시기가 있는 숨겨진 행과 열을 Excel과 같이 표시
+- 항상 Excel과 같이 작동하는 연속 탭
+- Excel과 같이 시트 및 표에 대한 확장 필터 사용자 인터페이스
+- (Alt) + (=) 으로 AutoSum을 실행하는 것처럼 더 많은 기본 동작에 키보드 동작 매핑
 
-## WinForms
+이러한 기본 동작을 위해 V12로 생성된 새 인스턴스의 여러 속성에서 기본값을 변경했습니다. 또한, 최종 사용자가 익숙하게 사용할 수 있도록 다음과 같은 새로운 기능과 대화창을 출시했습니다.
 
-### DataFilter
+- Excel과 유사한 기본 셀 스타일 추가
+- Excel과 유사한 서식 대화 상자
+- 숫자 서식
+- 그라데이션 및 패턴 채우기
+- 셀 범위에 대한 확장 정렬 및 필터링
+- Office 문서 속성 가져오기, 내보내기, 수정
 
-필터링 기준이나 컨디션을 기반으로 유저는 컨트롤을 통해 데이터를 필터링 할 수 있습니다. DataFilter 베타버전이 2018년 버전 3으로 출시된 바 있으며, 2019년 버전 1에서 컨트롤은 베타버전을 유지하며 아래의 기능이 추가되었습니다
+## 업그레이드 환경 개선： V12와 이전 버전과의 호환성
 
-- 필터를 생성할 때 메인데이터소스에서 자동으로 체크리스트 생성
-- ToolTips 지원 추가
-- 커스텀 필터 지원을 위한 클래스 추가
-- 캘린더 필터 옵션 추가
+런타임에 새로운 특수 호환 모드 집합을 사용할 수 있게 해주는 새로운 디자인 타임 속성 LegacyBehaviors를 사용하여 Spread.NET 이전 버전과의 호환성이 유지됩니다. 이러한 레거시 모드는 업그레이드 사용자를 위해 설계되었으며, 기본적으로 이전 버전의 Spread.NET에서 업그레이드된 컨트롤 인스턴스는 자동으로 LegacyBehaviors를 사용하기 때문에 업그레이드된 이전 버전의 인스턴스와 호환됩니다. 이제 스프레드시트 컨트롤의 기본 생성자가 모든 레거시 모드 작업을 사용할 수 있게 해주는 LegacyBehaviors.All로 새 인스턴스를 만들기 때문에 이전 버전의 모든 업그레이드 코드가 호환됩니다.
 
-![DataFilter](https://www.grapecity.co.kr/images/metalsmith/developer/componentone-enterprise/whatsnew/2019V1/1.png "DataFilter")
+### 새로운 Legacy 모드
 
-### CollectionView
+Spread.NET Windows Forms 12에서는 각각 독립적으로 사용하거나 사용하지 않도록 설정할 수 있는 AutoRowHeight, CalculationEngine, PropertyDefaults, Style의 네 가지 LegacyBehavior 모드가 제공됩니다.
 
-CollectionView는 컬렉션을 그룹핑, 분류, 필터링 및 네비게이션하기 위한 뷰를 제공합니다. 2019년 버전 1부터, 해당 라이브러리는 WinForms에디션에서 이용 가능합니다.
+- AutoRowHeight 플래그는 새로운 자동 행 높이 동작을 사용하지 않도록 설정합니다.
+- Calcultation 플래그는 모든 날짜 관련 함수에서 Excel과 유사한 이중 데이터 형식이 아니라 .NET DateTime 데이터 형식을 반환하게 하는 레거시 계산 모드를 사용하도록 설정합니다.
+- PropertyDefaults 플래그는 위에서 설명한 Excel과 유사한 새로운 동작을 사용할 수 있도록 속성의 새로운 기본값을 모두 사용하지 않도록 설정합니다. 이 플래그를 사용하면 이전 버전의 Spread.NET에서 구현된 모든 레거시 속성의 워크시트 Protect defaulting이 True로 설정되고 셀의 Locked의 기본값이 False로 설정되는 것을 비롯한 이전 기본값이 유지됩니다.
+- Style 플래그는 셀의 새로운 핵심 스타일 모델 통합과 새로운 DefaultCellType 렌더링을 사용하지 않도록 설정하고, 대신 이전 버전의 레거시 스타일 모델과 GeneralCellType 렌더링을 사용합니다.
 
-### BulletGraph
+### 편리하게 Spread.NET V12로 업그레이드
 
-BulletGraph는 선형 측정기의 한 형태로, 대시보드와 정보화면에서 사용되도록 특별히 고안되었습니다. 측정값이 좋은지 나쁜지 혹은 어떤 다른 상태인지를 즉각적으로 전달하기 위한 단일 키 측정을 보여줍니다.
+먼저, 프로젝트 참조를 V12의 DLL을 사용하도록 변경합니다. 그리고 프로젝트의 licenses.licx를 새 버전을 참조하도록 업데이트합니다. 프로젝트의 모든 인스턴스가 자동으로 LegacyBehaviors.All을 사용하며, 스프레드시트가 이전처럼 작동합니다. 즉시 프로젝트 확장을 시작하여 새로운 API와 기능을 활용할 수 있습니다! 새로운 기능을 사례별로 사용하도록 설정하려면 LegacyBehaviors를 끕니다.
 
-![FlexGrid 통합](https://www.grapecity.co.kr/images/metalsmith/developer/componentone-enterprise/whatsnew/2019V1/3.png "FlexGrid 통합")
+### 새로운 디자인 타임 동작
 
-### Data Slicer
+이제 디자인 타임에 새 인스턴스가 모든 레거시 모드 작업을 사용하지 않도록 설정하고 컨트롤의 새로운 기능을 사용하도록 설정하는 LegacyBehaviors.None을 통해 생성됩니다.
 
-C1FlexPivotSlicer 컨트롤은 PivotField 객체에 적용할 수 있는 필터를 편집할 수 있는 빠른 방법을 제공합니다. 데이터 슬라이서는 사용자가 값을 기반으로 한 데이터를 필터링할 수 있게 해주며, 현재 필터링 상태 역시 보여줍니다.
+## 새로운 VSTO 기반 API 및 기능 개선 사항
 
-![FlexGrid 통합](https://www.grapecity.co.kr/images/metalsmith/developer/componentone-enterprise/whatsnew/2019V1/4.png "FlexGrid 통합")
+Visual Studio Tools for Office API 기반의 새로운 API가 V12의 GrapeCity.Spreadsheet.dll에 공개됩니다. 이 새로운 API 계층은 V12의 새로운 기능 개선 사항을 지원하며 통합 문서의 모든 측면에 대한 제어를 월등하게 강화합니다. 이 방대한 새 API 계층에 노출되는 수백 개의 새로운 유형 중 하나에 불과한 IRange 인터페이스에서만 31개 메서드 오버로드와 56개 속성을 제공합니다.
 
-### 추가 개선사항
+이 놀라운 새 API는 컨트롤과 별개로 작동할 수 있으므로 응용 프로그램이 새로운 Factory 클래스를 통해 메모리에 효율적으로 통합 문서를 만들고 조작할 수 있습니다. 이 API를 사용하여 웹 서버나 Azure에서 UI 없는 서버 측 사용 사례를 지원할 수 있습니다. Factory 클래스를 통해 만든 인스턴스를 컨트롤 인스턴스에 연결할 수도 있습니다.
 
-**FlexPie** 자동 데이터 라벨의 위치를 지원함으로써 오버래핑 방지 (FlexChart와 매우 유사)
+```
+GrapeCity.Spreadsheet.IWorkbookSet workbookSet = GrapeCity.Spreadsheet.Win.Factory.CreateWorkbookSet(); fpSpread1.Attach(workbookSet.Workbooks.Add())
+```
 
-**FlexChart** 를 위한 Drawing Tools샘플 프로젝트가 추가되었다. 차트 툴바를 통해서 추가/편집 차트 요소 (주석, 시리즈, 추세선 등)와 같은 동작을 잘 보여줍니다.
+통합 문서 또는 통합 문서 집합의 콘텐츠 열기, 저장 또는 조작에 사용할 양식에 컨트롤 인스턴스가 없어도 됩니다. 컨트롤 API를 사용하여 암호로 보호된 PDF 또는 XLSX 파일을 보호할 수도 있습니다. 이 기능은 개인의 의료, 재무 또는 기타 중요한 데이터의 보안 요구 사항을 충족하는 데 사용할 수 있습니다.
 
-**Input** 새로운 CharHelper 클래스가 일본어 글자 세트에 보다 효율적으로 동작할 수 있는 방법을 제공 (카타카나를 히라가나로 변환 가능)
+### 외부 통합 문서의 셀 및 범위 참조
 
-**Command** C1DockingManager.FloatingWindowOptions을 통해 사용자는 플로팅 윈도우 경계 스타일과 ‘닫기’ 버튼 동작을 바꿀 수 있습니다.
+이제 외부 통합 문서의 셀과 범위를 참조하고 이러한 외부 참조를 XLSX로 가져오거나 내보낼 수 있습니다. WorkbookSet에는 서로 참조하고 실시간으로 다시 계산되는 여러 개의 관련 통합 문서가 포함될 수 있으며, 동일한 양식이나 다른 양식에 있는 컨트롤의 라이브 인스턴스에 해당 통합 문서를 연결할 수 있습니다. 언로드된 통합 문서에 대한 외부 참조는 Excel과 같이 작동합니다.
 
-## ASP.NET MVC
+![Spread.NET V12 외부 통합 문서 참조](https://www.grapecity.co.kr/images/metalsmith/developer/spreadstudio/whatsnew/12/whatsnew_1.png "Spread.NET V12 외부 통합 문서 참조")
 
-### OLAP Slicer
+(Spread.NET V12 외부 통합 문서 참조)
 
-Slicer컨트롤은 PivotField 객체에 적용할 수 있는 필터를 편집할 수 있는 빠른 방법을 제공합니다. Slicer는 버튼을 제공하는데, 사용자는 값을 기반으로 한 데이터를 필터링하기 위해 해당 버튼을 클릭할 수 있으며, 현재 필터링 상태 역시 보여줍니다. 이를 통해 필터링을 마친 PivotGrid와 PivotChart 컨트롤에서 보여주는 내용을 보다 쉽게 이해할 수 있습니다.
+## 기타 향상된 기능
 
-![OLAP Slicer](https://www.grapecity.co.kr/images/metalsmith/developer/componentone-enterprise/whatsnew/2019V1/olapslicer-asp-mvccopy.png "OLAP Slicer")
-
-### Multi-Column Combo Sample
-
-이 확장 컨트롤은, 멀티컬럼을 갖추고 있으면서 페이징 가능한 (pageable) FlexGrid 를 포함시키기 위해 셀의 드롭다운 옵션을 확장시킵니다. MultiColumn Combo컨트롤은 사용자가 멀티컬럼을 보고 의사결정을 할 때 유용합니다. 드롭다운 또한 페이징이 가능한데, 수요에 따른 데이터 로딩을 가능하게 해줍니다.
-
-![Multi-Column Combo Sample](https://www.grapecity.co.kr/images/metalsmith/developer/componentone-enterprise/whatsnew/2019V1/multicolumncombo_mvc.png "Multi-Column Combo Sample")
-
-### Control Wizard
-
-**Control Wizard**는 최신 버전으로 업데이트 되어 있으므로, OLAP, Tab, DashboardLayout컨트롤 사용이 가능합니다. 프로젝트 리소스와 Web.config.를 라이센싱 및 업데이트 하는 지원 기능이 향상되어 제공되고 있습니다.
-
-![Control Wizard](https://www.grapecity.co.kr/images/metalsmith/developer/componentone-enterprise/whatsnew/2019V1/controlwizard_mvc.png "Control Wizard")
-
-### 추가 개선사항
-
-**FlexGrid** 에 Column Header양식이 있는 Column Groups지원 기능이 추가 되었습니다. 컬럼 헤더 양식은 일부 컬럼이 컬럼 그룹을 포함하고 있는 계층적 컬럼 구조를 정의하는 데 도움을 줍니다.
-
-**Menu** 컨트롤을 위해 Menu.subItemsPath 속성이 추가 되었는데, 계층적 (멀티레벨) 메뉴 생성이 가능합니다.
-
-**Calendar**와 **InputDate** 를 위해 ShowYearPicker 속성이 추가 되었는데, 사용자가 연간 캘린더 헤더를 클릭하면 캘린더가 연도 리스트를 보여줍니다.
-
-**Web API** Data저장 기능이 이제 클라우드 저장과 CRUD 동작을 지원합니다.
-
-## WPF
-
-### SimplifiedRibbon
-
-![SimplifiedRibbon](https://www.grapecity.co.kr/images/metalsmith/developer/componentone-enterprise/whatsnew/2019V1/5.png "SimplifiedRibbon")
-
-Simplified Ribbon이 업데이트 되어 C1Icon (이미지, 폰트 지원 포함, 버튼을 위한 벡터 그래픽 사용) 사용이 가능하며, 테마 지원도 개선되었습니다.
-
-### FlexGrid
-
-전문(全文) 필터는 검색창과 유사하게 작용하는데, FlexGrid 내에 포함되어 있는 매칭을 하이라이트 표시해줍니다. 사례 매칭, 전체 단어 매칭, 숫자 매칭 및 공간을 앤드(and) 연산자로 취급하는 옵션이 가능합니다.
-
-![FlexGrid](https://www.grapecity.co.kr/images/metalsmith/developer/componentone-enterprise/whatsnew/2019V1/6.png "FlexGrid")
-
-이제 FlexGrid를 통해 C1Icon을 사용하여GroupExpanded, GroupCollapsed, NewRow, DetailCollapsed, DetailExpanded 아이콘 설정이 가능합니다.
-
-### 추가 개선사항
-
-**FlexSheet** 는 VLOOKUP, HLOOKUP과 NOW기능 및 코멘트를 업데이트 혹은 삭제할 수 있게 해줍니다. FlexSheet.CalcEngine 속성은 이제 일반에 공개되었으며, 또한 맞춤 표현을 가능하게 해줍니다.
-
-**C1Zip** 에 새로운 ZipEncoding 클래스가 추가되었는데, ZipEncoding.Encoding 속성은 압축 엔트리 네임과 코멘트에 사용되는 인코딩을 규정하며, 이때 기본 인코딩은 UTF8입니다.
-
-## UWP
-
-### FlexGrid
-
-Entity Framework로 ComponentOne MVC 컨트롤의 코드를 만들고 싶지 않다면 그레이프시티의 강화된 스캐폴딩 기능을 사용해 보세요. 마법사 설정 컨트롤을 자유롭게 제어할 수 있습니다! 또한, 리본 스타일과 포함해야 하는 단추를 사용자 정의할 수 있습니다.
-
-새로운 컨트롤을 삽입했을 뿐만 아니라 설정 마법사로 기존의 컨트롤을 바로 업데이트할 수도 있습니다. 예를 들어 위에서 설명한 Razor 보기에서FlexGrid를 선언하면 커서를 정의에 놓고 컨텍스트 메뉴에서 “Update C1 Control”을 선택해 컨트롤의 속성을 설정하고 필요한 코드를 생성할 수 있습니다. ASP.NET MVC와 ASP.NET Core MVC 모두 이 기능을 지원합니다. 컨텍스트 메뉴 또는 Razor 보기의 “바로 가기”로 이 마법사를 호출할 수 있습니다.
-
-이제 FlexGrid를 통해C1Icon을 사용하여GroupExpanded, GroupCollapsed, NewRow, DetailCollapsed, DetailExpanded 아이콘 설정이 가능합니다.
-
-## Xamarin
-
-### FlexGrid
-
-### Animations
-
-![Animations](https://www.grapecity.co.kr/images/metalsmith/developer/componentone-enterprise/whatsnew/2019V1/xamfgdrag.gif "Animations")
-
-새로운 애니메이션이 그리드에 추가되었는데, 이 중 rip 애니메이션은 사용자가 컬럼을 길게 누르기 하면 사용이 가능합니다. 또한 추가된 그리드 중 플로잉 재배치 애니메이션은 사용자가 열(컬럼) 혹은 행을 드래그하여 위치를 변경할 때 작동합니다.
-
-새로운 Export 기능을 통해 데이터를 텍스트, CSV, 포맷한 HTML로 쉽게 내보낼 수 있습니다.
-
-### Gauges
-
-### Radial Gauge
-
-Radial Gauge의 방향을 바꿀 수 있게 해주는 속성이 추가되었습니다. 0도에서 360도로 시계방향으로 측정하는 대신에, 이제 반시계방향으로360도에서0도로 측정이 가능합니다.
-
-새로운 Export 기능을 통해 데이터를 텍스트, CSV, 포맷한 HTML로 쉽게 내보낼 수 있습니다.
-
-### Input
-
-이제 모든 인풋 컨트롤이 오른쪽에서 왼쪽 방향을 지원 (RTL Support)하는데, 아랍어와 같은 특정 언어의 현지화를 할 때 중요한 요소입니다. 레이아웃 방향은 어떤 인풋 컨트롤이든 플로우 방향 세팅을 통해 변경이 가능합니다.
-
-### C1Icon
-
-C1PathIcon을 통한 크로스 플랫폼 벡터 그래픽 지원이 개선 및 추가되었습니다. 이 경로를 사용하여, 앱 상에서 쉽게 데이터 사이즈를 재조정하거나 컬러로 표시할 수 있습니다.
-
-![C1Icon](https://www.grapecity.co.kr/images/metalsmith/developer/componentone-enterprise/whatsnew/2019V1/cipathicon.gif "C1Icon")
+이번 출시 버전에서도 기타 기능이 향상되었습니다. 출시된 업데이트에 대한 자세한 사항은 [릴리스 정보를 참고하세요](http://help.grapecity.com/spread/SpreadNET12ReadMe/webframe.html#rnotes.html).
