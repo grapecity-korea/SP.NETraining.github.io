@@ -2,7 +2,7 @@
 
 <ul id="mysidebar" class="nav">
   <li class="sidebarTitle">{{sidebar[0].product}} {{sidebar[0].version}}</li>
-  <li><a href="https://www.grapecity.co.kr/download/spreadnet">다운로드</a></li>
+  <li><a href="https://www.grapecity.co.kr/download/spreadnet" target="_blank" id="download">다운로드</a></li>
   {% for entry in sidebar %}
   {% for folder in entry.folders %}
   {% if folder.output contains "web" %}
