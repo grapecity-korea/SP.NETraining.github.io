@@ -1,6 +1,6 @@
-body{
-  font-family: 'Noto Sans KR', sans-serif;
-}
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body { font-family: 'Nanum Gothic', sans-serif; }
 
 .summary {
   color: #808080;
@@ -39,6 +39,7 @@ h4 {
 
 .nav > li > a:hover {
   background-color: #ab3161;
+  color: #fff;
 }
 
 div.navbar-collapse .dropdown-menu > li > a:hover {
