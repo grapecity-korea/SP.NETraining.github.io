@@ -58,4 +58,4 @@ entries:
       
       - title: 다운로드
         output: web, pdf
-        url: https://www.grapecity.co.kr/download/spreadnet
+        external_url: https://www.grapecity.co.kr/download/spreadnet
