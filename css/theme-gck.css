@@ -176,7 +176,7 @@ div#tg-sb-content h1 {
   cursor: pointer;
 }
 
-#download:hover{
+#download{
     background-color: #ab3161;
     color: #fff;
     font-weight: bold;
