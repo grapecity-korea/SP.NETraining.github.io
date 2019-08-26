@@ -55,3 +55,7 @@ entries:
           - title: 시작하기
             url: /spasp_start.html
             output: web, pdf
+      
+      - title: 다운로드
+        output: web, pdf
+        url: https://www.grapecity.co.kr/download/spreadnet
