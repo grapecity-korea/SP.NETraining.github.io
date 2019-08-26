@@ -41,10 +41,10 @@ feedback_subject_line: 기술지원
 feedback_email: support-kor@grapecity.com
 # used as a contact email for the Feedback link in the top navigation bar
 
-feedback_disable: true
+#feedback_disable: true
 # if you uncomment the previous line, the Feedback link gets removed
 
-# feedback_text: "Need help?"
+feedback_text: "제품문의"
 # if you uncomment the previous line, it changes the Feedback text
 
 # feedback_link: "http://helpy.io/"

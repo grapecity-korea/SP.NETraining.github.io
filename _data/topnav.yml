@@ -3,8 +3,10 @@
 topnav:
   - title: Topnav
     items:
-      - title: News
-        url: /news
+      - title: 트레이닝 센터
+        url: /index.html
+      - title: 새로운 기능
+        url: /2019v12_whatsnew.html
       - title: 다운로드
         external_url: https://www.grapecity.co.kr/download/spreadnet
 #Topnav dropdowns

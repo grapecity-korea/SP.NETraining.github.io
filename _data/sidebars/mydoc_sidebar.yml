@@ -35,9 +35,9 @@ entries:
             output: web, pdf
 
           - title: 배포
-            url: /mydoc_about.html
+            url: /spnet_deply.html
             output: web, pdf
 
           - title: 마이그레이션
-            url: /mydoc_support.html
+            url: /spnet_migration.html
             output: web, pdf
