@@ -4,11 +4,8 @@ sidebar: home_sidebar
 keywords: news, blog, updates, release notes, announcements
 permalink: 2019v12_whatsnew.html
 folder: news
+summary: "Excel과 유사하게 전문적이고 유연한 .NET 테이블 컨트롤 Spread.NET의 V12 버전이 출시되었습니다! 이번 새 버전에서는 다양한 성능이 크게 향상되었을 뿐만 아니라 VSTO 기반의 API 및 기능이 향상되었습니다."
 ---
-
-# Spread.NET - V12 새로운 기능
-
-Excel과 유사하게 전문적이고 유연한 .NET 테이블 컨트롤 Spread.NET의 V12 버전이 출시되었습니다! 이번 새 버전에서는 다양한 성능이 크게 향상되었을 뿐만 아니라 VSTO 기반의 API 및 기능이 향상되었습니다.
 
 ## 성능 최적화： 데이터 바인딩, 디자인 타임, Excel 파일 암호화
 
