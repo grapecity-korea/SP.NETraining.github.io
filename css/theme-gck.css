@@ -28,6 +28,15 @@ h4 {
   background-color: #da706f;
 }
 
+.nav li.active li.active a{
+  background-color: #f8cace;
+  color: #333;
+}
+
+.nav > li > a:hover {
+  background-color: #e87777;
+}
+
 div.navbar-collapse .dropdown-menu > li > a:hover {
   background-color: #347dbe;
 }
