@@ -56,6 +56,6 @@ entries:
             url: /spasp_start.html
             output: web, pdf
       
-      - title: 다운로드
-        output: web, pdf
-        external_url: https://www.grapecity.co.kr/download/spreadnet
+  - title: 다운로드
+    output: web, pdf
+    external_url: https://www.grapecity.co.kr/download/spreadnet
