@@ -48,7 +48,6 @@ entries:
           - title: 시작하기
             url: /spwin_start.html
             output: web, pdf
-            type: homepage
 
       - title: ASP.NET (웹폼)
         output: web, pdf
@@ -56,4 +55,3 @@ entries:
           - title: 시작하기
             url: /spasp_start.html
             output: web, pdf
-            type: homepage

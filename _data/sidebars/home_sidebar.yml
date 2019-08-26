@@ -4,7 +4,7 @@ entries:
   - title: sidebar
     folders:
       - title: 새로운 기능
-        output: web
+        output: web, pdf
         folderitems:
           - title: 2019 V2
             url: /2019v12_whatsnew.html
