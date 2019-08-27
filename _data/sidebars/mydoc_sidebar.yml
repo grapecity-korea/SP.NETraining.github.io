@@ -55,6 +55,12 @@ entries:
           - title: 스타일
             url: /spwin_style.html
             output: web, pdfs
+          - title: 셀 설정
+            url: /spwin_cellSetting.html
+            output: web, pdfs
+          - title: 폼 설정
+            url: /spwin_formSetting.html
+            output: web, pdfs
 
       - title: ASP.NET (웹폼)
         output: web, pdf
