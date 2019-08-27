@@ -68,7 +68,7 @@ folder: mydoc
 
 10.  아래와 같이 설치 완료후 Exit를 눌러 빠져 나옵니다.  
     
-    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-12.png)
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-11.png)
     
 11.  이렇게 선택한 만큼 도움말 설치를 몇번 반복하면 최종적으로 오프라인 도움말 설치가 완료 됩니다.  
     
