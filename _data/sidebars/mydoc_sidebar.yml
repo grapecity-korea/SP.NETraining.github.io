@@ -67,6 +67,12 @@ entries:
           - title: 출력
             url: /spwin_print.html
             output: web, pdfs
+          - title: Excel 입출력
+            url: /spwin_excelIO.html
+            output: web, pdfs
+          - title: 셀 유형
+            url: /spwin_cellType.html
+            output: web, pdfs
 
       - title: ASP.NET (웹폼)
         output: web, pdf

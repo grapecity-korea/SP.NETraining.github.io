@@ -10,9 +10,7 @@ folder: mydoc
 ---
 
 
-## 출력
-
-### Spread 표 컨트롤: 배경 이미지를 가진 PDF 파일 인쇄하기
+## Spread 표 컨트롤: 배경 이미지를 가진 PDF 파일 인쇄하기
 
 Spread 표 컨트롤은 PDF 파일로 인쇄하기 기능을 지원합니다. Printinfo의 PrintToPdf 방법으로 PDF로 인쇄하기 기능을 구현할 수 있습니다.
 
@@ -47,7 +45,7 @@ Spread 표 컨트롤은 PDF 파일로 인쇄하기 기능을 지원합니다. Pr
 
   
 
-### 2) 표 필터 사용
+## 표 필터 사용
 
 표(Table)는 Excel의 데이터 필터와 비슷한 필터 도구를 제공합니다. 표의 필터 기능은 TablesView. FilterButtonVisible 속성에서 설정할 수 있습니다.
 
@@ -163,7 +161,7 @@ FarPoint.Win.Spread.PrintInfo printset = new FarPoint.Win.Spread.PrintInfo();
 [샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/pagenumber_frozenrow.zip)
 
 
-### Spread는 Excel 인쇄 미리보기를 위해 A4 용지의 점선을 적용할 수 있습니다.
+## Spread는 Excel 인쇄 미리보기를 위해 A4 용지의 점선을 적용할 수 있습니다.
 
 엑셀에는 인쇄보기 중 종이크기 적용 기능이 있습니다. 이 기능을 사용하면 사용자가 Excel 파일에서 많은 양의 데이터를 쉽게 편집 할 수 있습니다.
 
