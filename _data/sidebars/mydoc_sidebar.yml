@@ -48,6 +48,10 @@ entries:
           - title: 시작하기
             url: /spwin_start.html
             output: web, pdf
+          - title: 스타일
+            url: /spwin_start.html
+            output: web, pdf
+          - title: 셀 설정
 
       - title: ASP.NET (웹폼)
         output: web, pdf

@@ -87,3 +87,61 @@ folder: mydoc
      ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-18.png)
     
 18.  오프라인 인증이나 좀더 자세한 Activation 방법은 같은 페이지의 Activation/Deactivation 링크를 확인하여 주시기 바랍니다.
+
+
+### Spread 라이선스 인증
+
+#### [인터넷이 연결 되는 경우의 인증 방법]
+
+1.  C:\ProgramData\Microsoft\Windows\Start Menu\Programs\GrapeCity\License Manager 로 들어가서 License Manager를 실행을 하면 아래와 같은 화면이 나옵니다. “Activate”를 클릭합니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-2-1.png)
+    
+2.  “Next” 버튼을 클릭합니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-2-2.png)
+    
+3.  구매 시 받은 Product Key를 정확이 입력한 후 “Next”버튼을 클릭합니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-2-3.png)
+    
+4.  아래와 같이 인증 성공한 화면을 볼 수 있습니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-2-4.png)
+    
+
+  
+
+#### [오프라인 상태 인증 방법]
+
+유무선 인터넷 연결을 해제하시고 아래 방법대로 오프라인 인증을 하셔야 합니다.
+
+  
+
+1.  C:\ProgramData\Microsoft\Windows\Start Menu\Programs\GrapeCity\License Manager 로 들어가서 License Manager를 실행을 하면 아래와 같은 화면이 나옵니다. “Activate”를 클릭합니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-2-5.png)
+    
+2.  두 번째 항목인 “Use a browser on another machine with internet connectivity”를 선택하고 “Next”버튼을 클릭합니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-2-6.png)
+    
+3.  화면에 나온 Product Key와 Authentication Number를 기록합니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-2-7.png)
+    
+4.  인터넷이 연결된 PC에서[http://sas.grapecity.com/activation/](http://sas.grapecity.com/activation/)사이트에 접속하여 주소의 Activation화면에 기록해두었던Product Key 와 Authentication Number를 입력 한 후 “Send Request”버튼을 클릭합니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-2-8.png)
+    
+5.  아래와 같이 새로운 license key를 발급받을 수 있습니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-2-9.png)
+    
+6.  위에서 받은 license Key를 Spread Studio 활성화 화면에 입력 한 후 Next버튼을 클릭합니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-2-10.png)
+    
+7.  아래와 같이 인증에 성공한 화면을 볼 수 있습니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-2-11.png)
