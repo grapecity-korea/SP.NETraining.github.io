@@ -61,6 +61,12 @@ entries:
           - title: 폼 설정
             url: /spwin_formSetting.html
             output: web, pdfs
+          - title: 필터 & 그룹핑
+            url: /spwin_filter.html
+            output: web, pdfs
+          - title: 출력
+            url: /spwin_print.html
+            output: web, pdfs
 
       - title: ASP.NET (웹폼)
         output: web, pdf
