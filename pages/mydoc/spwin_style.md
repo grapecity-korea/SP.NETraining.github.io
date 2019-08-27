@@ -10,9 +10,7 @@ folder: mydoc
 ---
 
 
-## 스타일
-
-### 좌측 상단 모서리 셀의 배경색 설정하기
+## 좌측 상단 모서리 셀의 배경색 설정하기
 
 하단의 코드로 좌측 상단 모서리 셀의 배경색을 설정할 수 있습니다. 해당 셀을 클릭하면 전체 폼이 선택됩니다.
 
@@ -36,7 +34,7 @@ fpSpread1.ActiveSheet.SheetCornerStyle.BackColor = Color.Blue;
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms2-1-1.png)
 
-### Spread 선택기 탐색
+## Spread 선택기 탐색
 
 Spread 표 컨트롤 시스템은 기본값으로 선택기 2종을 제공하며 각각 속성 설정을 통해 즉시 구현할 수 있습니다. 또한, 선택기를 사용자의 용도에 따라 설정할 수도 있습니다.
 
@@ -120,7 +118,7 @@ Spread 표 컨트롤 시스템은 기본값으로 선택기 2종을 제공하며
 
 [샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/2-2.SpreadSelection.zip)
 
-### Spread Skin 사용자 정의
+## Spread Skin 사용자 정의
 
 Spread Skin은 Spread Skin클래스를 통해 사용자 정의 될 수 있습니다.  
 예를 들면 아래와 같습니다.
@@ -144,7 +142,7 @@ FarPoint.Win.Spread.SpreadSkin.Save(skin,"c:\\forums3\\farpoint.skn");
 
 [샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/custom_skin.zip)
 
-### 선택한 셀 렌더러의 배경색을 수정하는 방법
+## 선택한 셀 렌더러의 배경색을 수정하는 방법
 
 셀이 선택되었때 배경의 색을 임시적으로 바꾸는 방법에 대하여 설명 드립니다. ISelectionRenderer interface 사용하여 아래와 같은 코드를 통해 구현할 수 있습니다.
 
