@@ -73,6 +73,18 @@ entries:
           - title: 셀 유형
             url: /spwin_cellType.html
             output: web, pdfs
+          - title: 함수
+            url: /spwin_formula.html
+            output: web, pdfs
+          - title: 데이터 시각화
+            url: /spwin_dataVisualization.html
+            output: web, pdfs
+          - title: 마우스 키보드 제어
+            url: /spwin_mouseKeyboard.html
+            output: web, pdfs
+          - title: 기타
+            url: /spwin_etc.html
+            output: web, pdfs
 
       - title: ASP.NET (웹폼)
         output: web, pdf
