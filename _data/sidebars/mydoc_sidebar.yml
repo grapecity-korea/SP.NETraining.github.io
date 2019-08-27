@@ -92,3 +92,32 @@ entries:
           - title: 시작하기
             url: /spasp_start.html
             output: web, pdf
+          - title: 스타일
+            url: /spasp_style.html
+            output: web, pdfs
+          - title: 함수
+            url: /spasp_formula.html
+            output: web, pdfs
+          - title: 필터 / 그룹핑 / 검색
+            url: /spasp_filter.html
+            output: web, pdfs
+          - title: 클라이언트
+            url: /spasp_client.html
+            output: web, pdfs
+          - title: Excel과 호환
+            url: /spasp_excel.html
+            output: web, pdfs
+          - title: 셀 유형
+            url: /spasp_cellType.html
+            output: web, pdfs
+          - title: 데이터 시각화
+            url: /spasp_dataVisualization.html
+            output: web, pdfs
+          - title: 마우스 키보드 컨트롤
+            url: /spasp_mouseKeyboard.html
+            output: web, pdfs
+          - title: 기타
+            url: /spasp_etc.html
+            output: web, pdfs
+
+
