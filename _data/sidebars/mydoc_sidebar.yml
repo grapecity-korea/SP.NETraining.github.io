@@ -34,10 +34,6 @@ entries:
             url: /license_online.html
             output: web, pdf
 
-          - title: 온라인 라이선스 인증 및 해제
-            url: /license_online.html
-            output: web, pdf
-
           - title: 오프라인 라이선스 인증 및 해제
             url: /license_offline.html
             output: web, pdf
