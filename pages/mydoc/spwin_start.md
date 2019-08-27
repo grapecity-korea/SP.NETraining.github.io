@@ -145,3 +145,49 @@ folder: mydoc
 7.  아래와 같이 인증에 성공한 화면을 볼 수 있습니다.  
     
     ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-2-11.png)
+
+
+### Spread 라이선스 인증 해제
+
+#### [인터넷이 연결 되는 경우의 인증 해제 방법]
+
+1.  C:\ProgramData\Microsoft\Windows\Start Menu\Programs\GrapeCity\License Manager 로 들어가서 License Manager를 실행을 하면 아래와 같은 화면이 나옵니다. Deactivate를 클릭합니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-3-1.png)
+    
+2.  “Next” 버튼을 클릭합니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-3-2.png)
+    
+3.  다시 한번 Deactivation 여부를 물어 봅니다. “Next”버튼을 클릭합니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-3-3.png)
+    
+4.  아래와 같이 인증 해제를 성공하였습니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-3-4.png)
+    
+
+#### [오프라인 상태 인증 해제 방법]
+
+1.  C:\ProgramData\Microsoft\Windows\Start Menu\Programs\GrapeCity\License Manager 로 들어가서 License Manager를 실행을 하면 아래와 같은 화면이 나옵니다. Deactivate를 클릭합니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-3-5.png)
+    
+2.  두번째의 “Use a browser on another machine with Internet connectivity”를 선택하고 “Next” 버튼을 클릭합니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-3-6.png)
+    
+3.  아래의 ProductKey와 Deativation Key를 기록합니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-3-7.png)
+    
+4.  인터넷이 연결된 PC에서[http://sas.grapecity.com/deactivation/](http://sas.grapecity.com/deactivation/)주소의 Deactivation화면에 Product Key 와 Deactivation Key를 입력 합니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-3-8.png)
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-3-9.png)
+    
+5.  라이선스 해제가 아래와 같이 성공적으로 끝났습니다.  
+    
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-3-10.png)
