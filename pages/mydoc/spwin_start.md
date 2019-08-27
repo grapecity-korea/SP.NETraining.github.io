@@ -59,6 +59,7 @@ folder: mydoc
     ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-10.png)
     
 9.  설치가 진행 됩니다.
+
      ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-11.png)
 
 10.  아래와 같이 설치 완료후 Exit를 눌러 빠져 나옵니다.
