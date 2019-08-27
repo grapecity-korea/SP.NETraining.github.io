@@ -31,9 +31,9 @@ OnClientChanged-> 클라이언트 get/set 방법
   
 
 예시:
-```
+
 1.  Spread 초기화  
-    
+    ```
     /// <summary>
     /// Spread 초기화
     /// </summary>
@@ -64,10 +64,8 @@ OnClientChanged-> 클라이언트 get/set 방법
                 cb.OnClientChanged = "alert('옵션 변경')";
                 FpSpread1.ActiveSheetView.Cells[0, 0].CellType = cb;
             }
-    
-    
-    코드 복사
-```  
+
+    ```
 
 2.  데이터 소스 설정
 
@@ -93,7 +91,6 @@ OnClientChanged-> 클라이언트 get/set 방법
     	return ds;
             }
     
-    코드 복사
 ```  
     
 
@@ -114,7 +111,6 @@ OnClientChanged-> 클라이언트 get/set 방법
                 string _text = this.FpSpread1.ActiveSheetView.Cells[_row, _col].Text;
             } 
     
-    코드복사
 ```    
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc7-1-1.png)
