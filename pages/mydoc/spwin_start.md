@@ -75,6 +75,7 @@ folder: mydoc
     ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-14.png)
     
 13.  설치가 완료 되게 되면 미국 Spread 웹 사이트로 자동으로 이동하게 되는데 여기에서는 회원가입 후 뉴스레터를 받아 보거나 자신의 구매 정보를 관리 할 수 있게 됩니다. 또 영문으로 되어 있지만 유용한 정보도 많이 찾아 볼 수 있으니 한번 둘러 보시면 좋을 것 같습니다.
+
 14.  또한 아래와 같이 GrapeCity License Manager가 자동으로 실행 됩니다. 여기에서 정품 라이선스 인증을 할 수 있습니다. 먼저 Activtaion을 클릭합니다.  
     
     ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-15.png)
