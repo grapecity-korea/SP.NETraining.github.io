@@ -10,7 +10,7 @@ folder: mydoc
 ---
 
 
-### Spread 셀 유형을 이용한 ComboBoxCellType
+## Spread 셀 유형을 이용한 ComboBoxCellType
 
 본 장에서는 Spread for ASP.NET의 ComboBoxCellType 셀 유형 사용방법에 대해 알아봅니다.
 
@@ -225,7 +225,7 @@ protected void FpSpread1_ButtonCommand(object sender, FarPoint.Web.Spread.Spread
 [샘플 다운로드](https://www.grapecity.co.kr/files/Samples/CascadeComboBox.zip)
 
 
-### 사용자 지정 셀 유형을 통한 임의 개수의 링크주소 및 그림 구현
+## 사용자 지정 셀 유형을 통한 임의 개수의 링크주소 및 그림 구현
 
 응용 시스템 개발 중에는 테이블의 첫 열 혹은 마지막 열에 삭제, 수정, 데이터 상세보기 등의 기능을 가진 동작 버튼을 넣어야 할 경우가 있습니다. Spread for ASP.NET는 자체적으로 하이퍼링크 셀 유형HyperLinkCellTyp을 지원하지만 위와 같은 수요가 발생하는 경우에는 HyperLinkCellType 셀 유형의 행동(Behavior)을 확장할 수 있습니다.
 
