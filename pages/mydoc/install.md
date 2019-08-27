@@ -9,7 +9,7 @@ permalink: install.html
 folder: mydoc
 ---
 
-아래 링크 혹은 구매 시 메일로 전달받은 링크를 통해 제품을 다운 받습니다.
+아래 링크 혹은 구매 시 메일로 전달받은 링크를 통해 제품을 다운 받습니다.  
 다운로드 : [https://www.grapecity.co.kr/download/spreadnet](https://www.grapecity.co.kr/download/spreadnet)
     
 ![](https://www.grapecity.co.kr/images/training/spread/tc-install-1.png)
