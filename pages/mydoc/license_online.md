@@ -11,36 +11,36 @@ folder: mydoc
 
 ## 인터넷 연결이 되는 경우의 인증 방법
 
-1. C:\Program Files (x86)\Common Files\GrapeCity\Components로 들어가서 GrapeCity.LicenseManager.exe를 실행하면 아래와 같은 화면이 나옵니다. “Activate”를 클릭합니다.
+C:\Program Files (x86)\Common Files\GrapeCity\Components로 들어가서 GrapeCity.LicenseManager.exe를 실행하면 아래와 같은 화면이 나옵니다. “Activate”를 클릭합니다.
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc-online-1.png)
 
-2. "Next" 버튼을 클릭합니다.
+"Next" 버튼을 클릭합니다.
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc-online-2.png)
 
-3. 구매 시 받은 Product Key를 정확이 입력한 후 "Next"버튼을 클릭합니다.
+구매 시 받은 Product Key를 정확이 입력한 후 "Next"버튼을 클릭합니다.
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc-online-3.png)
 
-4. 정상적으로 인증이 되었다면 아래와 같은 화면이 나타납니다.
+정상적으로 인증이 되었다면 아래와 같은 화면이 나타납니다.
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc-online-4.png)
 
 ## 인터넷 연결이 되는 경우의 인증 해제 방법
 
-1. C:\Program Files (x86)\Common Files\GrapeCity\Components로 들어가서 GrapeCity.LicenseManager.exe를 실행하면 아래와 같은 화면이 나옵니다. “Deactivate”를 클릭합니다.
+C:\Program Files (x86)\Common Files\GrapeCity\Components로 들어가서 GrapeCity.LicenseManager.exe를 실행하면 아래와 같은 화면이 나옵니다. “Deactivate”를 클릭합니다.
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc-onlineDeact-1.png)
 
-2. "Next" 버튼을 클릭합니다.
+"Next" 버튼을 클릭합니다.
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc-onlineDeact-2.png)
 
-3. 다시 한번 "Next"버튼을 클릭합니다.
+다시 한번 "Next"버튼을 클릭합니다.
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc-onlineDeact-3.png)
 
-4. 정상적으로 인증이 해제되었다면 아래와 같은 화면이 나타납니다.
+정상적으로 인증이 해제되었다면 아래와 같은 화면이 나타납니다.
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc-onlineDeact-4.png)
