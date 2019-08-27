@@ -16,7 +16,7 @@ folder: mydoc
 
 ### Spread 제품 설치 방법
 
-<!-- 1.  아래의 링크를 통해 제품을 다운로드 받거나 또는 구매 시 메일로 전달 받은 링크를 통해 제품을 다운 받습니다.  
+1.  아래의 링크를 통해 제품을 다운로드 받거나 또는 구매 시 메일로 전달 받은 링크를 통해 제품을 다운 받습니다.  
     
     다운로드 :[http://www.componentone.co.kr/downloads/default.htm](http://www.componentone.co.kr/downloads/default.htm)
     
@@ -61,10 +61,10 @@ folder: mydoc
 9.  설치가 진행 됩니다.  
     
     ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-11.png)
-    
+
 10.  아래와 같이 설치 완료후 Exit를 눌러 빠져 나옵니다.  
     
-    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-12.png) -->
+    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-12.png)
     
 11.  이렇게 선택한 만큼 도움말 설치를 몇번 반복하면 최종적으로 오프라인 도움말 설치가 완료 됩니다.  
     
