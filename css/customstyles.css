@@ -381,6 +381,7 @@ background-color: #347DBE;
 
 ul#mysidebar {
     border-radius:0px;
+    position: fixed;
 }
 
 .nav ul li ul li a {
