@@ -33,7 +33,7 @@ C:\Program Files (x86)\Common Files\GrapeCity\Components로 들어가서 GrapeCi
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc-offline-5.png)
 
-인터넷이 연결된 다른 기기에서 http://sas.grapecity.com/activation 사이트에 접속하여 기록해 두었던 Product Key와 Authentication Number를 입력한 후 “Send Request” 버튼을 클릭합니다.
+인터넷이 연결된 다른 기기에서 [http://sas.grapecity.com/activation](http://sas.grapecity.com/activation) 사이트에 접속하여 기록해 두었던 Product Key와 Authentication Number를 입력한 후 “Send Request” 버튼을 클릭합니다.
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc-offline-6.png)
 
@@ -73,7 +73,7 @@ C:\Program Files (x86)\Common Files\GrapeCity\Components로 들어가서 GrapeCi
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc-offlineDeact-5.png)
 
-인터넷이 연결된 다른 기기에서 http://sas.grapecity.com/deactivation 사이트에 접속하여 기록해 두었던 Product Key와 Deactivation Key를 입력한 후 “Send Request” 버튼을 클릭합니다.
+인터넷이 연결된 다른 기기에서 [http://sas.grapecity.com/deactivation](http://sas.grapecity.com/deactivation) 사이트에 접속하여 기록해 두었던 Product Key와 Deactivation Key를 입력한 후 “Send Request” 버튼을 클릭합니다.
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc-offlineDeact-6.png)
 
