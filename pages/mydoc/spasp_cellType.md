@@ -69,7 +69,7 @@ OnClientChanged-> 클라이언트 get/set 방법
 
 2.  데이터 소스 설정
 
-```   
+    ```   
     /// 데이터 소스 설정
     
     /// <summary>
@@ -91,11 +91,11 @@ OnClientChanged-> 클라이언트 get/set 방법
     	return ds;
             }
     
-```  
+    ```  
     
 
 3.  ComboBoxCellType 포그라운드(foreground)에서 백그라운드 Spread 이벤트 ButtonCommand 트리거 변경을 선택하여 현재 선택한 항목의 Text Value값을 가져옵니다.  
-```
+    ```
     /// <summary>
     /// ComboBoxCellType 현재 선택한 항목의 Text Value값 가져오기
     /// </summary>
@@ -111,7 +111,7 @@ OnClientChanged-> 클라이언트 get/set 방법
                 string _text = this.FpSpread1.ActiveSheetView.Cells[_row, _col].Text;
             } 
     
-```    
+    ```    
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc7-1-1.png)
 
