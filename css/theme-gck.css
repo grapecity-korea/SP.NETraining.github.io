@@ -92,7 +92,7 @@ a.navbar-brand:hover {
 
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-  border-color: #248ec2 !important;
+  border-color: #fbe3eb !important;
 }
 
 .btn-primary {
@@ -158,11 +158,11 @@ li.sidebarTitle {
 
 .navbar-inverse .navbar-toggle:focus,
 .navbar-inverse .navbar-toggle:hover {
-  background-color: #015cae;
+  background-color: #bd758d;
 }
 
 .navbar-inverse .navbar-toggle {
-  border-color: #015cae;
+  border-color: #fbe3eb;
 }
 
 div#tg-sb-content h1 {
