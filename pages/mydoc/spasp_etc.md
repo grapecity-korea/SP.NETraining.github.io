@@ -341,13 +341,13 @@ Spread ASP.NET 컨트롤은 클라이언트에서 HTML Table로 렌더링됩니�
 
   
 
-###IE 브라우저 지원:
+### IE 브라우저 지원:
 
 Spread의 모든 기능은 Spread와 배포(release)시기가 같은 최신 버전의 IE 브라우저를 지원합니다.
 
   
 
-###Mozilla Firefox 브라우저 지원:
+### Mozilla Firefox 브라우저 지원:
 
 Spread 컨트롤 대부분의 기능은 Mozilla Firefox를 지원합니다. Mozilla Firefox와 호환되지 않는 기능은 아래 표와 같습니다.
 
