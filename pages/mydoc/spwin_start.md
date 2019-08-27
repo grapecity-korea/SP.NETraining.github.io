@@ -8,13 +8,9 @@ permalink: spwin_start.html
 folder: mydoc
 ---
 
-<!-- ## 준비중
+<!-- ## 설치 / 업그레이드 / 라이선스 / 배포 -->
 
-해당 페이지는 준비중에 있습니다. -->
-
-## 설치 / 업그레이드 / 라이선스 / 배포
-
-### Spread 제품 설치 방법
+## Spread 제품 설치 방법
 
 1.  아래의 링크를 통해 제품을 다운로드 받거나 또는 구매 시 메일로 전달 받은 링크를 통해 제품을 다운 받습니다.  
     
@@ -89,9 +85,9 @@ folder: mydoc
 18.  오프라인 인증이나 좀더 자세한 Activation 방법은 같은 페이지의 Activation/Deactivation 링크를 확인하여 주시기 바랍니다.
 
 
-### Spread 라이선스 인증
+## Spread 라이선스 인증
 
-#### [인터넷이 연결 되는 경우의 인증 방법]
+### [인터넷이 연결 되는 경우의 인증 방법]
 
 1.  C:\ProgramData\Microsoft\Windows\Start Menu\Programs\GrapeCity\License Manager 로 들어가서 License Manager를 실행을 하면 아래와 같은 화면이 나옵니다. “Activate”를 클릭합니다.  
     
@@ -112,7 +108,7 @@ folder: mydoc
 
   
 
-#### [오프라인 상태 인증 방법]
+### [오프라인 상태 인증 방법]
 
 유무선 인터넷 연결을 해제하시고 아래 방법대로 오프라인 인증을 하셔야 합니다.
 
@@ -147,9 +143,9 @@ folder: mydoc
     ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-2-11.png)
 
 
-### Spread 라이선스 인증 해제
+## Spread 라이선스 인증 해제
 
-#### [인터넷이 연결 되는 경우의 인증 해제 방법]
+### [인터넷이 연결 되는 경우의 인증 해제 방법]
 
 1.  C:\ProgramData\Microsoft\Windows\Start Menu\Programs\GrapeCity\License Manager 로 들어가서 License Manager를 실행을 하면 아래와 같은 화면이 나옵니다. Deactivate를 클릭합니다.  
     
@@ -168,7 +164,7 @@ folder: mydoc
     ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-3-4.png)
     
 
-#### [오프라인 상태 인증 해제 방법]
+### [오프라인 상태 인증 해제 방법]
 
 1.  C:\ProgramData\Microsoft\Windows\Start Menu\Programs\GrapeCity\License Manager 로 들어가서 License Manager를 실행을 하면 아래와 같은 화면이 나옵니다. Deactivate를 클릭합니다.  
     
@@ -193,15 +189,15 @@ folder: mydoc
     ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-3-10.png)
 
 
-### Spread Window Forms 배포 방법
+## Spread Window Forms 배포 방법
 
-#### [서버 요구사항]
+### [서버 요구사항]
 
 Microsoft 인터넷 정보 서버(IIS)에 배포해야 합니다.
 
   
 
-#### [시스템 요구사항]
+### [시스템 요구사항]
 
 사용자의 시스템은 아래 요구사항을 충족해야 합니다.
 
@@ -224,7 +220,7 @@ Microsoft 인터넷 정보 서버(IIS)에 배포해야 합니다.
     마이크로소프트 .NET Framework가 설치되어야 합니다.
 
   
-#### [배포되어야 하는 파일]
+### [배포되어야 하는 파일]
 
 사용자의 시스템에 아래와 같은 파일들이 함께 배포되어야 합니다.  
 
@@ -245,7 +241,7 @@ Microsoft 인터넷 정보 서버(IIS)에 배포해야 합니다.
 
   
 
-#### [웹 페이지에 컨트롤을 호스팅]
+### [웹 페이지에 컨트롤을 호스팅]
 
 만약 마이크로소프트 인터넷 익스플로러에 Spread Windows Forms 컨트롤을 호스팅 한다면, 보안 권한 조정을 만드세요.  
 
@@ -257,7 +253,7 @@ Microsoft 인터넷 정보 서버(IIS)에 배포해야 합니다.
 
 
 
-### 체험판 혹은 구버전 정보 삭제 솔루션
+## 체험판 혹은 구버전 정보 삭제 솔루션
 
 본 장에서는 체험판 정보 삭제를 위한 구체적인 솔루션을 알아봅니다.
 
