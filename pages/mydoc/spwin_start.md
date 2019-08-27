@@ -59,35 +59,30 @@ folder: mydoc
     ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-10.png)
     
 9.  설치가 진행 됩니다.
-![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-11.png)
+     ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-11.png)
 
 10.  아래와 같이 설치 완료후 Exit를 눌러 빠져 나옵니다.
-![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-12.png)
+     ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-12.png)
     
-11.  이렇게 선택한 만큼 도움말 설치를 몇번 반복하면 최종적으로 오프라인 도움말 설치가 완료 됩니다.  
+11.  이렇게 선택한 만큼 도움말 설치를 몇번 반복하면 최종적으로 오프라인 도움말 설치가 완료 됩니다.
+     ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-13.png)
     
-    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-13.png)
+12.  도움말 설치 완료 후 이어서 설치가 진행 되면서 아래와 같이 최종적으로 Spread Studio 설치가 완료 됩니다.
+     ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-14.png)
     
-12.  도움말 설치 완료 후 이어서 설치가 진행 되면서 아래와 같이 최종적으로 Spread Studio 설치가 완료 됩니다.  
-    
-    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-14.png)
-    
-13.  설치가 완료 되게 되면 미국 Spread 웹 사이트로 자동으로 이동하게 되는데 여기에서는 회원가입 후 뉴스레터를 받아 보거나 자신의 구매 정보를 관리 할 수 있게 됩니다. 또 영문으로 되어 있지만 유용한 정보도 많이 찾아 볼 수 있으니 한번 둘러 보시면 좋을 것 같습니다.
+13.  설치가 완료 되게 되면 미국 Spread 웹 사이트로 자동으로 이동하게 되는데 여기에서는 회원가입 후 뉴스레터를 받아 보거나 자신의 구매 정보를 관리 할 수 있게 됩니다.
+     또 영문으로 되어 있지만 유용한 정보도 많이 찾아 볼 수 있으니 한번 둘러 보시면 좋을 것 같습니다.
 
-14.  또한 아래와 같이 GrapeCity License Manager가 자동으로 실행 됩니다. 여기에서 정품 라이선스 인증을 할 수 있습니다. 먼저 Activtaion을 클릭합니다.  
+14.  또한 아래와 같이 GrapeCity License Manager가 자동으로 실행 됩니다. 여기에서 정품 라이선스 인증을 할 수 있습니다. 먼저 Activtaion을 클릭합니다.
+     ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-15.png)
     
-    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-15.png)
+15.  Next를 클릭하여 Activation과정을 진행 합니다.
+     ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-16.png)
     
-15.  Next를 클릭하여 Activation과정을 진행 합니다.  
+16.  성함 회사명 Email Product Key를 넣고 Next를 눌러 인증을 진행합니다.
+     ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-17.png)
     
-    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-16.png)
-    
-16.  성함 회사명 Email Product Key를 넣고 Next를 눌러 인증을 진행합니다.  
-    
-    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-17.png)
-    
-17.  다음과 같이 정상적으로 완료가 됩니다.  
-    
-    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-18.png)
+17.  다음과 같이 정상적으로 완료가 됩니다.
+     ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms1-1-18.png)
     
 18.  오프라인 인증이나 좀더 자세한 Activation 방법은 같은 페이지의 Activation/Deactivation 링크를 확인하여 주시기 바랍니다.
