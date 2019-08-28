@@ -168,15 +168,15 @@ protected void Page_Load(object sender, EventArgs e)
 **클라이언트 단, CategoryChanged 함수의 구현 코드:**
 
 ```javascript
-<script type ="text/javascript" language="javascript">
-        function CategoryChanged() {
-            var row = FpSpread1.ActiveRow;
-            var col = FpSpread1.ActiveCol;
-            FpSpread1.EndEdit();
-            FpSpread1.UpdatePostbackData();
-            FpSpread1.CallBack("CategoryChanged," + row.toString() + "," + col.toString());
-        }
-</script>
+    <script type ="text/javascript" language="javascript">
+            function CategoryChanged() {
+                var row = FpSpread1.ActiveRow;
+                var col = FpSpread1.ActiveCol;
+                FpSpread1.EndEdit();
+                FpSpread1.UpdatePostbackData();
+                FpSpread1.CallBack("CategoryChanged," + row.toString() + "," + col.toString());
+            }
+    </script>
 ```
 
 Spread ButtonCommand 이벤트의 백그라운드 처리 코드는 해당 이벤트에서 선택한 유형을 가져온 후 해당 열의 전체 상품을 표시합니다.
