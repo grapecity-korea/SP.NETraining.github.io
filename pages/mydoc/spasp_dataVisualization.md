@@ -153,8 +153,8 @@ Spread는 85가지의 다양한 차트 유형을 제공합니다. 워크시트 �
 
 **2. BarSeries 설정**
 
-    ```csharp
-     	FarPoint.Web.Chart.BarSeries series = new FarPoint.Web.Chart.BarSeries();
+```csharp
+FarPoint.Web.Chart.BarSeries series = new FarPoint.Web.Chart.BarSeries();
 
      	// 차트 표시 데이터 설정
     	series.Values.DataSource = dt;
@@ -170,12 +170,12 @@ Spread는 85가지의 다양한 차트 유형을 제공합니다. 워크시트 �
      	series.CategoryNames.Add("가구");
 
     	series.LabelVisible = true;
-    ```
+```
 
 **3. YPlotArea 설정**
 
-    ```csharp
-        	FarPoint.Web.Chart.YPlotArea plotArea = new FarPoint.Web.Chart.YPlotArea();
+```csharp
+FarPoint.Web.Chart.YPlotArea plotArea = new FarPoint.Web.Chart.YPlotArea();
 
         	// 표시 단위 20%로 설정
         	//plotArea.YAxes[0].DisplayUnits = 0.5;
@@ -190,11 +190,11 @@ Spread는 85가지의 다양한 차트 유형을 제공합니다. 워크시트 �
         	plotArea.Size = new System.Drawing.SizeF(0.6F, 0.6F);
 
         	plotArea.Series.Add(series);
-    ```
+```
 
 **4. 차트 범례 설정**
 
-    ```
+    ```csharp
              LegendArea legend = new LegendArea();
 
              	legend.Location = new PointF(0.98f, 0.5f);
@@ -206,7 +206,7 @@ Spread는 85가지의 다양한 차트 유형을 제공합니다. 워크시트 �
 
 **5. 차트 탭(Label) 설정**
 
-    ```
+    ```csharp
              LabelArea label = new LabelArea();
 
              label.Text = "상품 유통";
@@ -219,7 +219,7 @@ Spread는 85가지의 다양한 차트 유형을 제공합니다. 워크시트 �
 
 **6. 마지막으로 WebConfig 파일에 아래의 정보를 추가합니다.**
 
-    ```
+    ```xml
         <httpHandlers>
 
           <add path="FpChart.axd" verb="*" type="FarPoint.Web.Chart.ChartImageHttpHandler" validate="true" />
@@ -229,11 +229,11 @@ Spread는 85가지의 다양한 차트 유형을 제공합니다. 워크시트 �
 
 [FpChart 사용방법 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/FpChartTest.zip)
 
-\_\_
+---
 
-## 차트 동적 알림기능 추가
+## 차트 동적 툴팁(ToolTip) 추가
 
-[차트 동적 알림기능 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/ChartToolTipWithSpread_CS.zip)
+[차트 ToolTip - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/ChartToolTipWithSpread_CS.zip)
 
 Spread 표(그리드) 컨트롤에 차트를 삽입시키는 방법은 매우 자주 사용되는 방법입니다. Spread 컨트롤은 5.0버전부터 차트 내장 기능을 지원하며 동시에 85가지 차트 유형을 제공합니다. 본 장에서는 차트의 동적 알림 기능 구현 방법에 대해 알아봅니다.
 
@@ -264,7 +264,7 @@ FarPoint.Web.Chart.ChartViewType.View3D, true);
 이제 동적 알림 기능 구현에 대해 알아보도록 하겠습니다.  
 구현 방법은 매우 간단합니다. AutoGenerateMapAreaToolTip 속성을 'true'로 설정하면 차트의 자동 알림이 생성됩니다. RenderMapArea 속성을 'True'로 설정하면 차트는 Map형식으로 렌더링을 진행하게 됩니다.
 
-```
+```csharp
 FpSpread1.Sheets[0].Charts[0].RenderMapArea = true;
 FpSpread1.Sheets[0].Charts[0].AutoGenerateMapAreaToolTip = true;
 FpSpread1.Sheets[0].Charts[0].HotSpotMode = HotSpotMode.Inactive;
@@ -272,7 +272,7 @@ FpSpread1.Sheets[0].Charts[0].HotSpotMode = HotSpotMode.Inactive;
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc8-3-2.gif)
 
-[차트 동적 알림기능 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/ChartToolTipWithSpread_CS.zip)
+[차트 ToolTip - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/ChartToolTipWithSpread_CS.zip)
 
 ---
 
