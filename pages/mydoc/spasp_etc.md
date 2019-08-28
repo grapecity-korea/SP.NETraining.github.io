@@ -105,7 +105,7 @@ Step4：Views\Home\Index.cshtml수정 - 컨트롤 추가
 
 Controllers\HomeController.cs 파일에서 디폴트 값으로 설정되어 있는 Index 함수를 아래와 같이 변경합니다.
 
-    ```
+```
    1: public ActionResult Index([MvcSpread(true)]FarPoint.Mvc.Spread.FpSpread FpSpread1)
    2: {
    3:  FpSpread1.ActiveSheetView.Rows.Count = 30;
@@ -117,7 +117,7 @@ Controllers\HomeController.cs 파일에서 디폴트 값으로 설정되어 있�
    9:  }
   10:    return View();
   11: }
-    ```  
+```  
 
 위의 과정이 마무리되면 F5 키를 통해 화면에서 Spread를 확인할 수 있습니다.
 
@@ -159,7 +159,7 @@ Step5：Controller에 MvcSpreadEvent 추가
 
 이에 Controllers\HomeController.cs파일에 이들을 각각 추가합니다.
 
-    ```
+```
    1: public void FpSpread1_Load(object sender, EventArgs e)
    2: {
    3:    FpSpread sp = sender as FpSpread;
@@ -177,7 +177,7 @@ Step5：Controller에 MvcSpreadEvent 추가
  15: private void _init(object sender, EventArgs e)
  16: {
  17: }
-    ```  
+```  
 
 단축키 F5를 사용하여 프로그램을 실행시키면 MVC-Spread ASP.net의 “Hello World” 프로그램이 완성됩니다.
 
@@ -265,14 +265,14 @@ C# 코드：
 Spread BS 프로그램의 데이터 로딩 효율 분석:
 
 1.  BS 프로그램의 데이터 로딩 속도는 해당 네트워크의 대역폭 및 클라이언트 성능에 따라 달라집니다. 데이터량이 기준치를 초과할 때 로딩 속도가 느려지는 현상은 BS 프로그램의 취약점으로 분석되고 있습니다.
-2.  Spread는 데이터를 표시할 때 데이터뿐만 아니라 스타일도 함께 로딩되기 때문에 프로그램 성능에 다소 영향을 미치게 됩니다.
+2.  Spread는 데이터를 표시할 때 데이터뿐만 아니라 스타일도 함께 로딩되기 때문에 프로그램 성능에 다소 영향을 미치게 됩니다.    
 
   
 
 Spread의 효율을 높이는 방법에 대해서는 많은 의견들이 제시되고 있지만 본 장에서는 데모 프로그램을 사용하여 아래와 같은 두 가지 방법을 통해 Spread 데이터 표시 효율을 높이는 방법을 소개합니다.
 
 1.  서버(server) 효율 제고: BaseSheetDataModel을 Spread의 데이터 소스로 상속 받은 후 페이지 번호 및 페이지 크기(PageSize)를 클릭하여 데이터를 분할 인출(data fetch)함으로써 페이지 나누기(paging)를 실시합니다.
-2.  클라이언트 효율 제고: IsTrackingViewState 속성을 'ViewState 저장 금지'로 설정함으로써 효율을 높입니다.
+2.  클라이언트 효율 제고: IsTrackingViewState 속성을 'ViewState 저장 금지'로 설정함으로써 효율을 높입니다.    
 
 위의 두 가지 방법을 사용할 경우 1000개의 데이터 로딩에 소요되는 시간은 약 5-10초 입니다.
 
