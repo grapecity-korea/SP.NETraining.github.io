@@ -40,7 +40,7 @@ folder: mydoc
     3: </httpHandlers>
     ```  
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/ExcelChartImport.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/ExcelChartImport.zip)
 
 
 
@@ -61,7 +61,7 @@ folder: mydoc
 1: this.FpSpread1.SaveExcel(Server.MapPath("测试.xls"));
 ```  
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/Spread_SaveAsCNName.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread_SaveAsCNName.zip)
 
 
 ## Excel 테두리 가져오기 설정
@@ -118,4 +118,4 @@ Spread 컨트롤에서 Excel 가져오기 후 테두리가 굵게 변하는 문�
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/Spread_ASP_Border.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread_ASP_Border.zip)

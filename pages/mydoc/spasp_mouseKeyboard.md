@@ -39,7 +39,7 @@ JS 코드 :
 </script>
 ```  
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/SpreadChangeFocus.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/SpreadChangeFocus.zip)
 
 
 ## Spread 클라이언트 마우스 클릭 이벤트
@@ -68,7 +68,7 @@ JS 코드 :
     </script>
     ```  
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/CustomSpreadClientEvent.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/CustomSpreadClientEvent.zip)
 
 
 ## Spread 영역 내 마우스 커서 모양 변경 방법
@@ -95,7 +95,7 @@ Spread가 제공하는 GrayAreaCursorType 속성은 공백 영역에서의 마�
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc9-3-1.gif)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/5041_Cursor.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/5041_Cursor.zip)
 
 
 ## 테이블 코너(Corner) 클릭으로 Spread 전체를 선택하는 기능 해제하기

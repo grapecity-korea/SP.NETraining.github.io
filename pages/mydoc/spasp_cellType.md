@@ -115,7 +115,7 @@ OnClientChanged-> 클라이언트 get/set 방법
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc7-1-1.png)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/ComboBoxCellType.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/ComboBoxCellType.zip)
 
 
 ## ComboBoxCellType을 통한 직렬데이터 입력 구현
@@ -218,7 +218,7 @@ protected void FpSpread1_ButtonCommand(object sender, FarPoint.Web.Spread.Spread
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc7-2-1.gif)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/CascadeComboBox.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/CascadeComboBox.zip)
 
 
 ## 사용자 지정 셀 유형을 통한 임의 개수의 링크주소 및 그림 구현
@@ -350,7 +350,7 @@ protected void Page_Load(object sender, EventArgs e)
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc7-3-1.png)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/7862_Link.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/7862_Link.zip)
 
 
 ## Cell에 사용자 지정 컨트롤 추가하기
@@ -425,4 +425,4 @@ protected void Page_Load(object sender, EventArgs e)
     ![](https://www.grapecity.co.kr/images/training/spread/tc7-4-2.png)
     
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/usercontrol.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/usercontrol.zip)

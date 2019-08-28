@@ -55,7 +55,7 @@ folder: mydoc
      </script>
     
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/Spread_ASP_SortJS.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread_ASP_SortJS.zip)
 
 
 
@@ -167,7 +167,7 @@ Spread for ASP.NET 컨트롤은 그룹핑 기능이 포함되어 있습니다. �
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc4-3-1.gif)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/GroupRowCount.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/GroupRowCount.zip)
 
 
 ## 검색
@@ -204,7 +204,7 @@ protected void Button1_Click(object sender, EventArgs e)
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc4-4-1.gif)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/Spread_ASP_Search.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread_ASP_Search.zip)
 
 
 
@@ -299,4 +299,4 @@ Excel 스타일 필터링:
 27: 
 28: FpSpread1.ActiveSheetView.RowFilter = rowFilter;
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/Filtering.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Filtering.zip)

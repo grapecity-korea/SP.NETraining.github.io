@@ -61,7 +61,7 @@ protected override void Render(HtmlTextWriter writer)
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/5363_Frozen.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/5363_Frozen.zip)
 
 
 ## 행 템플릿 레이아웃
@@ -152,4 +152,4 @@ true, true, true, true, false);
 myskin.Apply(FpSpread1.Sheets[0]);
 ```
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/Spread_ASP_Skin.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread_ASP_Skin.zip)

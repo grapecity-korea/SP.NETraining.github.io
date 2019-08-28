@@ -91,7 +91,7 @@ Spread 테두리에는 사선 테두리가 없지만 다양한 도형 기능은 
     간단한 샘플을 참고해 주시기 바랍니다.
     
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/crossreport.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/crossreport.zip)
 
 
 ## Spread Studio : 표(Table) 기능
@@ -278,7 +278,7 @@ Spread는 표의 구조적 수식 인용을 지원합니다. 구조적 인용에
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/SpreadStudioV8_Table.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/SpreadStudioV8_Table.zip)
 
 
 ## 코드로 자식 폼을 확장하는 방법
@@ -298,7 +298,7 @@ Spread는 표의 구조적 수식 인용을 지원합니다. 구조적 인용에
 
 간단한 샘플을 참고하여 주시기 바랍니다.
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/hierachy.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/hierachy.zip)
 
 ## [WinForms] 그림 추가
 
@@ -320,4 +320,4 @@ Spread는 표의 구조적 수식 인용을 지원합니다. 구조적 인용에
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/Spread_Win_Selection.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/Spread_Win_Selection.zip)

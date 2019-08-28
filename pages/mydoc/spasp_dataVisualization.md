@@ -235,7 +235,7 @@ Spread는 85가지의 다양한 차트 유형을 제공합니다. 워크시트 �
         </httpHandlers>
     ```  
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/FpChartTest.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/FpChartTest.zip)
 
 
 ### 차트 동적 알림기능 추가
@@ -267,7 +267,7 @@ FpSpread1.Sheets[0].Charts[0].HotSpotMode = HotSpotMode.Inactive;
 ```  
 ![](https://www.grapecity.co.kr/images/training/spread/tc8-3-2.gif)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/ChartToolTipWithSpread_CS.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/ChartToolTipWithSpread_CS.zip)
 
 
 ## 스파크라인

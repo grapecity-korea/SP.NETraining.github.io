@@ -104,7 +104,7 @@ private void 아래쪽으로채우기ToolStripMenuItem_Click(object sender, Even
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/기존데이터로 셀 채우기.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/기존데이터로 셀 채우기.zip)
 
 
 ## Spread의 여러 셀에 데이터 붙여넣기
@@ -205,7 +205,7 @@ Excel을 사용하면서 어떤 한 셀의 데이터를 복사해 여러 셀에 
 
   
 
-[샘플 다운로드](http://www.grapecity.co.kr/files/Samples/WinformsSample/MultipleCellsPaste.zip)
+[샘플 다운로드](http://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/MultipleCellsPaste.zip)
 
 ## Spread 여러 행 또는 열이 있는 헤더 셀을 만듭니다.
 
@@ -302,7 +302,7 @@ Excel을 사용하면서 어떤 한 셀의 데이터를 복사해 여러 셀에 
     ```
     
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/Demo.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/Demo.zip)
 
 
 ## 셀에 프롬프트 추가
@@ -346,4 +346,4 @@ TextTipFetch 이벤트를 통해 툴팁을 표시 :
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/Spread_Win_ShortTool.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/Spread_Win_ShortTool.zip)

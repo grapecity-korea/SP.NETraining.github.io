@@ -49,7 +49,7 @@ fpSpread1.ActiveSheet.Cells[0, 0].CellType = mhp;
 fpSpread1.ActiveSheet.Cells[0, 0].Font = new Font("맑은 고딕", 20f);
 ```
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/Spread_Win_CellType_Hyper.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/Spread_Win_CellType_Hyper.zip)
 
 
 
@@ -95,7 +95,7 @@ void comboBoxCellType1_EditorValueChanged(object sender, EventArgs e)
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms8-2-1.png)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/spread_win_comboselect.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/spread_win_comboselect.zip)
 
 
 ## 동적 셀 유형
@@ -152,7 +152,7 @@ void OnFrameChanged(object sender, EventArgs e)
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms8-3-1.png)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/AnimateCellType_CS.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/AnimateCellType_CS.zip)
 
 
 ## 셀에 이미지 추가하기
@@ -191,7 +191,7 @@ new FarPoint.Win.Spread.CellType.ImageCellType();
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms8-4-1.png)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/Spread_Win_CopyImageToCell.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/Spread_Win_CopyImageToCell.zip)
 
 
 ## 대각선 그리기 DiagonalCellType
@@ -289,4 +289,4 @@ protected override void ValidateData()
     }
 ```
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/Spread_DiagonalCellType_demo.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/Spread_DiagonalCellType_demo.zip)

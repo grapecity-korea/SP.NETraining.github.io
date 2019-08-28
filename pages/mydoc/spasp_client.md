@@ -44,7 +44,7 @@ Spread for ASP.NET 컨트롤은 일련의 포그라운드 메소드 및 이벤�
 
 이제 Spread가 리셋되어 포그라운드의 Spread 이벤트를 저장할 수 있습니다.
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/Spread ASP .NET (JavaScript Baisic).zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread ASP .NET (JavaScript Baisic).zip)
 
 
 
@@ -189,7 +189,7 @@ protected void Page_Load(object sender, EventArgs e)
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-2-3.png)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/SpreadforASPDemo.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/SpreadforASPDemo.zip)
 
 
 ## js를 이용한 Spread 높이 설정
@@ -243,7 +243,7 @@ Html Button 클릭 이벤트를 통해 Spread 크기 변경을 트리거해줍�
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-3-2.gif)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/9339.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/9339.zip)
 
 
 ## JS를 이용한 Spread 행(row) 배경색 및 잠금 설정
@@ -273,7 +273,7 @@ function Button1_onclick() {
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-4-1.png)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/3615.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/3615.zip)
 
 
 ## Spread for ASP.NET 컨트롤: JavaScript를 이용한 셀 병합
@@ -316,4 +316,4 @@ function Button1_onclick() {
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-5-1.gif)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/MergeCells.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/MergeCells.zip)

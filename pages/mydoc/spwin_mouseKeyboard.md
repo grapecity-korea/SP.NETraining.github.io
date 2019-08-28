@@ -55,7 +55,7 @@ public static void fpSpread1_ButtonClicked(object sender, EditorNotifyEventArgs 
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/SpreadButClickAction.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/SpreadButClickAction.zip)
 
 
 ## Change 이벤트 감지 바로 가기 키
@@ -95,7 +95,7 @@ Spread 컨트롤은 데이터 표시, 입력 및 확인에 많이 쓰입니다. 
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/10207.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/10207.zip)
 
 
 ## 일반셀에서 마우스를 이용하여 넓이나 높이 조절하기
@@ -163,7 +163,7 @@ public partial class Form1 : Form
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/7664_Width.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/7664_Width.zip)
 
 
 ## Tab키로 컨트롤 이동하기
@@ -186,7 +186,7 @@ im.Put(k, FarPoint.Win.Spread.SpreadActions.None);}
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/Tab키로 컨트롤 이동하기.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/Tab키로 컨트롤 이동하기.zip)
 
 
 ## 셀안에 리스트 만들기
@@ -243,4 +243,4 @@ im.Put(k, FarPoint.Win.Spread.SpreadActions.None);}
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/셀안에 리스트 만들기.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/셀안에 리스트 만들기.zip)

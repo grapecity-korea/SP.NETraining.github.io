@@ -191,7 +191,7 @@ Step5：Controller에 MvcSpreadEvent 추가
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/MVC_Spread_Web.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/MVC_Spread_Web.zip)
 
 
 ## Context(컨텍스트) 메뉴

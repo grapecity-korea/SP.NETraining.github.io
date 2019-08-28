@@ -82,4 +82,4 @@ this.FpSpread1.ClientAutoCalculation = true;
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc3-3-1.png)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/Spread_ASP_Formula.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread_ASP_Formula.zip)

@@ -43,7 +43,7 @@ private void saveToolStripMenuItem_Click(object sender, EventArgs e)
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/Spread_SaveStream.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/Spread_SaveStream.zip)
 
 
 ## 스프레드 툴팁 기능
@@ -87,4 +87,4 @@ private void Form1_Load(object sender, EventArgs e)
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/스프레드 툴팁 기능.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/스프레드 툴팁 기능.zip)

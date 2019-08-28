@@ -116,7 +116,7 @@ Spread 표 컨트롤 시스템은 기본값으로 선택기 2종을 제공하며
     ```
     
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/2-2.SpreadSelection.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/2-2.SpreadSelection.zip)
 
 ## Spread Skin 사용자 정의
 
@@ -140,7 +140,7 @@ FarPoint.Win.Spread.SpreadSkin.Save(skin,"c:\\forums3\\farpoint.skn");
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/custom_skin.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/custom_skin.zip)
 
 ## 선택한 셀 렌더러의 배경색을 수정하는 방법
 
@@ -164,4 +164,4 @@ public class SelectionRenderer : FarPoint.Win.Spread.ISelectionRenderer
 간단한 샘플을 참고해 주시기 바랍니다.
 
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/Cell Renderer.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/Cell Renderer.zip)

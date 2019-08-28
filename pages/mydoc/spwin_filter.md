@@ -88,7 +88,7 @@ folder: mydoc
 
 간단한 샘플을 참고해 주시기 바랍니다.
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/filter_rowfilter.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/filter_rowfilter.zip)
 
 ## [WinForms] 그룹화 라인을 설정하는 방법
 
@@ -132,4 +132,4 @@ GroupDataModel과 같은 관련 속성을 사용하여 그룹화를 설정할 �
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/Samples/WinformsSample/spread_win_groupfooter.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/spread_win_groupfooter.zip)
