@@ -23,24 +23,35 @@ folder: mydoc
 1.  Spread로 Excel 열기
 
     ```csharp
-    1:  this.FpSpread1.OpenExcel(this.Server.MapPath("ExcelChartImport.xlsx"));
+
+        this.FpSpread1.OpenExcel(this.Server.MapPath("ExcelChartImport.xlsx"));
+
     ```
 
 2.  만약 Excel 파일 내에 여러 개의 차트가 있다면 Excel의 각 차트를 모두 첫 번째 시트에 표시하도록 설정합니다.
+
     ```csharp
-    1:
-    2:   for (int c = 0; c < FpSpread1.ActiveSheetView.Charts.Count; c++)
-    3:   {
-    4:
-    5:       FpSpread1.ActiveSheetView.Charts[c].PageIndex = 0;
-    6:   }
+
+       for (int c = 0; c < FpSpread1.ActiveSheetView.Charts.Count; c++)
+       {
+
+           FpSpread1.ActiveSheetView.Charts[c].PageIndex = 0;
+       }
+
     ```
+
 3.  webconfig 파일에 차트 설치 노드를 추가합니다.
-    ```csharp
-    1: <httpHandlers>
-    2: <add path="FpChart.axd" verb="*" type="FarPoint.Web.Chart.ChartImageHttpHandler" validate="true" />
-    3: </httpHandlers>
-    ```
+
+```html
+<httpHandlers>
+  <add
+    path="FpChart.axd"
+    verb="*"
+    type="FarPoint.Web.Chart.ChartImageHttpHandler"
+    validate="true"
+  />
+</httpHandlers>
+```
 
 [Excel 에서 차트 가져오기 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/ExcelChartImport.zip)
 
@@ -57,13 +68,13 @@ folder: mydoc
 <br />
 
 ```csharp
-1: this.FpSpread1.SaveExcelToResponse(Server.UrlEncode("test.xls"));
+    this.FpSpread1.SaveExcelToResponse(Server.UrlEncode("test.xls"));
 ```
 
 서버에서 Spread 파일 내보내기:
 
 ```csharp
-1: this.FpSpread1.SaveExcel(Server.MapPath("test.xls"));
+    this.FpSpread1.SaveExcel(Server.MapPath("test.xls"));
 ```
 
 [ 다국어 Excel 파일 내보내기 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread_SaveAsCNName.zip)
@@ -94,33 +105,33 @@ Spread 컨트롤에서 Excel 가져오기 후 테두리가 굵게 변하는 문�
 <br />
 
 ```csharp
-1: //공백이 아닌 마지막 행/열의 인덱스 가져오기
-2: int rowCount = this.FpSpread1.Sheets[0].NonEmptyRowCount;
-3: int colCount = this.FpSpread1.Sheets[0].NonEmptyColumnCount;
-4:
-5: // Cell 테두리 크기 만큼 루프
-6: for (int i = 0; i < rowCount; i++)
-7: {
-8:     for (int j = 0; j < colCount; j++)
-9:     {
-10:         if (this.FpSpread1.Sheets[0].Cells[i, j].Border.BorderStyleBottom == BorderStyle.Solid)
-11:         {
-12:             this.FpSpread1.Sheets[0].Cells[i, j].Border.BorderSizeBottom = 1;
-13:         }
-14:         if (this.FpSpread1.Sheets[0].Cells[i, j].Border.BorderStyleLeft == BorderStyle.Solid)
-15:         {
-16:             this.FpSpread1.Sheets[0].Cells[i, j].Border.BorderSizeLeft = 1;
-17:         }
-18:         if (this.FpSpread1.Sheets[0].Cells[i, j].Border.BorderStyleRight == BorderStyle.Solid)
-19:         {
-20:             this.FpSpread1.Sheets[0].Cells[i, j].Border.BorderSizeRight = 1;
-21:         }
-22:         if (this.FpSpread1.Sheets[0].Cells[i, j].Border.BorderStyleTop == BorderStyle.Solid)
-23:         {
-24:             this.FpSpread1.Sheets[0].Cells[i, j].Border.BorderSizeTop = 1;
-25:         }
-26:     }
-27: }
+    //공백이 아닌 마지막 행/열의 인덱스 가져오기
+    int rowCount = this.FpSpread1.Sheets[0].NonEmptyRowCount;
+    int colCount = this.FpSpread1.Sheets[0].NonEmptyColumnCount;
+
+    // Cell 테두리 크기 만큼 루프
+    for (int i = 0; i < rowCount; i++)
+    {
+        for (int j = 0; j < colCount; j++)
+        {
+            if (this.FpSpread1.Sheets[0].Cells[i, j].Border.BorderStyleBottom == BorderStyle.Solid)
+            {
+                this.FpSpread1.Sheets[0].Cells[i, j].Border.BorderSizeBottom = 1;
+            }
+            if (this.FpSpread1.Sheets[0].Cells[i, j].Border.BorderStyleLeft == BorderStyle.Solid)
+            {
+                this.FpSpread1.Sheets[0].Cells[i, j].Border.BorderSizeLeft = 1;
+            }
+            if (this.FpSpread1.Sheets[0].Cells[i, j].Border.BorderStyleRight == BorderStyle.Solid)
+            {
+                this.FpSpread1.Sheets[0].Cells[i, j].Border.BorderSizeRight = 1;
+            }
+            if (this.FpSpread1.Sheets[0].Cells[i, j].Border.BorderStyleTop == BorderStyle.Solid)
+            {
+                this.FpSpread1.Sheets[0].Cells[i, j].Border.BorderSizeTop = 1;
+            }
+        }
+    }
 ```
 
 <br /><br />

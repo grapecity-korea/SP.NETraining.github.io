@@ -165,9 +165,9 @@ protected void Page_Load(object sender, EventArgs e)
     }
 ```
 
-클라이언트 단, CategoryChanged 함수의 구현 코드:
+**클라이언트 단, CategoryChanged 함수의 구현 코드:**
 
-```csharp
+```javascript
 <script type ="text/javascript" language="javascript">
         function CategoryChanged() {
             var row = FpSpread1.ActiveRow;
@@ -177,44 +177,47 @@ protected void Page_Load(object sender, EventArgs e)
             FpSpread1.CallBack("CategoryChanged," + row.toString() + "," + col.toString());
         }
 </script>
+```
 
 Spread ButtonCommand 이벤트의 백그라운드 처리 코드는 해당 이벤트에서 선택한 유형을 가져온 후 해당 열의 전체 상품을 표시합니다.
 
-/// <summary>
-/// Spread ButtonCommand 이벤트 처리 함수, e.CommandName 값에 따라 이에 상응하는 처리 로직 결정
-/// </summary>
-/// <param name="sender"></param>
-/// <param name="e"></param>
+```csharp
+    /// <summary>
+    /// Spread ButtonCommand 이벤트 처리 함수, e.CommandName 값에 따라 이에 상응하는 처리 로직 결정
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
 
-protected void FpSpread1_ButtonCommand(object sender, FarPoint.Web.Spread.SpreadCommandEventArgs e)
-    {
-        switch (e.CommandName)
+    protected void FpSpread1_ButtonCommand(object sender, FarPoint.Web.Spread.SpreadCommandEventArgs e)
         {
-            case "CategoryChanged":
+            switch (e.CommandName)
+            {
+                case "CategoryChanged":
 
-                // 선택한 제품 카테고리를 가져온 후 제품 명칭 열의 조회 조건으로 설정
-                Point cell = (Point)e.CommandArgument;
-                int categoryid = Convert.ToInt32(this.FpSpread1.ActiveSheetView.Cells[cell.X, cell.Y].Value.ToString());
+                    // 선택한 제품 카테고리를 가져온 후 제품 명칭 열의 조회 조건으로 설정
+                    Point cell = (Point)e.CommandArgument;
+                    int categoryid = Convert.ToInt32(this.FpSpread1.ActiveSheetView.Cells[cell.X, cell.Y].Value.ToString());
 
-                // 제품 열에 상응하는 셀 유형CellType 지정
-                DataSet ds = GetDataSource();
-                DataView product = ds.Tables["Products"].DefaultView;
-                product.RowFilter = string.Format("CategoryID = {0}", categoryid);
-                ComboBoxCellType ctProduct = new FarPoint.Web.Spread.ComboBoxCellType();
-                ctProduct.DataSource = product;
-                ctProduct.DataTextField = "Name";
-                ctProduct.DataValueField = "ID";
-                ctProduct.UseValue = true;
-                FpSpread1.ActiveSheetView.Cells[cell.X, cell.Y + 1].CellType = ctProduct;
+                    // 제품 열에 상응하는 셀 유형CellType 지정
+                    DataSet ds = GetDataSource();
+                    DataView product = ds.Tables["Products"].DefaultView;
+                    product.RowFilter = string.Format("CategoryID = {0}", categoryid);
+                    ComboBoxCellType ctProduct = new FarPoint.Web.Spread.ComboBoxCellType();
+                    ctProduct.DataSource = product;
+                    ctProduct.DataTextField = "Name";
+                    ctProduct.DataValueField = "ID";
+                    ctProduct.UseValue = true;
+                    FpSpread1.ActiveSheetView.Cells[cell.X, cell.Y + 1].CellType = ctProduct;
 
-                break;
-                default:
-                break;
+                    break;
+                    default:
+                    break;
+            }
         }
-    }
 ```
 
-스크린샷:
+<br />
+**스크린샷:**
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc7-2-1.gif)
 
@@ -361,59 +364,50 @@ protected void Page_Load(object sender, EventArgs e)
 ## Cell에 사용자 지정 컨트롤 추가하기
 
 [사용자 지정 컨트롤 추가 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/usercontrol.zip)
+
 <br /><br />
-
 본 장에서는 Cell에 사용자 정의 컨트롤(컴포넌트)을 추가하는 방법에 대해 알아봅니다.
-<br />
 
-1.  구현 방법:
+<br />
+**1. 구현 방법:**
 
     A. BaseCellType 을 상속받은 후 사용자 지정 셀 유형을 생성합니다.
 
     B. PaintCell 및 GetEditorControl 메소드를 오버로딩하여 사용자 정의 컨트롤을 추가합니다.
-    <br />
 
-2.  세부 단계:
+<br />
+**2. 세부 단계:**
 
     A. 사용자 정의 컨트롤(UserControl)을 생성합니다. 여기에서는 FileUpload와 Calendar 표준 컨트롤을 추가했습니다.
 
-    렌더링:  
+<br />
+   **렌더링:**
+
     ![](https://www.grapecity.co.kr/images/training/spread/tc7-4-1.png)
 
     B. 사용자 지정 셀 유형을 생성합니다. 해당 코드는 아래와 같습니다.
 
-    ```
+```csharp
     [Serializable]
-
-            public class TestWebControlInCell : FarPoint.Web.Spread.BaseCellType
-
-            {
-
-                public override Control PaintCell(string id, TableCell parent, FarPoint.Web.Spread.Appearance style, FarPoint.Web.Spread.Inset margin, object value, bool upperLevel)
-
-                {
-
-                    Control twc;
-
-                    twc = parent.Page.LoadControl("WebUserControl1.ascx");
-
-                    twc.ID = "NewID";
-
-                    return twc;
-
-                }
-
-                public override Control GetEditorControl(string id, TableCell parent, FarPoint.Web.Spread.Appearance style, FarPoint.Web.Spread.Inset margin, object value, bool upperLevel)
-
-                {
-                    return null;
-                }
-            }
-    ```
+    public class TestWebControlInCell : FarPoint.Web.Spread.BaseCellType
+    {
+        public override Control PaintCell(string id, TableCell parent, FarPoint.Web.Spread.Appearance style, FarPoint.Web.Spread.Inset margin, object value, bool upperLevel)
+        {
+            Control twc;
+            twc = parent.Page.LoadControl("WebUserControl1.ascx");
+            twc.ID = "NewID";
+            return twc;
+        }
+        public override Control GetEditorControl(string id, TableCell parent, FarPoint.Web.Spread.Appearance style, FarPoint.Web.Spread.Inset margin, object value, bool upperLevel)
+        {
+            return null;
+        }
+    }
+```
 
     C. 셀 유형을 Cell에 적용합니다. 해당 코드는 아래와 같습니다.
 
-    ```
+```csharp
     protected void Page_Load(object sender, EventArgs e)
 
             {
@@ -427,10 +421,12 @@ protected void Page_Load(object sender, EventArgs e)
                 this.FpSpread1.ActiveSheetView.Rows[0].Height = 300;
 
             }
-    ```
+```
 
-    스크린샷:
+<br />
 
-    ![](https://www.grapecity.co.kr/images/training/spread/tc7-4-2.png)
+**스크린샷:**
 
-    [사용자 지정 컨트롤 추가 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/usercontrol.zip)
+![](https://www.grapecity.co.kr/images/training/spread/tc7-4-2.png)
+
+[사용자 지정 컨트롤 추가 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/usercontrol.zip)
