@@ -115,7 +115,7 @@ Controllers\HomeController.cs 파일에서 디폴트 값으로 설정되어 있�
 
 Server Error in '/' Application.
 
-### # Compilation Error
+#### Compilation Error
 
 Description: An error occurred during the compilation of a resource required to service this request. Please review the following specific error details and modify your source code appropriately.
 
@@ -171,6 +171,8 @@ Compiler Error Message: CS0012: The type 'FarPoint.Web.Spread.FpSpread' is defin
 - ASP .NET MVC 프레임 내에 자체 컨트롤이 사라진다면 페이지 디자인 및 구조는 과거 html코드를 작성하던 시대로 완전히 회귀하게 될 것입니다. 다행히 asp .net mvc 프레임에는 자체적으로 HtmlHelper 와 UrlHelper 2가지의 헬퍼클래스를 갖추고 있습니다. 또한 MvcContrib 확장 프로젝트에는 확장된 헬퍼클래스가 존재하기 때문에 완벽한 html을 사용해서 필요한 페이지를 구성할 수 있을 뿐만 아니라 이들 헬퍼클래스를 활용하여 완성할 수 있습니다. 단, 마지막 런타임에는 html 코드를 생성해야 합니다.
 
 [Spread.Net ASP.Net MVC - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/MVC_Spread_Web.zip)
+
+---
 
 ## Context(컨텍스트) 메뉴
 
@@ -234,6 +236,8 @@ CommandArgument 속성과 CommandCode 속성은 클릭 메뉴 속성을 설정�
 18: FpSpread1.ContextMenus.Add(rowHeaderContextMenu);
 ```
 
+---
+
 ## Spread 페이징을 통한 BS프로그램 성능 개선
 
 바인딩 데이터량이 크게 늘어날 경우(1000개 이상) 데이터 로딩에 약 30-60초 정도의 시간이 소요되면서 이와 함께 효율성이 떨어지는 문제가 보고되고 있습니다. 아래와 같은 사항을 고려해 보시기 바랍니다.
@@ -251,6 +255,8 @@ CommandArgument 속성과 CommandCode 속성은 클릭 메뉴 속성을 설정�
 
 <br /><br />
 위의 두 가지 방법을 사용할 경우 1000개의 데이터 로딩에 소요되는 시간은 약 5-10초 입니다.
+
+---
 
 ## CommandBar에 사용자 지정 버튼 추가하기
 
