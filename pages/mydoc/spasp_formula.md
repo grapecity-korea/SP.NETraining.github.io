@@ -53,18 +53,19 @@ Spread 컨트롤은 교차 시트 함수 설정 기능을 지원합니다. 본 �
 **1.  Spread ClientAutoCalculation 속성을 설정하여 클라이언트에서의 Spread 자동 계산 기능을 사용합니다.**
 
 ```csharp
-this.FpSpread1.ClientAutoCalculation = false;
+    this.FpSpread1.ClientAutoCalculation = false;
 ```
 
+<br />
 **2. 셀 함수 설정：**
 
 ```csharp
-this.FpSpread1.Sheets[1].Cells[0, 0].Formula = "sheet1!A2+sheet1!A1";
+    this.FpSpread1.Sheets[1].Cells[0, 0].Formula = "sheet1!A2+sheet1!A1";
 ```
 
     ![](https://www.grapecity.co.kr/images/training/spread/tc3-2-1.gif)
 
-    이러한 방법으로 간단하게 설정하면 해당 기능을 사용할 수 있습니다.
+이러한 방법으로 간단하게 설정하면 해당 기능을 사용할 수 있습니다.
 
 ---
 
@@ -79,13 +80,14 @@ Spread 컨트롤의 강력한 함수엔진은 300여 종류의 내장 함수를 
 **테스트 코드는 아래와 같습니다.**
 
 ```csharp
-this.FpSpread1.Sheets[0].Cells[0,2].Formula = "SUM(A1:B1)";
+    this.FpSpread1.Sheets[0].Cells[0,2].Formula = "SUM(A1:B1)";
 ```
 
 <br />
 **클라이언트 자동 계산 기능 설정:**
+
 ```csharp
-this.FpSpread1.ClientAutoCalculation = true;
+    this.FpSpread1.ClientAutoCalculation = true;
 ```
 
 <br />
@@ -93,8 +95,8 @@ this.FpSpread1.ClientAutoCalculation = true;
 시트(폼) 인덱스를 통해 교차 시트 함수를 설정합니다.
 
 ```csharp
-// 교차 시트 함수
-This.FpSpread1.Sheets[1].Cells[0, 0].Formula = "sheet1!A1+sheet1!B1";
+    // 교차 시트 함수
+    This.FpSpread1.Sheets[1].Cells[0, 0].Formula = "sheet1!A1+sheet1!B1";
 ```
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc3-3-1.png)
