@@ -17,7 +17,7 @@ folder: mydoc
 
 우선 확실히 해둘 필요가 있는 부분은 MVC 4 환경에서는 ASP webForm 에서처럼 끌어서 놓기(Drag&Drop) 컨트롤을 재사용할 수 없다는 점입니다. 따라서 아래와 같은 단계를 통해 추가를 진행하게 됩니다.
 
-###Step1: FarPoint.Mvc.Spread.dll 참조 추가
+### Step1: FarPoint.Mvc.Spread.dll 참조 추가
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc10-1-1.png)
 
@@ -44,7 +44,7 @@ Internet Application 템플릿을 선택하고 보기 엔진(view engine)은 Raz
 - C:\Program Files (x86)\GrapeCity\Spread Studio 10\ASP.NET\v1X.XX.XXXXX.0\bin\FarPoint.Mvc.Spread.dll
 - C:\Program Files (x86)\GrapeCity\Spread Studio 10\ASP.NET\v1X.XX.XXXXX.0\bin\FarPoint.Web.Spread.dll
 
-###Step2：Licenses.licx 추가
+### Step2：Licenses.licx 추가
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc10-1-5.png)
 
@@ -59,7 +59,7 @@ Properties 폴더에 txt 형식의 파일(Licenses.licx)을 추가하여 프로�
 
 이로써 MVC 4의 Spread ASP.net 설치환경이 정상적으로 완료되었습니다.
 
-###Step3: Global.asax.cs 파일 수정
+### Step3: Global.asax.cs 파일 수정
 
 Global.asax 파일을 더블 클릭하여 코드를 오픈하고 Application_Start 함수 내용을 아래와 같이 변경합니다.
 
@@ -77,7 +77,7 @@ Global.asax 파일을 더블 클릭하여 코드를 오픈하고 Application_Sta
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc10-1-6.png)
 
-###Step4：Views\Home\Index.cshtml수정 - 컨트롤 추가
+### Step4：Views\Home\Index.cshtml수정 - 컨트롤 추가
 
 최상단에 using 코드 행을 추가하여 namespace를 불러옵니다.
 
@@ -115,7 +115,7 @@ Controllers\HomeController.cs 파일에서 디폴트 값으로 설정되어 있�
 
 Server Error in '/' Application.
 
-#### Compilation Error
+### # Compilation Error
 
 Description: An error occurred during the compilation of a resource required to service this request. Please review the following specific error details and modify your source code appropriately.
 
@@ -136,7 +136,7 @@ Compiler Error Message: CS0012: The type 'FarPoint.Web.Spread.FpSpread' is defin
 
 여기까지 이상이 없이 마무리가 되었다면 Spread Web 7.2 컨트롤은 성공적으로 MVC 프로그램 메인화면에 추가됩니다.
 
-###Step5：Controller에 MvcSpreadEvent 추가
+### Step5：Controller에 MvcSpreadEvent 추가
 
 우선 MvcSpreadEvent의 개념을 명확히 해야 할 필요가 있습니다. MvcSpread는 3개의 주요 이벤트를 첨가할 수 있습니다: Init, Load, PreRender
 <br /><br />
@@ -393,7 +393,7 @@ Spread 컨트롤 대부분의 기능은 Google Chrome을 지원합니다. Google
 **1. FrozenRowCount 속성과 FrozenColumnCount 속성 - 행/열 고정 기능을 지원하지 않습니다.**
 **2. ImeMode 속성 - 셀 유형의 입력기 상태를 편집할 수 있습니다.**
 
-<br /><br />
+<br />
 **테스트 코드：**
 
     ```csharp
@@ -404,7 +404,7 @@ Spread 컨트롤 대부분의 기능은 Google Chrome을 지원합니다. Google
 
     ![](https://www.grapecity.co.kr/images/training/spread/tc10-5-5.png)
 
-<br /><br />
+<br />
 **3. UIVirtualization 속성**
 
     UIVirtualization이 'false'로 설정되어 있는 경우 스크롤바를 끌어서 놓기(Drag&Drop)할 때 Spread 상단의 셀은 스크롤바와 함께 움직이지 않습니다. 드래그 앤 드롭을 해제하고 난 후(마우스를 누르지 않은 상태)에야 열 헤더를 현재 위치로 이동할 수 있습니다. 이 속성은 Firefox에서는 사용할 수 없습니다.
