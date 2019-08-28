@@ -26,8 +26,9 @@ folder: mydoc
 > Items &rarr; Text 필드 get/set  
 > Values &rarr; Value 필드 get/set  
 > OnClientChanged &rarr; 클라이언트 get/set 방법
-> <br />
-> 예시:
+
+ <br />
+ **예시:**
 
 1.  Spread 초기화
 
