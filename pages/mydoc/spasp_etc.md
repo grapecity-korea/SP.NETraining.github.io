@@ -122,7 +122,7 @@ Description: An error occurred during the compilation of a resource required to 
 Compiler Error Message: CS0012: The type 'FarPoint.Web.Spread.FpSpread' is defined in an assembly that is not referenced. You must add a reference to assembly 'FarPoint.Web.Spread, Version=1X.XX.XXXXX.X, Culture=neutral, PublicKeyToken=327c3516b1b18457'.
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc10-1-7.png)
-<br />
+<br /><br />
 이러한 Error는 Step1 단계 과정의 문제로 발생합니다.
 2 개의 dll를 불러오기하여 속성을 변경해야 합니다: Copy Local—True
 <br />
