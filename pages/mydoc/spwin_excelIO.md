@@ -57,7 +57,7 @@ this.fpSpread1.ActiveSheet.AddShape(rShape);
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/Spread_Win_CopyImageFromExcel.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/Spread_Win_CopyImageFromExcel.zip)
 
 
 ## Spread에서 구현하는 Excel의 삭제, 실행 취소, 다시 실행 기능
@@ -243,7 +243,7 @@ public override bool PerformUndoAction(object sender)
  }
 ```
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/Spread_WF_Delete_Content.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/Spread_WF_Delete_Content.zip)
 
 
 ## Excel의 인쇄 설정 정보 획득하기
@@ -296,7 +296,7 @@ private void Form1_Load(object sender, EventArgs e)
 
 이외에 Printinfo는 확대/축소, 인쇄 페이지 범위 설정 및 스마트 인쇄 등 기능을 포함한 매우 자세한 속성 설정을 할 수 있습니다. 더 자세한 내용은 도움말 문서를 참고하시기 바랍니다.
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/Spread_Win_GetExcelPrintInfo.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/Spread_Win_GetExcelPrintInfo.zip)
 
 
 ## Spread에서 테두리 설정 후 내보내기
@@ -316,7 +316,7 @@ private void ExportLineBorder()
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/Spread_win_exportlineborder.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/Spread_win_exportlineborder.zip)
 
 
 
@@ -349,4 +349,4 @@ private void AddImageToCell()
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/Spread_win_exportimage.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/Spread_win_exportimage.zip)

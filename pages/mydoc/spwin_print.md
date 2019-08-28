@@ -70,7 +70,7 @@ Spread 표 컨트롤은 PDF 파일로 인쇄하기 기능을 지원합니다. Pr
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/PrintToPDFWithBackGroundImage_CS.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/PrintToPDFWithBackGroundImage_CS.zip)
 
 
 ## Spread 머리글 바닥글 인쇄 설정-이미지 삽입하기
@@ -122,7 +122,7 @@ Spread의 인쇄와 인쇄 미리보기는 PrintInfo 유형으로 구현합니�
 
   
 
-[샘플 다운로드](http://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/PrintHeaderFooterDemo.zip)
+[샘플 다운로드](http://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/PrintHeaderFooterDemo.zip)
 
 
 ## Spread 머리글 또는 바닥글 사용자 지정 인쇄
@@ -158,7 +158,7 @@ FarPoint.Win.Spread.PrintInfo printset = new FarPoint.Win.Spread.PrintInfo();
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/pagenumber_frozenrow.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/pagenumber_frozenrow.zip)
 
 
 ## Spread는 Excel 인쇄 미리보기를 위해 A4 용지의 점선을 적용할 수 있습니다.
@@ -233,4 +233,4 @@ int rowCount = this.fpSpread1.ActiveSheet.RowCount;
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/Spread_WF_PrintPreview.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/Spread_WF_PrintPreview.zip)

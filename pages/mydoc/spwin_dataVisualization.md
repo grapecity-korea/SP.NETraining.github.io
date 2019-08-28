@@ -59,7 +59,7 @@ fpSpread1.Sheets[0].AddSparkline(data, data2, FarPoint.Win.Spread.SparklineType.
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/SparklinesDemo.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/SparklinesDemo.zip)
 
 
 
@@ -253,4 +253,4 @@ Spread for Winforms컨트롤은 스파크라인 기능을 제공하여 모든 �
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/SpreadSparkline.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/SpreadSparkline.zip)

@@ -43,7 +43,7 @@ private void button1_Click(object sender, EventArgs e)
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms9-1-2.png)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/FormulaProviderCase.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/FormulaProviderCase.zip)
 
 
 ## FormulaProvider 사용하기
@@ -76,7 +76,7 @@ Formula Provider 사용하기
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/FormulaProvider.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/FormulaProvider.zip)
 
 
 ## 열 끝에 통계 수식 추가하기
@@ -104,7 +104,7 @@ Spread 표 컨트롤은[SetAggregationType()](http://helpcentral.componentone.co
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/CustomFormulaColFooterAggregation_CS.zip)
+[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/CustomFormulaColFooterAggregation_CS.zip)
 
 
 
@@ -122,7 +122,7 @@ formulaEditor.ShowDialog();
 
   
 
-[샘플 다운로드](http://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/spread_win_callformulaeditor.zip)
+[샘플 다운로드](http://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/spread_win_callformulaeditor.zip)
 
 
 ## 수식이 폼에서 셀값을 참조하는 방법
@@ -137,4 +137,4 @@ this.fpSpread1_Sheet1.Cells[1, 0].Formula = "SUM(Sheet2!A1:A3)";
 
   
 
-[샘플 다운로드](http://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/WinformsSample/spread_win_callformulaeditor.zip)
+[샘플 다운로드](http://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/spread_win_callformulaeditor.zip)
