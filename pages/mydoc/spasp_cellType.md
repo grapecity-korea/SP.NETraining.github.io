@@ -93,29 +93,28 @@ folder: mydoc
 
 3.  ComboBoxCellType 포그라운드(foreground)에서 백그라운드 Spread 이벤트 ButtonCommand 트리거 변경을 선택하여 현재 선택한 항목의 Text Value값을 가져옵니다.
 
-    ```csharp
-    /// <summary>
-    /// ComboBoxCellType 현재 선택한 항목의 Text Value값 가져오기
-    /// </summary>
-    	/// <param name="sender"></param>
-      	/// <param name="e"></param>
-    	protected void FpSpread1_ButtonCommand(object sender, FarPoint.Web.Spread.SpreadCommandEventArgs e)
-            {
-                // 현재 셀의 행 및 열 인덱스 가져오기
-                Point _test = (Point)e.CommandArgument;
-                int _row = _test.X;
-                int _col = _test.Y;
-                string _value = this.FpSpread1.ActiveSheetView.Cells[_row, _col].Value.ToString() ;
-                string _text = this.FpSpread1.ActiveSheetView.Cells[_row, _col].Text;
-            }
+            ```csharp
+            /// <summary>
+            /// ComboBoxCellType 현재 선택한 항목의 Text Value값 가져오기
+            /// </summary>
+            	/// <param name="sender"></param>
+              	/// <param name="e"></param>
+            	protected void FpSpread1_ButtonCommand(object sender, FarPoint.Web.Spread.SpreadCommandEventArgs e)
+                    {
+                        // 현재 셀의 행 및 열 인덱스 가져오기
+                        Point _test = (Point)e.CommandArgument;
+                        int _row = _test.X;
+                        int _col = _test.Y;
+                        string _value = this.FpSpread1.ActiveSheetView.Cells[_row, _col].Value.ToString() ;
+                        string _text = this.FpSpread1.ActiveSheetView.Cells[_row, _col].Text;
+                    }
 
-    ```
+            ```
 
-    ![](https://www.grapecity.co.kr/images/training/spread/tc7-1-1.png)
+            ![](https://www.grapecity.co.kr/images/training/spread/tc7-1-1.png)
 
-<br /><br />
-[Spread 셀 유형을 이용한 ComboBoxCellType 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/ComboBoxCellType.zip)
-<br /><br />
+    <br />
+        [Spread 셀 유형을 이용한 ComboBoxCellType 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/ComboBoxCellType.zip)
 
 ## ComboBoxCellType을 통한 직렬데이터 입력 구현
 
@@ -217,6 +216,7 @@ protected void FpSpread1_ButtonCommand(object sender, FarPoint.Web.Spread.Spread
 스크린샷:
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc7-2-1.gif)
+
 [ComboBoxCellType을 통한 직렬데이터 입력 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/CascadeComboBox.zip)
 
 ## 사용자 지정 이미지 버튼 링크
@@ -351,9 +351,11 @@ protected void Page_Load(object sender, EventArgs e)
 ```
 
 스크린샷:
+
 ![](https://www.grapecity.co.kr/images/training/spread/tc7-3-1.png)
+
+<br />
 [사용자 지정 이미지 버튼 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/7862_Link.zip)
-<br /><br />
 
 ## Cell에 사용자 지정 컨트롤 추가하기
 
@@ -427,4 +429,5 @@ protected void Page_Load(object sender, EventArgs e)
     스크린샷:
 
     ![](https://www.grapecity.co.kr/images/training/spread/tc7-4-2.png)
+
     [사용자 지정 컨트롤 추가 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/usercontrol.zip)
