@@ -230,6 +230,8 @@ ul#results-container a:hover {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin-top:10px;
+    border-radius: 6px;
+    border: 0;
 }
 /* end search */
 
