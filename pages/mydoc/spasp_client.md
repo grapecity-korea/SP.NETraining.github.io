@@ -202,12 +202,13 @@ protected void Page_Load(object sender, EventArgs e)
 JS를 통해 Spread Studio for ASP.NET 컨트롤의 Spread 높이를 설정하는 방법에 대한 문의가 게시판을 통해 자주 등장하고 있습니다. 본 장에서는 높이 설정 방법에 대해 알아봅니다.
 <br /><br />
 **구현 배경:**
+
 사용자가 Spread를 포함한 페이지에 대한 요청을 제기할 경우 Spread는 브라우저 내에서 HTML Table로 렌더링됩니다.
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-3-1.png)
 
 따라서 포그라운드에서 Spread에 대한 동작을 실행할 경우 Spread에 내장된 일부 이벤트 및 메소드를 사용하는 것 외에 Table에 대한 모든 DOM 속성 및 js 동작을 Spread에 시험적용합니다.
-
+<br /><br />
 여기에서는 Spread 생성 테이블에 대한 구현 방법을 알아보겠습니다.
 
 ```html
@@ -268,8 +269,9 @@ Html Button 클릭 이벤트를 통해 Spread 크기 변경을 트리거해줍�
 
 [ JavaScript로 행(row) 배경색 및 잠금 -샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/3615.zip)
 <br /><br />
-본 장에서는 JS를 이용한 행(row) 배경색 설정 및 행 잠금 방법에 대해 알아봅니다.
+본 장에서는 JS를 이용한 행(row) 배경색 설정 및 행 잠금 방법에 대해 알아봅니다.\
 
+<br /><br />
 **JS 코드:**
 
 ```javascript
@@ -302,6 +304,7 @@ function Button1_onclick() {
 최근 '동일 내용의 연속된 셀 병합'에 대한 필요성이 제기되고 있습니다. 예를 들면, 하나의 열에 속한 연속된 셀들이 동일한 값을 가지고 있을 때 하나의 셀로 병합하여 나타내는 방식을 말합니다.
 본 장에서는 Cell 클라이언트 속성인 rowSpan와 colSpan를 사용하여 위의 기능을 구현하는 방법에 대해 알아봅니다.
 
+<br /><br />
 아래의 예제는 특정 열의 모든 행에 대한 루프를 통해 인접한 셀의 값에 따라 그룹화를 진행하는 방법을 나타내고 있습니다.
 
 ```javascript
@@ -341,5 +344,3 @@ function Button1_onclick() {
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-5-1.gif)
 
 [JavaScript를 이용한 셀 병합 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/MergeCells.zip)
-
-{% include links.html %}
