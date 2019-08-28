@@ -21,14 +21,16 @@ folder: mydoc
 
 **1. 포그라운드를 통해 정렬 기능을 구현하기 위해서는 우선 AllowSort 속성을 설정해주어야 합니다.**
 
-protected void Page_Load(object sender, EventArgs e)
-{
-if (IsPostBack)
-{
-return;
-}
-this.FpSpread1.Sheets[0].AllowSort = true;
-}
+     ```csharp
+     protected void Page_Load(object sender, EventArgs e)
+     {
+     if (IsPostBack)
+     {
+     return;
+     }
+     this.FpSpread1.Sheets[0].AllowSort = true;
+     }
+     ```
 
 **2. Spread의 디폴트 정렬 메소드는 포그라운드에서 열 헤더 '더블클릭' 이벤트를 통해 정렬하도록 되어 있습니다. 따라서 우선 포그라운드의 클릭 이벤트를 필요에 맞게 재설정해야 합니다.**
 
@@ -47,15 +49,15 @@ this.FpSpread1.Sheets[0].AllowSort = true;
 
 **3. 포그라운드에서 Spread DON 노드를 가져오고 정렬 메소드를 호출합니다.**
 
-```javascript
-  <script type="text/javascript">
-   function Sort() {
-   spread = document.getElementById("<%=FpSpread1.ClientID%>");
-   spread.SortColumn(spread.ActiveCol);
-   alert("정렬");
-   }
-   </script>
-```
+     ```javascript
+     <script type="text/javascript">
+     function Sort() {
+     spread = document.getElementById("<%=FpSpread1.ClientID%>");
+     spread.SortColumn(spread.ActiveCol);
+     alert("정렬");
+     }
+     </script>
+     ```
 
 [ColumnHeader클릭을 통한 정렬 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread_ASP_SortJS.zip)
 
@@ -76,45 +78,45 @@ Spread는 다음과 같은 두 가지 방식을 통화 그룹핑을 진행합니
 
 **1. 그룹핑 코드: 아래와 같은 방식으로 주석을 생성합니다.**
 
-```csharp
-protected void Page_Load(object sender, EventArgs e)
-{
-if (IsPostBack)
-{
-return;
-}
-GroupDataModel gdm;
+     ```csharp
+     protected void Page_Load(object sender, EventArgs e)
+     {
+     if (IsPostBack)
+     {
+     return;
+     }
+     GroupDataModel gdm;
 
-// 그룹바가 보이도록 설정
-FpSpread1.Sheets[0].GroupBarVisible = true;
-FpSpread1.Sheets[0].GroupBarText = " ColumnHeader의 드래그 앤 드롭을 통한 그룹핑";
+     // 그룹바가 보이도록 설정
+     FpSpread1.Sheets[0].GroupBarVisible = true;
+     FpSpread1.Sheets[0].GroupBarText = " ColumnHeader의 드래그 앤 드롭을 통한 그룹핑";
 
-//group정보 설정
-FarPoint.Web.Spread.SheetView sv = this.FpSpread1.ActiveSheetView;
-sv.AllowGroup = true;
+     //group정보 설정
+     FarPoint.Web.Spread.SheetView sv = this.FpSpread1.ActiveSheetView;
+     sv.AllowGroup = true;
 
-////데이터 모델을 그룹핑 모델에 전송
-gdm = new GroupDataModel(sv.DataModel);
-sv.DataModel = gdm;
+     ////데이터 모델을 그룹핑 모델에 전송
+     gdm = new GroupDataModel(sv.DataModel);
+     sv.DataModel = gdm;
 
-//그룹핑 열 및 정렬 방식 설정
-FarPoint.Web.Spread.SortInfo[] sort = new FarPoint.Web.Spread.SortInfo[1];
+     //그룹핑 열 및 정렬 방식 설정
+     FarPoint.Web.Spread.SortInfo[] sort = new FarPoint.Web.Spread.SortInfo[1];
 
-// 파라미터1은 그룹핑 열, 파라미터2는 정렬방식, true는 오름차순 정렬
-sort[0] = new FarPoint.Web.Spread.SortInfo(1, true);
-gdm.Group(sort);
-FarPoint.Web.Spread.Model.Group group = new Group(gdm,
-(FarPoint.Web.Spread.Model.Group)gdm.Groups[0], 0, false);
+     // 파라미터1은 그룹핑 열, 파라미터2는 정렬방식, true는 오름차순 정렬
+     sort[0] = new FarPoint.Web.Spread.SortInfo(1, true);
+     gdm.Group(sort);
+     FarPoint.Web.Spread.Model.Group group = new Group(gdm,
+     (FarPoint.Web.Spread.Model.Group)gdm.Groups[0], 0, false);
 
-//groupfooter 정보 설정
-GroupFooter groupfooter = new GroupFooter(group);
-FpSpread1.Sheets[0].GroupFooterVisible = true;
+     //groupfooter 정보 설정
+     GroupFooter groupfooter = new GroupFooter(group);
+     FpSpread1.Sheets[0].GroupFooterVisible = true;
 
-//ColumnFooter, GroupFooter 제1열 수식은 Sum으로 설정, 제5열의 모든 셀 총합 계산
-this.FpSpread1.ActiveSheetView.Columns[0].AggregationType
-= FarPoint.Web.Spread.Model.AggregationType.Sum;
-}
-```
+     //ColumnFooter, GroupFooter 제1열 수식은 Sum으로 설정, 제5열의 모든 셀 총합 계산
+     this.FpSpread1.ActiveSheetView.Columns[0].AggregationType
+     = FarPoint.Web.Spread.Model.AggregationType.Sum;
+     }
+     ```
 
 <br />
 **효과:**
@@ -141,40 +143,40 @@ Spread for ASP.NET 컨트롤은 그룹핑 기능이 포함되어 있습니다.
 본 예제는 매우 간단한 구현 방법을 소개하고 있습니다.
 **폼 안의 모든 행(공백이 아닌)을 루프시키고 IsGroup 메소드를 통해 그룹핑 행 여부를 판단해야 합니다. 그룹핑 행이 맞다면 관련 정보를 가져오게 됩니다.**
 
-```csharp
-1: private void CalculateGroups(object sender)
-2: {
-3: FarPoint.Web.Spread.FpSpread ss = (FarPoint.Web.Spread.FpSpread)sender;
-4: FarPoint.Web.Spread.Model.GroupDataModel gm;
-5: int total;
-6: int column = 0;
-7: int y = 0;
-8: gm = (FarPoint.Web.Spread.Model.GroupDataModel)ss.ActiveSheetView.DataModel;
-9:
-10: for (int i = 0; i < ss.ActiveSheetView.NonEmptyRowCount; i++)
-11: {
-12: if (gm.IsGroup(i))
-13: {
-14: FarPoint.Web.Spread.Model.Group g;
-15: g = gm.GetGroup(i);
-16: g.Expanded = false;
-17: total = 0;
-18: total = g.Rows.Count;
-19: column = g.Column;
-20:
-21: string s = gm.TargetModel.GetValue(getRow(g), column).ToString();
-22: s = column.ToString() + ":" + s;
-23: g.Text = s + " (" + total.ToString() + ")";
-24: }
-25: }
-26: }
-27:
-28: int getRow(FarPoint.Web.Spread.Model.Group group)
-29: {
-30: if (group.Rows[0] is FarPoint.Web.Spread.Model.Group) return getRow(group.Rows[0] as FarPoint.Web.Spread.Model.Group);
-31: return (int)group.Rows[0];
-32: }
-```
+     ```csharp
+     1: private void CalculateGroups(object sender)
+     2: {
+     3: FarPoint.Web.Spread.FpSpread ss = (FarPoint.Web.Spread.FpSpread)sender;
+     4: FarPoint.Web.Spread.Model.GroupDataModel gm;
+     5: int total;
+     6: int column = 0;
+     7: int y = 0;
+     8: gm = (FarPoint.Web.Spread.Model.GroupDataModel)ss.ActiveSheetView.DataModel;
+     9:
+     10: for (int i = 0; i < ss.ActiveSheetView.NonEmptyRowCount; i++)
+     11: {
+     12: if (gm.IsGroup(i))
+     13: {
+     14: FarPoint.Web.Spread.Model.Group g;
+     15: g = gm.GetGroup(i);
+     16: g.Expanded = false;
+     17: total = 0;
+     18: total = g.Rows.Count;
+     19: column = g.Column;
+     20:
+     21: string s = gm.TargetModel.GetValue(getRow(g), column).ToString();
+     22: s = column.ToString() + ":" + s;
+     23: g.Text = s + " (" + total.ToString() + ")";
+     24: }
+     25: }
+     26: }
+     27:
+     28: int getRow(FarPoint.Web.Spread.Model.Group group)
+     29: {
+     30: if (group.Rows[0] is FarPoint.Web.Spread.Model.Group) return getRow(group.Rows[0] as FarPoint.Web.Spread.Model.Group);
+     31: return (int)group.Rows[0];
+     32: }
+     ```
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc4-3-1.gif)
 
@@ -193,36 +195,36 @@ Spread for ASP.NET는 워크시트와 검색 대기 문자열 설정을 통해 �
 <br />
 **우선 헤더 내용의 검색 방법에 대해 알아봅니다.**
 
-```csharp
-protected void Page_Load(object sender, EventArgs e)
-{
-FpSpread1.Sheets[0].RowHeader.Cells[0, 0].Text = "Row Header";
-FpSpread1.Sheets[0].RowHeader.Cells[0, 0].Tag= "Row Header Tag";
-FpSpread1.Sheets[0].RowHeader.Cells[0, 0].Note = "Row Header Note";
-}
+     ```csharp
+     protected void Page_Load(object sender, EventArgs e)
+     {
+     FpSpread1.Sheets[0].RowHeader.Cells[0, 0].Text = "Row Header";
+     FpSpread1.Sheets[0].RowHeader.Cells[0, 0].Tag= "Row Header Tag";
+     FpSpread1.Sheets[0].RowHeader.Cells[0, 0].Note = "Row Header Note";
+     }
 
-protected void Button1_Click(object sender, EventArgs e)
-{
-int x = 0;
-int x = 0;
-FarPoint.Web.Spread.SearchFoundFlags sff;
-//텍스트 검색 및 검색 범위 설정
-sff = FpSpread1.SearchHeaders(0, "Row Header", true, false, false, false, false, true, false, false, 0, 0, 2, 2, ref x, ref y);
-}
-```
+     protected void Button1_Click(object sender, EventArgs e)
+     {
+     int x = 0;
+     int x = 0;
+     FarPoint.Web.Spread.SearchFoundFlags sff;
+     //텍스트 검색 및 검색 범위 설정
+     sff = FpSpread1.SearchHeaders(0, "Row Header", true, false, false, false, false, true, false, false, 0, 0, 2, 2, ref x, ref y);
+     }
+     ```
 
-<br /><br />
-**이제 기본 셀의 데이터 검색 방법에 대해 알아보겠습니다. 코드는 아래와 같습니다.**
+     <br /><br />
+     **이제 기본 셀의 데이터 검색 방법에 대해 알아보겠습니다. 코드는 아래와 같습니다.**
 
-```csharp
-protected void Button2_Click(object sender, EventArgs e)
-{
-int rowindx=0;
-int rowindx=0;
-//타겟 내용이 검색되면 검색결과로 리턴됩니다. 그렇지 않을 경우 null이 리턴됩니다.
-string searchStr = FpSpread1.Search(0, "Total", true, true, false, false, 0, 0, 2, 3, ref rowindx, ref colindx);
-}
-```
+     ```csharp
+     protected void Button2_Click(object sender, EventArgs e)
+     {
+     int rowindx=0;
+     int rowindx=0;
+     //타겟 내용이 검색되면 검색결과로 리턴됩니다. 그렇지 않을 경우 null이 리턴됩니다.
+     string searchStr = FpSpread1.Search(0, "Total", true, true, false, false, 0, 0, 2, 3, ref rowindx, ref colindx);
+     }
+     ```
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc4-4-1.gif)
 
@@ -268,13 +270,13 @@ Spread 컨트롤은 기본 필터, 필터바(bar) 및 Microsoft Excel과 유사�
 
 사용자의 필요에 따른 필터링 설정이 가능하므로 더욱 손쉽게 사용할 수 있습니다. 폼(form) 행 필터링을 사용할 수 있습니다. 특정 열을 대상으로 필터링을 진행할 수 있기 때문에 조건에 부합하는 행만을 표시할 수 있으며 동시에 이들 행의 모양(외관)을 임의로 설정할 수 있습니다. 기본 필터링 기능을 사용하는 동시에 사용자 정의 필터링 또한 간편하게 구현해낼 수 있습니다.
 
-```csharp
-1: //6번째 열 필터링 가능으로 설정
-2: FarPoint.Web.Spread.HideRowFilter hideRowFilter = new FarPoint.Web.Spread.HideRowFilter(FpSpread1.ActiveSheetView);
-3: hideRowFilter.ShowFilterIndicator = true; //Spread 필터링 버튼 표시
-4: hideRowFilter.AddColumn(6);
-5: FpSpread1.ActiveSheetView.RowFilter = hideRowFilter; //필터링 적용
-```
+     ```csharp
+     1: //6번째 열 필터링 가능으로 설정
+     2: FarPoint.Web.Spread.HideRowFilter hideRowFilter = new FarPoint.Web.Spread.HideRowFilter(FpSpread1.ActiveSheetView);
+     3: hideRowFilter.ShowFilterIndicator = true; //Spread 필터링 버튼 표시
+     4: hideRowFilter.AddColumn(6);
+     5: FpSpread1.ActiveSheetView.RowFilter = hideRowFilter; //필터링 적용
+     ```
 
 <br />
 **2.  필터바 필터링 설정:**
@@ -283,22 +285,22 @@ Spread 컨트롤은 기본 필터, 필터바(bar) 및 Microsoft Excel과 유사�
 
 현재 열의 속성을 필터링 조건으로 설정할 수 있습니다. 필터 버튼을 클릭 하면 Spread는 자동으로 해당 조건에 맞는 행을 필터링합니다.
 
-```csharp
-1:
-2: //Spread 필터링 모델 설정
-3: sheet.AutoFilterMode = FarPoint.Web.Spread.AutoFilterMode.FilterBar;
-4:
-5: //네 번째 열의 필터 유형을 수치형으로 설정
-6: FarPoint.Web.Spread.FilterBarCellType ct = new FarPoint.Web.Spread.FilterBarCellType();
-7: ct.MenuType = FarPoint.Web.Spread.FilterMenuType.Number;
-8: sheet.FilterBar.Cells[3].CellType = ct;
-9:
-10: //5, 6번째 열의 필터유형을 날짜형으로 설정
-11: FarPoint.Web.Spread.FilterBarCellType ct1 = new FarPoint.Web.Spread.FilterBarCellType();
-12: ct1.MenuType = FarPoint.Web.Spread.FilterMenuType.Date;
-13: FpSpread1.ActiveSheetView.FilterBar.Cells[5].CellType = ct1;
-14: FpSpread1.ActiveSheetView.FilterBar.Cells[6].CellType = ct1;
-```
+     ```csharp
+     1:
+     2: //Spread 필터링 모델 설정
+     3: sheet.AutoFilterMode = FarPoint.Web.Spread.AutoFilterMode.FilterBar;
+     4:
+     5: //네 번째 열의 필터 유형을 수치형으로 설정
+     6: FarPoint.Web.Spread.FilterBarCellType ct = new FarPoint.Web.Spread.FilterBarCellType();
+     7: ct.MenuType = FarPoint.Web.Spread.FilterMenuType.Number;
+     8: sheet.FilterBar.Cells[3].CellType = ct;
+     9:
+     10: //5, 6번째 열의 필터유형을 날짜형으로 설정
+     11: FarPoint.Web.Spread.FilterBarCellType ct1 = new FarPoint.Web.Spread.FilterBarCellType();
+     12: ct1.MenuType = FarPoint.Web.Spread.FilterMenuType.Date;
+     13: FpSpread1.ActiveSheetView.FilterBar.Cells[5].CellType = ct1;
+     14: FpSpread1.ActiveSheetView.FilterBar.Cells[6].CellType = ct1;
+     ```
 
 <br />
 **3.  Excel 스타일 필터링:**
@@ -308,35 +310,35 @@ Spread 컨트롤은 기본 필터, 필터바(bar) 및 Microsoft Excel과 유사�
 
 또한 여러 열(Multi-column)에 대한 정렬도 가능합니다. 필터링 기능은 중첩 사용이 가능하며 이는 곧 각각의 필터링 조건이 모두 현재의 필터링 결과를 기반으로 하고 있음을 뜻합니다.
 
-```csharp
-1: FpSpread1.ActiveSheetView.DefaultStyle.VerticalAlign = VerticalAlign.Middle;
-2: //엑셀 타입의 필터 선언
-3: FpSpread1.ActiveSheetView.AutoFilterMode = FarPoint.Web.Spread.AutoFilterMode.Enhanced;
-4: FarPoint.Web.Spread.IRowFilter rowFilter = new FarPoint.Web.Spread.HideRowFilter(FpSpread1.ActiveSheetView);
-5:
-6: FarPoint.Web.Spread.FilterColumnDefinition fd0 = new FarPoint.Web.Spread.FilterColumnDefinition(0, FarPoint.Web.Spread.FilterListBehavior.Default);
-7: FarPoint.Web.Spread.FilterColumnDefinition fd1 = new FarPoint.Web.Spread.FilterColumnDefinition(1, FarPoint.Web.Spread.FilterListBehavior.Default);
-8: FarPoint.Web.Spread.FilterColumnDefinition fd2 = new FarPoint.Web.Spread.FilterColumnDefinition(2, FarPoint.Web.Spread.FilterListBehavior.Default);
-9: FarPoint.Web.Spread.FilterColumnDefinition fd3 = new FarPoint.Web.Spread.FilterColumnDefinition(3, FarPoint.Web.Spread.FilterListBehavior.Default);
-10: FarPoint.Web.Spread.FilterColumnDefinition fd4 = new FarPoint.Web.Spread.FilterColumnDefinition(4, FarPoint.Web.Spread.FilterListBehavior.Default);
-11: FarPoint.Web.Spread.FilterColumnDefinition fd5 = new FarPoint.Web.Spread.FilterColumnDefinition(5, FarPoint.Web.Spread.FilterListBehavior.Default);
-12: FarPoint.Web.Spread.FilterColumnDefinition fd6 = new FarPoint.Web.Spread.FilterColumnDefinition(6, FarPoint.Web.Spread.FilterListBehavior.Default);
-13: FarPoint.Web.Spread.FilterColumnDefinition fd7 = new FarPoint.Web.Spread.FilterColumnDefinition(7, FarPoint.Web.Spread.FilterListBehavior.Default);
-14: FarPoint.Web.Spread.FilterColumnDefinition fd8 = new FarPoint.Web.Spread.FilterColumnDefinition(8, FarPoint.Web.Spread.FilterListBehavior.Default);
-15: FarPoint.Web.Spread.FilterColumnDefinition fd9 = new FarPoint.Web.Spread.FilterColumnDefinition(9, FarPoint.Web.Spread.FilterListBehavior.Default);
-16:
-17: rowFilter.ColumnDefinitions.Add(fd0);
-18: rowFilter.ColumnDefinitions.Add(fd1);
-19:rowFilter.ColumnDefinitions.Add(fd2);
-20: rowFilter.ColumnDefinitions.Add(fd3);
-21: rowFilter.ColumnDefinitions.Add(fd4);
-22: rowFilter.ColumnDefinitions.Add(fd5);
-23: rowFilter.ColumnDefinitions.Add(fd6);
-24: rowFilter.ColumnDefinitions.Add(fd7);
-25: rowFilter.ColumnDefinitions.Add(fd8);
-26: rowFilter.ColumnDefinitions.Add(fd9);
-27:
-28: FpSpread1.ActiveSheetView.RowFilter = rowFilter;
-```
+     ```csharp
+     1: FpSpread1.ActiveSheetView.DefaultStyle.VerticalAlign = VerticalAlign.Middle;
+     2: //엑셀 타입의 필터 선언
+     3: FpSpread1.ActiveSheetView.AutoFilterMode = FarPoint.Web.Spread.AutoFilterMode.Enhanced;
+     4: FarPoint.Web.Spread.IRowFilter rowFilter = new FarPoint.Web.Spread.HideRowFilter(FpSpread1.ActiveSheetView);
+     5:
+     6: FarPoint.Web.Spread.FilterColumnDefinition fd0 = new FarPoint.Web.Spread.FilterColumnDefinition(0, FarPoint.Web.Spread.FilterListBehavior.Default);
+     7: FarPoint.Web.Spread.FilterColumnDefinition fd1 = new FarPoint.Web.Spread.FilterColumnDefinition(1, FarPoint.Web.Spread.FilterListBehavior.Default);
+     8: FarPoint.Web.Spread.FilterColumnDefinition fd2 = new FarPoint.Web.Spread.FilterColumnDefinition(2, FarPoint.Web.Spread.FilterListBehavior.Default);
+     9: FarPoint.Web.Spread.FilterColumnDefinition fd3 = new FarPoint.Web.Spread.FilterColumnDefinition(3, FarPoint.Web.Spread.FilterListBehavior.Default);
+     10: FarPoint.Web.Spread.FilterColumnDefinition fd4 = new FarPoint.Web.Spread.FilterColumnDefinition(4, FarPoint.Web.Spread.FilterListBehavior.Default);
+     11: FarPoint.Web.Spread.FilterColumnDefinition fd5 = new FarPoint.Web.Spread.FilterColumnDefinition(5, FarPoint.Web.Spread.FilterListBehavior.Default);
+     12: FarPoint.Web.Spread.FilterColumnDefinition fd6 = new FarPoint.Web.Spread.FilterColumnDefinition(6, FarPoint.Web.Spread.FilterListBehavior.Default);
+     13: FarPoint.Web.Spread.FilterColumnDefinition fd7 = new FarPoint.Web.Spread.FilterColumnDefinition(7, FarPoint.Web.Spread.FilterListBehavior.Default);
+     14: FarPoint.Web.Spread.FilterColumnDefinition fd8 = new FarPoint.Web.Spread.FilterColumnDefinition(8, FarPoint.Web.Spread.FilterListBehavior.Default);
+     15: FarPoint.Web.Spread.FilterColumnDefinition fd9 = new FarPoint.Web.Spread.FilterColumnDefinition(9, FarPoint.Web.Spread.FilterListBehavior.Default);
+     16:
+     17: rowFilter.ColumnDefinitions.Add(fd0);
+     18: rowFilter.ColumnDefinitions.Add(fd1);
+     19:rowFilter.ColumnDefinitions.Add(fd2);
+     20: rowFilter.ColumnDefinitions.Add(fd3);
+     21: rowFilter.ColumnDefinitions.Add(fd4);
+     22: rowFilter.ColumnDefinitions.Add(fd5);
+     23: rowFilter.ColumnDefinitions.Add(fd6);
+     24: rowFilter.ColumnDefinitions.Add(fd7);
+     25: rowFilter.ColumnDefinitions.Add(fd8);
+     26: rowFilter.ColumnDefinitions.Add(fd9);
+     27:
+     28: FpSpread1.ActiveSheetView.RowFilter = rowFilter;
+     ```
 
 [샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Filtering.zip)
