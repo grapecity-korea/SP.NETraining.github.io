@@ -12,7 +12,7 @@ folder: mydoc
 ## 코드를 이용하여 Spread 포그라운드 이벤트 추가하기
 
 [코드를 이용하여 이벤트 추가하기 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread ASP .NET (JavaScript Baisic).zip)
-
+<br /><br />
 Spread for ASP.NET 컨트롤은 일련의 포그라운드 메소드 및 이벤트를 지원함으로써 클라이언트에서의 Spread 컨트롤 사용에 대한 편의를 제공합니다. 특히 포그라운드의 속성 창에서 간편하게 이벤트를 추가할 수 있습니다. 그러나 백그라운드에서 Spread를 리셋해야 하는 경우에는 포그라운드에서 추가한 모든 이벤트들이 모두 리셋됩니다. 본 장에서는 포그라운드의 js 코드를 사용하여 Spread 클라이언트 이벤트를 추가하는 방법에 대해 알아봅니다.
 
 추가 코드는 아래와 같습니다.
@@ -42,7 +42,8 @@ Spread for ASP.NET 컨트롤은 일련의 포그라운드 메소드 및 이벤�
 ```
 
 <br />
-스크린샷:
+**스크린샷:**
+
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-1-1.png)
 
 이제 Spread가 리셋되어 포그라운드의 Spread 이벤트를 저장할 수 있습니다.
@@ -54,11 +55,12 @@ Spread for ASP.NET 컨트롤은 일련의 포그라운드 메소드 및 이벤�
 ## JavaScript를 이용한 Spread 속성 가져오기/설정하기
 
 [JavaScript로 Spread 속성 제어 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/SpreadforASPDemo.zip)
-
+<br /><br />
 Web 항목에서 Spread를 사용하는 경우 JaveScript와 Spread 간의 상호작용(interaction)을 통하여 관련 속성을 가져오는 방법이 가장 자주 사용되고 있습니다. 물론 많은 사용자들이 이와 관련된 문제들을 제기하기도 합니다. 본 장에서는 비교적 자주 접하는 케이스를 예로 들어 JaveScript와 Spread의 intercation 방법을 소개합니다.
 
 ### Case 1: JavaScript에서 현재 활성화된 셀의 위치 및 셀 관련 속성 가져오기
 
+<br />
 구현 경로: Spread ActiveRow와 ActiveColumn 속성을 통해 현재 활성화된 셀의 행/열 인덱스를 가져오고 다시 Spread 포그라운드 메소드 GetCellByRowCol를 통해 현재 활성화된 셀 오브젝트를 가져옵니다.
 
 ```csharp
@@ -104,6 +106,7 @@ protected void FpSpread1_ButtonCommand(object sender, .Web.Spread.SpreadCommandE
 
 ### Case 2: 마우스 커서의 셀 진입 후 서버와의 통신
 
+<br />
 UpdatePanel 내 CellType 변경 또는 backColor 설정을 셀 클릭시 보여 줍니다. GetPostBackEventReference메소드를 통해 ButtonCommand 이벤트를 트리거시켰습니다.
 
 코드는 아래와 같습니다.
@@ -146,6 +149,7 @@ function FpSpread1_EditStopped(event) {
 
 ### Case 3: Spread 스크롤바 위치 get/set
 
+<br />
 본 케이스는 Spread 포그라운드 속성을 scrollTop 및 scrollLeft로 설정하여 스크롤바 위치를 변경합니다.
 
 코드는 아래와 같습니다.
@@ -194,10 +198,10 @@ protected void Page_Load(object sender, EventArgs e)
 ## JavaScript를 이용한 Spread 높이 설정
 
 [JavaScript로 Spread 높이 설정 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/9339.zip)
-
+<br /><br />
 JS를 통해 Spread Studio for ASP.NET 컨트롤의 Spread 높이를 설정하는 방법에 대한 문의가 게시판을 통해 자주 등장하고 있습니다. 본 장에서는 높이 설정 방법에 대해 알아봅니다.
-<br />
-구현 배경:  
+<br /><br />
+**구현 배경:**
 사용자가 Spread를 포함한 페이지에 대한 요청을 제기할 경우 Spread는 브라우저 내에서 HTML Table로 렌더링됩니다.
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-3-1.png)
@@ -206,20 +210,35 @@ JS를 통해 Spread Studio for ASP.NET 컨트롤의 Spread 높이를 설정하�
 
 여기에서는 Spread 생성 테이블에 대한 구현 방법을 알아보겠습니다.
 
-```cshtml
+```html
 <div id="spreadcontainer" style="width: 400px; height: 200px;">
-        <FarPoint:FpSpread ID="FpSpread1" runat="server" BorderColor="Black" BorderStyle="Solid"
-            BorderWidth="1px" Height="100%" Width="100%">
-            <CommandBar BackColor="Control" ButtonFaceColor="Control" ButtonHighlightColor="ControlLightLight"
-                ButtonShadowColor="ControlDark">
-            </CommandBar>
-            <Sheets>
-                <FarPoint:SheetView SheetName="Sheet1">
-                </FarPoint:SheetView>
-            </Sheets>
-        </FarPoint:FpSpread>
-        <br />
-        <input id="Button1" type="button" value="button" onclick="return Button1_onclick()" />
+  <FarPoint:FpSpread
+    ID="FpSpread1"
+    runat="server"
+    BorderColor="Black"
+    BorderStyle="Solid"
+    BorderWidth="1px"
+    Height="100%"
+    Width="100%"
+  >
+    <CommandBar
+      BackColor="Control"
+      ButtonFaceColor="Control"
+      ButtonHighlightColor="ControlLightLight"
+      ButtonShadowColor="ControlDark"
+    >
+    </CommandBar>
+    <Sheets>
+      <FarPoint:SheetView SheetName="Sheet1"> </FarPoint:SheetView>
+    </Sheets>
+  </FarPoint:FpSpread>
+  <br />
+  <input
+    id="Button1"
+    type="button"
+    value="button"
+    onclick="return Button1_onclick()"
+  />
 </div>
 ```
 
@@ -322,3 +341,5 @@ function Button1_onclick() {
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-5-1.gif)
 
 [JavaScript를 이용한 셀 병합 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/MergeCells.zip)
+
+{% include links.html %}
