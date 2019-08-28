@@ -1,6 +1,7 @@
 @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 body { font-family: 'Nanum Gothic', sans-serif; }
+h2, h3, h4 { font-weight: bold; }
 
 .summary {
   color: #808080;
