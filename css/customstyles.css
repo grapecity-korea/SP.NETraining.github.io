@@ -381,7 +381,6 @@ background-color: #347DBE;
 
 ul#mysidebar {
     border-radius:0px;
-    position: fixed;
 }
 
 .nav ul li ul li a {
@@ -864,6 +863,7 @@ span.soft {
 
     ul#mysidebar {
         width: 225px;
+        position: fixed;
     }
 }
 
