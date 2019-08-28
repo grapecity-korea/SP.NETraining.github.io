@@ -52,15 +52,15 @@ Spread 컨트롤은 교차 시트 함수 설정 기능을 지원합니다. 본 �
 <br />
 **1.  Spread ClientAutoCalculation 속성을 설정하여 클라이언트에서의 Spread 자동 계산 기능을 사용합니다.**
 
-    ```csharp
-    this.FpSpread1.ClientAutoCalculation = false;
-    ```
+```csharp
+this.FpSpread1.ClientAutoCalculation = false;
+```
 
 **2. 셀 함수 설정：**
 
-    ```csharp
-    this.FpSpread1.Sheets[1].Cells[0, 0].Formula = "sheet1!A2+sheet1!A1";
-    ```
+```csharp
+this.FpSpread1.Sheets[1].Cells[0, 0].Formula = "sheet1!A2+sheet1!A1";
+```
 
     ![](https://www.grapecity.co.kr/images/training/spread/tc3-2-1.gif)
 
