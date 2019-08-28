@@ -180,7 +180,7 @@ Spread for ASP.NET 는 사용자 정의 포그라운드 단축기 기능을 지�
 ```
 
 <br />
-Spread 포그라운드 RemoveKeyMap 메소드는 단축키 정보 제거에 사용되며 해당 코드는 아래와 같습니다.
+**Spread 포그라운드 RemoveKeyMap 메소드는 단축키 정보 제거에 사용되며 해당 코드는 아래와 같습니다.**
 
 ```javascript
 <script language=javascript>
