@@ -30,7 +30,7 @@ folder: mydoc
  <br />
  **예시:**
 
-1.  Spread 초기화
+**1. Spread 초기화**
 
     ```csharp
     /// <summary>
@@ -66,7 +66,7 @@ folder: mydoc
 
     ```
 
-2.  데이터 소스 설정
+**2. 데이터 소스 설정**
 
     ```csharp
     /// 데이터 소스 설정
@@ -92,30 +92,31 @@ folder: mydoc
 
     ```
 
-3.  ComboBoxCellType 포그라운드(foreground)에서 백그라운드 Spread 이벤트 ButtonCommand 트리거 변경을 선택하여 현재 선택한 항목의 Text Value값을 가져옵니다.
+**3. ComboBoxCellType 포그라운드(foreground)에서 백그라운드 Spread 이벤트 ButtonCommand 트리거 변경을 선택하여 현재 선택한 항목의 Text Value값을 가져옵니다.**
 
-                ```csharp
-                /// <summary>
-                /// ComboBoxCellType 현재 선택한 항목의 Text Value값 가져오기
-                /// </summary>
-                	/// <param name="sender"></param>
-                  	/// <param name="e"></param>
-                	protected void FpSpread1_ButtonCommand(object sender, FarPoint.Web.Spread.SpreadCommandEventArgs e)
-                        {
-                            // 현재 셀의 행 및 열 인덱스 가져오기
-                            Point _test = (Point)e.CommandArgument;
-                            int _row = _test.X;
-                            int _col = _test.Y;
-                            string _value = this.FpSpread1.ActiveSheetView.Cells[_row, _col].Value.ToString() ;
-                            string _text = this.FpSpread1.ActiveSheetView.Cells[_row, _col].Text;
-                        }
+    ```csharp
+        /// <summary>
+        /// ComboBoxCellType 현재 선택한 항목의 Text Value값 가져오기
+        /// </summary>
+            /// <param name="sender"></param>
+            /// <param name="e"></param>
+            protected void FpSpread1_ButtonCommand(object sender, FarPoint.Web.Spread.SpreadCommandEventArgs e)
+                {
+                    // 현재 셀의 행 및 열 인덱스 가져오기
+                    Point _test = (Point)e.CommandArgument;
+                    int _row = _test.X;
+                    int _col = _test.Y;
+                    string _value = this.FpSpread1.ActiveSheetView.Cells[_row, _col].Value.ToString() ;
+                    string _text = this.FpSpread1.ActiveSheetView.Cells[_row, _col].Text;
+                }
+    ```
 
-                ```
-
-                ![](https://www.grapecity.co.kr/images/training/spread/tc7-1-1.png)
+![](https://www.grapecity.co.kr/images/training/spread/tc7-1-1.png)
 
 <br />
 [Spread 셀 유형을 이용한 ComboBoxCellType - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/ComboBoxCellType.zip)
+
+---
 
 ## ComboBoxCellType을 통한 직렬데이터 입력 구현
 
@@ -123,45 +124,45 @@ folder: mydoc
 <br /><br />
 데이터 입력 시 종종 직렬데이터 입력 문제에 부딪힐 때가 있습니다. 예를 들면 상품 카테고리를 선택한 후 해당 카테고리에 해당하는 상품 전체를 표시할 때 발생하는 문제입니다. 본 장에서는 ComboBoxCellType를 결합하여 직렬데이터 입력을 구현하는 기능에 대해 알아봅니다.
 
-Spread 표를 초기화하고 카테고리 열의 셀 유형을 설정합니다. 해당 코드는 아래와 같습니다.
+**Spread 표를 초기화하고 카테고리 열의 셀 유형을 설정합니다. 해당 코드는 아래와 같습니다.**
 
 ```csharp
-protected void Page_Load(object sender, EventArgs e)
+    protected void Page_Load(object sender, EventArgs e)
     {
-        if (!IsPostBack)
-        {
-            FpSpread1.ClientAutoCalculation = true;
-            FpSpread1.ActiveSheetView.AllowPage = false;
-            FpSpread1.ActiveSheetView.RowCount = 10;
-            FpSpread1.ActiveSheetView.ColumnCount = 6;
-            FpSpread1.ActiveSheetView.Columns[0].Label = "카테고리";
-            FpSpread1.ActiveSheetView.Columns[0].Width = 150;
-            FpSpread1.ActiveSheetView.Columns[1].Label = "명칭";
-            FpSpread1.ActiveSheetView.Columns[1].Width = 300;
-            FpSpread1.ActiveSheetView.Columns[2].Label = "단가";
-            FpSpread1.ActiveSheetView.Columns[2].Width = 100;
-            FpSpread1.ActiveSheetView.Columns[3].Label = "수량";
-            FpSpread1.ActiveSheetView.Columns[3].Width = 100;
-            FpSpread1.ActiveSheetView.Columns[4].Label = "할인";
-            FpSpread1.ActiveSheetView.Columns[4].Width = 100;
-            FpSpread1.ActiveSheetView.Columns[5].Locked = true;
-            FpSpread1.ActiveSheetView.Columns[5].Label = "소계";
-            FpSpread1.ActiveSheetView.Columns[5].Width = 200;
-            FpSpread1.ActiveSheetView.Columns[5].Formula = "C1 * D1 * E1";
-            FpSpread1.ActiveSheetView.Columns[5].CellType = new CurrencyCellType();
+            if (!IsPostBack)
+            {
+                FpSpread1.ClientAutoCalculation = true;
+                FpSpread1.ActiveSheetView.AllowPage = false;
+                FpSpread1.ActiveSheetView.RowCount = 10;
+                FpSpread1.ActiveSheetView.ColumnCount = 6;
+                FpSpread1.ActiveSheetView.Columns[0].Label = "카테고리";
+                FpSpread1.ActiveSheetView.Columns[0].Width = 150;
+                FpSpread1.ActiveSheetView.Columns[1].Label = "명칭";
+                FpSpread1.ActiveSheetView.Columns[1].Width = 300;
+                FpSpread1.ActiveSheetView.Columns[2].Label = "단가";
+                FpSpread1.ActiveSheetView.Columns[2].Width = 100;
+                FpSpread1.ActiveSheetView.Columns[3].Label = "수량";
+                FpSpread1.ActiveSheetView.Columns[3].Width = 100;
+                FpSpread1.ActiveSheetView.Columns[4].Label = "할인";
+                FpSpread1.ActiveSheetView.Columns[4].Width = 100;
+                FpSpread1.ActiveSheetView.Columns[5].Locked = true;
+                FpSpread1.ActiveSheetView.Columns[5].Label = "소계";
+                FpSpread1.ActiveSheetView.Columns[5].Width = 200;
+                FpSpread1.ActiveSheetView.Columns[5].Formula = "C1 * D1 * E1";
+                FpSpread1.ActiveSheetView.Columns[5].CellType = new CurrencyCellType();
 
-// 제품 카테고리 열의 CellType 지정
-	DataSet ds = GetDataSource();
-            FarPoint.Web.Spread.ComboBoxCellType ctCategory = new FarPoint.Web.Spread.ComboBoxCellType();
-            ctCategory.DataSource = ds;
-            ctCategory.DataMember = "Category";
-            ctCategory.DataTextField = "Name";
-            ctCategory.DataValueField = "ID";
-            ctCategory.UseValue = true;
-            ctCategory.OnClientChanged = "return CategoryChanged();";
+    // 제품 카테고리 열의 CellType 지정
+        DataSet ds = GetDataSource();
+                FarPoint.Web.Spread.ComboBoxCellType ctCategory = new FarPoint.Web.Spread.ComboBoxCellType();
+                ctCategory.DataSource = ds;
+                ctCategory.DataMember = "Category";
+                ctCategory.DataTextField = "Name";
+                ctCategory.DataValueField = "ID";
+                ctCategory.UseValue = true;
+                ctCategory.OnClientChanged = "return CategoryChanged();";
 
-            FpSpread1.ActiveSheetView.Columns[0].CellType = ctCategory;
-        }
+                FpSpread1.ActiveSheetView.Columns[0].CellType = ctCategory;
+            }
     }
 ```
 
@@ -179,7 +180,7 @@ protected void Page_Load(object sender, EventArgs e)
     </script>
 ```
 
-Spread ButtonCommand 이벤트의 백그라운드 처리 코드는 해당 이벤트에서 선택한 유형을 가져온 후 해당 열의 전체 상품을 표시합니다.
+**Spread ButtonCommand 이벤트의 백그라운드 처리 코드는 해당 이벤트에서 선택한 유형을 가져온 후 해당 열의 전체 상품을 표시합니다.**
 
 ```csharp
     /// <summary>
@@ -222,6 +223,8 @@ Spread ButtonCommand 이벤트의 백그라운드 처리 코드는 해당 이벤
 ![](https://www.grapecity.co.kr/images/training/spread/tc7-2-1.gif)
 
 [ComboBoxCellType을 통한 직렬데이터 입력 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/CascadeComboBox.zip)
+
+---
 
 ## 사용자 지정 이미지 버튼 링크
 
@@ -270,96 +273,98 @@ Spread ButtonCommand 이벤트의 백그라운드 처리 코드는 해당 이벤
 이후 사용자 정의 하이퍼링크 셀 유형 CActionCellType을 구현합니다. 주로 PaintCell 메소드 오버라이딩(재정의)이 이루어지며 필요한 동작 유형에 따라 이에 상응하는 결과를 리턴합니다. 해당 코드는 아래와 같습니다.
 
 ```csharp
-[Serializable]
-    public class CActionCellType : FarPoint.Web.Spread.HyperLinkCellType
-    {
-        ///
-        /// 필요한 동작 생성
-        ///
-        public List Actions = new List();
-
-// 셀 그리기 과정 오버라이딩
-public override Control PaintCell(string id, TableCell parent, FarPoint.Web.Spread.Appearance style, FarPoint.Web.Spread.Inset margin, object value, bool upperLevel)
+    [Serializable]
+        public class CActionCellType : FarPoint.Web.Spread.HyperLinkCellType
         {
-            if (value != null)
-            {
-                Table table = new Table();
-                table.GridLines = GridLines.None;
-                TableRow row = new TableRow();
+            ///
+            /// 필요한 동작 생성
+            ///
+            public List Actions = new List();
 
-                // 지정된 동작에 따라 셀 내용 그리기 진행 후 셀의 Value를 페이지 액세스 파라미터와 연결
-                foreach (Action item in Actions)
+    // 셀 그리기 과정 오버라이딩
+    public override Control PaintCell(string id, TableCell parent, FarPoint.Web.Spread.Appearance style, FarPoint.Web.Spread.Inset margin, object value, bool upperLevel)
+            {
+                if (value != null)
                 {
-                    TableCell cell = new TableCell();
-                    cell.BorderStyle = BorderStyle.None;
+                    Table table = new Table();
+                    table.GridLines = GridLines.None;
+                    TableRow row = new TableRow();
 
-                    HyperLink link = new HyperLink();
+                    // 지정된 동작에 따라 셀 내용 그리기 진행 후 셀의 Value를 페이지 액세스 파라미터와 연결
+                    foreach (Action item in Actions)
+                    {
+                        TableCell cell = new TableCell();
+                        cell.BorderStyle = BorderStyle.None;
 
-                    link.ToolTip = item.Name;
-                    link.NavigateUrl = string.Format(item.NavigateUrl, value);
-                    link.ImageUrl = item.ImageUrl;
+                        HyperLink link = new HyperLink();
 
-                    cell.Controls.Add(link);
-                    row.Cells.Add(cell);
+                        link.ToolTip = item.Name;
+                        link.NavigateUrl = string.Format(item.NavigateUrl, value);
+                        link.ImageUrl = item.ImageUrl;
+
+                        cell.Controls.Add(link);
+                        row.Cells.Add(cell);
+                    }
+
+                    table.Rows.Add(row);
+                    return table;
                 }
-
-                table.Rows.Add(row);
-                return table;
-            }
-            else
-            {
-                return base.PaintCell(id, parent, style, margin, value, upperLevel);
+                else
+                {
+                    return base.PaintCell(id, parent, style, margin, value, upperLevel);
+                }
             }
         }
-    }
 ```
 
 마지막으로 사용자 지정 셀 유형을 사용합니다. 해당 코드는 아래와 같습니다.
 
 ```csharp
-protected void Page_Load(object sender, EventArgs e)
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
         {
-            if (!IsPostBack)
-            {
-                // Spread 컨트롤 기본 속성 설정
-                FpSpread1.ActiveSheetView.DataAutoCellTypes = false;
-                FpSpread1.Columns[0].Width = 130;
-                FpSpread1.Columns[1].Width = 300;
-                FpSpread1.Columns[2].Width = 100;
-                FpSpread1.Columns[3].Width = 100;
+            // Spread 컨트롤 기본 속성 설정
+            FpSpread1.ActiveSheetView.DataAutoCellTypes = false;
+            FpSpread1.Columns[0].Width = 130;
+            FpSpread1.Columns[1].Width = 300;
+            FpSpread1.Columns[2].Width = 100;
+            FpSpread1.Columns[3].Width = 100;
 
 
-                // 삭제, 편집, 보기 기능을 갖춘 셀 생성
-                CActionCellType action = new CActionCellType();
-                action.Actions.Add(new Action("삭제", "/Page1.aspx?id={0}", "/Images/Delete.png"));
-                action.Actions.Add(new Action("편집", "/Page2.aspx?id={0}", "/Images/Edit.png"));
-                action.Actions.Add(new Action("상세", "/Page3.aspx?id={0}", "/Images/Detail.png"));
+            // 삭제, 편집, 보기 기능을 갖춘 셀 생성
+            CActionCellType action = new CActionCellType();
+            action.Actions.Add(new Action("삭제", "/Page1.aspx?id={0}", "/Images/Delete.png"));
+            action.Actions.Add(new Action("편집", "/Page2.aspx?id={0}", "/Images/Edit.png"));
+            action.Actions.Add(new Action("상세", "/Page3.aspx?id={0}", "/Images/Detail.png"));
 
-                FpSpread1.ActiveSheetView.Columns[0].CellType = action;
+            FpSpread1.ActiveSheetView.Columns[0].CellType = action;
 
 
-                // 데이터 소스 바인딩
-                System.Data.DataTable dt = new System.Data.DataTable();
-                dt.Columns.Add("ID");
-                dt.Columns.Add("명칭");
-                dt.Columns.Add("카테고리");
-                dt.Columns.Add("단가");
+            // 데이터 소스 바인딩
+            System.Data.DataTable dt = new System.Data.DataTable();
+            dt.Columns.Add("ID");
+            dt.Columns.Add("명칭");
+            dt.Columns.Add("카테고리");
+            dt.Columns.Add("단가");
 
-                dt.Rows.Add(100001, "Spread .NET 그리드 컨트롤 V6.0", " 그리드 컨트롤", "10000");
-                dt.Rows.Add(100001, "ActionReports 리포트 컨트롤 V7.0", "리포트 컨트롤", "10000");
-                dt.Rows.Add(100001, "ComponentOne 컨트롤팩 2012V3", " 컨트롤팩", "10000");
+            dt.Rows.Add(100001, "Spread .NET 그리드 컨트롤 V6.0", " 그리드 컨트롤", "10000");
+            dt.Rows.Add(100001, "ActionReports 리포트 컨트롤 V7.0", "리포트 컨트롤", "10000");
+            dt.Rows.Add(100001, "ComponentOne 컨트롤팩 2012V3", " 컨트롤팩", "10000");
 
-                FpSpread1.DataSource = dt;
-            }
+            FpSpread1.DataSource = dt;
         }
+    }
 ```
 
-스크린샷:
+**스크린샷:**
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc7-3-1.png)
 
 <br />
 [사용자 지정 이미지 버튼 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/7862_Link.zip)
+
+---
 
 ## Cell에 사용자 지정 컨트롤 추가하기
 
@@ -372,7 +377,6 @@ protected void Page_Load(object sender, EventArgs e)
 **1. 구현 방법:**
 
     A. BaseCellType 을 상속받은 후 사용자 지정 셀 유형을 생성합니다.
-
     B. PaintCell 및 GetEditorControl 메소드를 오버로딩하여 사용자 정의 컨트롤을 추가합니다.
 
 <br />
@@ -383,9 +387,9 @@ protected void Page_Load(object sender, EventArgs e)
 <br />
    **렌더링:**
 
-    ![](https://www.grapecity.co.kr/images/training/spread/tc7-4-1.png)
+![](https://www.grapecity.co.kr/images/training/spread/tc7-4-1.png)
 
-    B. 사용자 지정 셀 유형을 생성합니다. 해당 코드는 아래와 같습니다.
+B. 사용자 지정 셀 유형을 생성합니다. 해당 코드는 아래와 같습니다.
 
 ```csharp
     [Serializable]
@@ -405,7 +409,7 @@ protected void Page_Load(object sender, EventArgs e)
     }
 ```
 
-    C. 셀 유형을 Cell에 적용합니다. 해당 코드는 아래와 같습니다.
+C. 셀 유형을 Cell에 적용합니다. 해당 코드는 아래와 같습니다.
 
 ```csharp
     protected void Page_Load(object sender, EventArgs e)
