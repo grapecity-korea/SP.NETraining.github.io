@@ -93,45 +93,47 @@ Spread for ASP.NET는 열 템플릿(RowTemplate)에 새로운 열 헤더 템플�
     이후 행 레이아웃 템플릿을 설정합니다.
 
 ```csharp
-    1: // 행 레이아웃 템플릿을 설정합니다.
-    2: sheet.WorksheetTemplate.ColumnCount = 4;
-    3: sheet.WorksheetTemplate.RowTemplate.RowCount = 2;
-    4: sheet.WorksheetTemplate.ColumnHeaderTemplate.RowCount = 1;
-    5: sheet.WorksheetTemplate.LayoutColumns[0].Width = 100;
-    6: sheet.WorksheetTemplate.LayoutColumns[1].Width = 100;
-    7: sheet.WorksheetTemplate.LayoutColumns[2].Width = 70;
-    8: sheet.WorksheetTemplate.LayoutColumns[3].Width = 300;
+    // 행 레이아웃 템플릿을 설정합니다.
+    sheet.WorksheetTemplate.ColumnCount = 4;
+    sheet.WorksheetTemplate.RowTemplate.RowCount = 2;
+    sheet.WorksheetTemplate.ColumnHeaderTemplate.RowCount = 1;
+    sheet.WorksheetTemplate.LayoutColumns[0].Width = 100;
+    sheet.WorksheetTemplate.LayoutColumns[1].Width = 100;
+    sheet.WorksheetTemplate.LayoutColumns[2].Width = 70;
+    sheet.WorksheetTemplate.LayoutColumns[3].Width = 300;
 ```
 
     마지막으로 데이터 소스 필드가 행 템플릿에서 표시되는 순서를 설정해야 합니다.
 
 ```csharp
-    1: //행 레이아웃에서 데이터 필드를 표시하는 순서 설정
-    2: sheet.WorksheetTemplate.LayoutCells[0, 0].DataIndex = 1;
-    3: sheet.WorksheetTemplate.LayoutCells[0, 1].DataIndex = 2;
-    4: sheet.WorksheetTemplate.LayoutCells[1, 0].DataIndex = 3;
-    5: sheet.WorksheetTemplate.LayoutCells[0, 2].DataIndex = 6;
-    6: sheet.WorksheetTemplate.LayoutCells[0, 3].DataIndex = 4;
-    7: sheet.WorksheetTemplate.LayoutCells[1, 3].DataIndex = 5;
+    //행 레이아웃에서 데이터 필드를 표시하는 순서 설정
+    sheet.WorksheetTemplate.LayoutCells[0, 0].DataIndex = 1;
+    sheet.WorksheetTemplate.LayoutCells[0, 1].DataIndex = 2;
+    sheet.WorksheetTemplate.LayoutCells[1, 0].DataIndex = 3;
+    sheet.WorksheetTemplate.LayoutCells[0, 2].DataIndex = 6;
+    sheet.WorksheetTemplate.LayoutCells[0, 3].DataIndex = 4;
+    sheet.WorksheetTemplate.LayoutCells[1, 3].DataIndex = 5;
 ```
 
 <br />
 **2.  Spread 데이터 소스 설정**
 
 ```csharp
-    1: //데이터 소스에서 데이터 가져오기
-    2: DataTable employees = new DataTable("Employees");
-    3: using (OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\Northwind.mdb;Persist Security Info=True"))
-    4: {
-    5:     using (OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT EmployeeID, FirstName, LastName, Title, Address, HomePhone FROM Employees", connection))
-    6:     {
-    7:         adapter.Fill(employees);
-    8:     }
-    9: }
-    10: employees.Columns.Add(new DataColumn("Photo"));
-    11:
-    12: //FpSpread 클래스의 DataSource 속성을 통해 데이터 소스 설정
-    13: FpSpread1.DataSource = employees;
+    //데이터 소스에서 데이터 가져오기
+    DataTable employees = new DataTable("Employees");
+
+    using (OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\Northwind.mdb;Persist Security Info=True"))
+    {
+        using (OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT EmployeeID, FirstName, LastName, Title, Address, HomePhone FROM Employees", connection))
+        {
+            adapter.Fill(employees);
+        }
+    }
+
+    employees.Columns.Add(new DataColumn("Photo"));
+
+    //FpSpread 클래스의 DataSource 속성을 통해 데이터 소스 설정
+    FpSpread1.DataSource = employees;
 ```
 
 이상으로 Spread for ASP.NET 7의 새로운 틋징 - 행 템플릿 레이아웃에 대한 설명을 마칩니다.

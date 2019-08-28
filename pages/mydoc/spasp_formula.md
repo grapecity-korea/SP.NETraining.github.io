@@ -63,7 +63,7 @@ Spread 컨트롤은 교차 시트 함수 설정 기능을 지원합니다. 본 �
     this.FpSpread1.Sheets[1].Cells[0, 0].Formula = "sheet1!A2+sheet1!A1";
 ```
 
-    ![](https://www.grapecity.co.kr/images/training/spread/tc3-2-1.gif)
+![](https://www.grapecity.co.kr/images/training/spread/tc3-2-1.gif)
 
 이러한 방법으로 간단하게 설정하면 해당 기능을 사용할 수 있습니다.
 
