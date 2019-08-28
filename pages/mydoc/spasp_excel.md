@@ -42,16 +42,16 @@ folder: mydoc
 
 3.  webconfig 파일에 차트 설치 노드를 추가합니다.
 
-```html
-<httpHandlers>
-  <add
-    path="FpChart.axd"
-    verb="*"
-    type="FarPoint.Web.Chart.ChartImageHttpHandler"
-    validate="true"
-  />
-</httpHandlers>
-```
+    ```html
+    <httpHandlers>
+      <add
+        path="FpChart.axd"
+        verb="*"
+        type="FarPoint.Web.Chart.ChartImageHttpHandler"
+        validate="true"
+      />
+    </httpHandlers>
+    ```
 
 [Excel 에서 차트 가져오기 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/ExcelChartImport.zip)
 
