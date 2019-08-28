@@ -308,6 +308,8 @@ CommandArgument 속성과 CommandCode 속성은 클릭 메뉴 속성을 설정�
     </script>
     ```
 
+---
+
 ## 브라우저 지원
 
 Spread ASP.NET는 현재 가장 많은 사용자를 보유한 브라우저(IE, Firefox, Chrome, Safari, Opera등)환경을 지원합니다. Spread ASP.NET 컨트롤이 서버에 배치되는 경우 사용자는 서버에 요청을 보내고 서버는 클라이언트 브라우저에 Spread를 포함한 페이지 정보를 전송합니다.
@@ -329,7 +331,7 @@ Spread 컨트롤 대부분의 기능은 Mozilla Firefox를 지원합니다. Mozi
 
     테스트 코드：
 
-    ```
+    ```csharp
     this.FpSpread1.AllowHeaderResize = true;
     ```
 
@@ -350,15 +352,16 @@ Spread 컨트롤 대부분의 기능은 Mozilla Firefox를 지원합니다. Mozi
 
     UIVirtualization이 'false'로 설정되어 있는 경우 스크롤바를 끌어서 놓기(Drag&Drop)할 때 Spread 상단의 셀은 스크롤바와 함께 움직이지 않습니다. 드래그 앤 드롭을 해제하고 난 후(마우스를 누르지 않은 상태)에야 열 헤더를 현재 위치로 이동할 수 있습니다. 이 속성은 Firefox에서는 사용할 수 없습니다.
 
-<br /><br />
+<br />
 **테스트 코드：**
 
     ```csharp
     This.FpSpread1.UIVirtualization = false;
     ```
 
-<br /><br />
+<br />
 **Internet Explorer**
+
 ![](https://www.grapecity.co.kr/images/training/spread/tc10-5-2.png)
 
 ### Apple Safari 브라우저 지원
@@ -368,7 +371,7 @@ Spread 컨트롤 대부분의 기능은 Apple Safari를 지원합니다. Apple S
 **1. FrozenRowCount 속성과 FrozenColumnCount 속성 - 행/열 고정 기능을 지원하지 않습니다.**
 **2. ImeMode 속성 - 셀 유형의 입력기 상태를 편집할 수 있습니다.**
 
-<br /><br />
+<br />
 **테스트 코드：**
 
     ```csharp
