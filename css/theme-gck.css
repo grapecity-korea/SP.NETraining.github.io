@@ -61,6 +61,8 @@ a[data-toggle="tooltip"] {
 .navbar-inverse {
   background-color: #811e4d;
   border: 0px;
+  position: fixed;
+  width: 100%;
 }
 
 .navbar-inverse .navbar-nav > li > a,
@@ -187,3 +189,6 @@ div#tg-sb-content h1 {
   position: fixed;
 } */
 
+#main{
+  margin-top: 50px;
+}
