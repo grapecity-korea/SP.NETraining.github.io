@@ -44,7 +44,8 @@ folder: mydoc
 ## 다국어 Excel 파일 내보내기
 
 클라이언트에서 Excel 파일 형식으로 Spread를 저장할 때 파일명을 다국어로 설정하면 내보내기를 한 후 파일명이 깨지는 문제가 발생할 수 있습니다. 해결방법은UrlEncode 메소드를 통해 다국어로 명칭을 전환하기만 하면 됩니다.
-<예제 코드>
+
+**예제 코드**
 
 ```csharp
 1: this.FpSpread1.SaveExcelToResponse(Server.UrlEncode("测试.xls"));
