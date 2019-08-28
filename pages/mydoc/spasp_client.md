@@ -18,27 +18,27 @@ Spread for ASP.NET 컨트롤은 일련의 포그라운드 메소드 및 이벤�
 추가 코드는 아래와 같습니다.
 
 ```javascript
-<script type="text/javascript">
-    window.onload = function () {
-        var ss = document.getElementById("FpSpread1");
-        ss.addEventListener("ActiveCellChanged", onActiveCellChanged, false);
-        ss.addEventListener("EditStart", onEditStart, false);
-        ss.addEventListener("EditStopped", onEditStop, false);
-    }
-    function onActiveCellChanged(event) {
-        // Row changed
-        // event.row doesn't work in FireFox
-        alert(event.row);
-    }
+    <script type="text/javascript">
+        window.onload = function () {
+            var ss = document.getElementById("FpSpread1");
+            ss.addEventListener("ActiveCellChanged", onActiveCellChanged, false);
+            ss.addEventListener("EditStart", onEditStart, false);
+            ss.addEventListener("EditStopped", onEditStop, false);
+        }
+        function onActiveCellChanged(event) {
+            // Row changed
+            // event.row doesn't work in FireFox
+            alert(event.row);
+        }
 
-    function onEditStart(event) {
-        alert("EditStart");
-    }
+        function onEditStart(event) {
+            alert("EditStart");
+        }
 
-    function onEditStop(event) {
-        alert("EditStoped");
-    }
-</script>
+        function onEditStop(event) {
+            alert("EditStoped");
+        }
+    </script>
 ```
 
 <br />
@@ -64,42 +64,42 @@ Web 항목에서 Spread를 사용하는 경우 JaveScript와 Spread 간의 상�
 구현 경로: Spread ActiveRow와 ActiveColumn 속성을 통해 현재 활성화된 셀의 행/열 인덱스를 가져오고 다시 Spread 포그라운드 메소드 GetCellByRowCol를 통해 현재 활성화된 셀 오브젝트를 가져옵니다.
 
 ```csharp
-protected void Page_Load(object sender, EventArgs e)
-{
-    if (!Page.IsPostBack)
+    protected void Page_Load(object sender, EventArgs e)
     {
-        FarPoint.Web.Spread.TextCellType tcell = new FarPoint.Web.Spread.TextCellType();
-        tcell.Password = true;
-        tcell.MaxLength = 5;
-        FpSpread1.ActiveSheetView.Cells[1, 1].CellType = tcell;
+        if (!Page.IsPostBack)
+        {
+            FarPoint.Web.Spread.TextCellType tcell = new FarPoint.Web.Spread.TextCellType();
+            tcell.Password = true;
+            tcell.MaxLength = 5;
+            FpSpread1.ActiveSheetView.Cells[1, 1].CellType = tcell;
 
-        FarPoint.Web.Spread.SheetView sv = FpSpread1.ActiveSheetView;
-        sv.ActiveColumn = 0;
-        sv.ActiveRow = 0;
-        sv.SetValue(sv.ActiveColumn, sv.ActiveRow, "Active");
+            FarPoint.Web.Spread.SheetView sv = FpSpread1.ActiveSheetView;
+            sv.ActiveColumn = 0;
+            sv.ActiveRow = 0;
+            sv.SetValue(sv.ActiveColumn, sv.ActiveRow, "Active");
 
-        FpSpread1.Sheets[0].Cells[sv.ActiveColumn, sv.ActiveRow].BackColor = rawing.Color.Red;
-        FpSpread1.Sheets[0].Cells[sv.ActiveColumn + 1, sv.ActiveRow + 1].BackColor = rawing.Color.Yellow;
-        FpSpread1.Sheets[0].Cells[sv.ActiveColumn + 2, sv.ActiveRow + 2].BackColor = rawing.Color.BlueViolet;
+            FpSpread1.Sheets[0].Cells[sv.ActiveColumn, sv.ActiveRow].BackColor = rawing.Color.Red;
+            FpSpread1.Sheets[0].Cells[sv.ActiveColumn + 1, sv.ActiveRow + 1].BackColor = rawing.Color.Yellow;
+            FpSpread1.Sheets[0].Cells[sv.ActiveColumn + 2, sv.ActiveRow + 2].BackColor = rawing.Color.BlueViolet;
+        }
     }
-}
 
-protected override void Render(HtmlTextWriter writer)
-{
-    Table spreadTable = this.FpSpread1.FindControl("viewport") as Table;
-    spreadTable.Attributes.Add("onclick", ript.GetPostBackEventReference(FpSpread1, "Button,-1,-1") + "; return false;");
-    base.Render(writer);
-}
+    protected override void Render(HtmlTextWriter writer)
+    {
+        Table spreadTable = this.FpSpread1.FindControl("viewport") as Table;
+        spreadTable.Attributes.Add("onclick", ript.GetPostBackEventReference(FpSpread1, "Button,-1,-1") + "; return false;");
+        base.Render(writer);
+    }
 
-protected void FpSpread1_ButtonCommand(object sender, .Web.Spread.SpreadCommandEventArgs e)
-{
+    protected void FpSpread1_ButtonCommand(object sender, .Web.Spread.SpreadCommandEventArgs e)
+    {
 
-    TextBox1.Text = FpSpread1.Sheets[0].ActiveRow.ToString();
-    TextBox2.Text = FpSpread1.Sheets[0].ActiveColumn.ToString();
-    TextBox4.Text = FpSpread1.Sheets[0].Cells[FpSpread1.Sheets[0].ActiveRow, 1.Sheets[0].ActiveColumn].BackColor.ToString();
-    TextBox3.Text = FpSpread1.Sheets[0].GetCellType(FpSpread1.Sheets[0].ActiveRow, 1.Sheets[0].ActiveColumn).ToString();
-    UpdatePanel1.Update();
-}
+        TextBox1.Text = FpSpread1.Sheets[0].ActiveRow.ToString();
+        TextBox2.Text = FpSpread1.Sheets[0].ActiveColumn.ToString();
+        TextBox4.Text = FpSpread1.Sheets[0].Cells[FpSpread1.Sheets[0].ActiveRow, 1.Sheets[0].ActiveColumn].BackColor.ToString();
+        TextBox3.Text = FpSpread1.Sheets[0].GetCellType(FpSpread1.Sheets[0].ActiveRow, 1.Sheets[0].ActiveColumn).ToString();
+        UpdatePanel1.Update();
+    }
 ```
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-2-1.png)
@@ -112,37 +112,41 @@ UpdatePanel 내 CellType 변경 또는 backColor 설정을 셀 클릭시 보여 
 코드는 아래와 같습니다.
 
 ```javascript
-<script lang="javascript" type="text/javascript">
-window.onload = function () {
-    var spread1 = document.getElementById("<%=FpSpread1.ClientID %>");
-    if (document.all) {
-        // IE
-        if (spread1.addEventListener) {
-            // IE9
-            spread1.addEventListener("ActiveCellChanged", cellChanged, false);
-            spread1.addEventListener("EditStopped", FpSpread1_EditStopped, false);
-        } else {
-            // Other versions of IE and IE9 quirks mode (no doctype set)
-            spread1.onActiveCellChanged = cellChanged;
-            spread1.onEditStopped = FpSpread1_EditStopped;
+    <script lang="javascript" type="text/javascript">
+        window.onload = function () {
+            var spread1 = document.getElementById("<%=FpSpread1.ClientID %>");
+            if (document.all) {
+                // IE
+                if (spread1.addEventListener) {
+                    // IE9
+                    spread1.addEventListener("ActiveCellChanged", cellChanged, false);
+                    spread1.addEventListener("EditStopped", FpSpread1_EditStopped, false);
+                } else {
+                    // Other versions of IE and IE9 quirks mode (no doctype set)
+                    spread1.onActiveCellChanged = cellChanged;
+                    spread1.onEditStopped = FpSpread1_EditStopped;
+                }
+            }
+            else {
+                spread1.addEventListener("ActiveCellChanged", cellChanged, false);
+                spread1.addEventListener("EditStopped", FpSpread1_EditStopped, false);
+            }
         }
-    }
-    else {
-        spread1.addEventListener("ActiveCellChanged", cellChanged, false);
-        spread1.addEventListener("EditStopped", FpSpread1_EditStopped, false);
-    }
-}
 
-function cellChanged(event) {
-    alert("r" + event.row + ",c" + event.col);
-}
+        function cellChanged(event) {
+            alert("r" + event.row + ",c" + event.col);
+        }
 
-function FpSpread1_EditStopped(event) {
-    //Add code to handle your event here.
-    var spread = document.getElementById("<%=FpSpread1.ClientID %>");
-    spread.UpdatePostbackData();
-    spread.CallBack("Button");
-}
+        function FpSpread1_EditStopped(event) {
+
+            //Add code to handle your event here.
+            var spread = document.getElementById("<%=FpSpread1.ClientID %>");
+            spread.UpdatePostbackData();
+            spread.CallBack("Button");
+
+        }
+
+    </script>
 ```
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-2-2.png)
@@ -155,38 +159,40 @@ function FpSpread1_EditStopped(event) {
 코드는 아래와 같습니다.
 
 ```javascript
-<script lang="javascript" type="text/javascript">
-function Button1_onClick(event) {
-     //Add code to handle your event here.
-    var spread = document.getElementById("<%=FpSpread1.ClientID %>");
-    var RowPosition = 15, ColPosition = 2;
+    <script lang="javascript" type="text/javascript">
 
-    spread.ScrollTo(RowPosition, ColPosition);
+        function Button1_onClick(event) {
+            //Add code to handle your event here.
+            var spread = document.getElementById("<%=FpSpread1.ClientID %>");
+            var RowPosition = 15, ColPosition = 2;
 
-    spread.EndEdit();
-    spread.SetActiveCell(RowPosition, ColPosition);
-    spread.StartEdit();
+            spread.ScrollTo(RowPosition, ColPosition);
 
-    var txBox = document.getElementById("<%= TextBox1.ClientID %>");
-    txBox.value = "Activcell Row Positon : " + RowPosition.toString() + "  /  Column  : " + ColPosition.toString();
-}
-</script>
+            spread.EndEdit();
+            spread.SetActiveCell(RowPosition, ColPosition);
+            spread.StartEdit();
+
+            var txBox = document.getElementById("<%= TextBox1.ClientID %>");
+            txBox.value = "Activcell Row Positon : " + RowPosition.toString() + "  /  Column  : " + ColPosition.toString();
+        }
+
+    </script>
 ```
 
 ```csharp
-protected void Page_Load(object sender, EventArgs e)
-{
-
-    if (!IsPostBack)
+    protected void Page_Load(object sender, EventArgs e)
     {
-        this.FpSpread1.Sheets[0].ColumnCount = 30;
-        this.FpSpread1.Sheets[0].RowCount = 500;
-        this.FpSpread1.Sheets[0].AllowPage = false;
-        this.FpSpread1.Sheets[0].Cells[0, 0].BackColor = System.Drawing.Color.Red;
 
-        Button1.Attributes.Add("onclick", "Button1_onClick(event)");
+        if (!IsPostBack)
+        {
+            this.FpSpread1.Sheets[0].ColumnCount = 30;
+            this.FpSpread1.Sheets[0].RowCount = 500;
+            this.FpSpread1.Sheets[0].AllowPage = false;
+            this.FpSpread1.Sheets[0].Cells[0, 0].BackColor = System.Drawing.Color.Red;
+
+            Button1.Attributes.Add("onclick", "Button1_onClick(event)");
+        }
     }
-}
 ```
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-2-3.png)
@@ -247,18 +253,20 @@ JS를 통해 Spread Studio for ASP.NET 컨트롤의 Spread 높이를 설정하�
 Html Button 클릭 이벤트를 통해 Spread 크기 변경을 트리거해줍니다.
 
 ```javascript
-<script language="javascript" type="text/javascript">
-// <![CDATA[
-        function Button1_onclick() {
-            var container = document.getElementById("spreadcontainer");
-            var c1 = document.getElementById("FpSpread1_rowHeader");
-            var c2 = document.getElementById("FpSpread1_view");
-            container.style.height = "700px";
-            c1.style.height = "649px";
-            c2.style.height = "649px";
-        }
-// ]]>
-</script>
+    <script language="javascript" type="text/javascript">
+
+    // <![CDATA[
+            function Button1_onclick() {
+                var container = document.getElementById("spreadcontainer");
+                var c1 = document.getElementById("FpSpread1_rowHeader");
+                var c2 = document.getElementById("FpSpread1_view");
+                container.style.height = "700px";
+                c1.style.height = "649px";
+                c2.style.height = "649px";
+            }
+    // ]]>
+
+    </script>
 ```
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-3-2.gif)
@@ -275,8 +283,9 @@ Html Button 클릭 이벤트를 통해 Spread 크기 변경을 트리거해줍�
 **JS 코드:**
 
 ```javascript
-<script type="text/javascript">
-function Button1_onclick() {
+    <script type="text/javascript">
+
+        function Button1_onclick() {
 
             var spread = document.all("FpSpread1");
             var table = FpSpread1.all("FpSpread1_Viewport");
@@ -284,13 +293,15 @@ function Button1_onclick() {
             tr.bgColor = "Red";
 
             var iActiveRow, iActiveCol;
+
             for (var i = 0; i < 4; i++) {
                 iActiveRow = FpSpread1.ActiveRow;
                 var cell = FpSpread1.GetCellByRowCol(iActiveRow, i);
                 cell.setAttribute("FpCellType", "readonly");
             }
         }
-</script>
+
+    </script>
 ```
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-4-1.png)
@@ -308,37 +319,42 @@ function Button1_onclick() {
 아래의 예제는 특정 열의 모든 행에 대한 루프를 통해 인접한 셀의 값에 따라 그룹화를 진행하는 방법을 나타내고 있습니다.
 
 ```javascript
-   1: <script type="text/javascript">
-   2:      function Button2_onclick()
-   3:      {
-   4:         var spread = document.getElementById("FpSpread1");
-   5:         var rc = spread.GetTotalRowCount();
-   6:         var r = 0;
-   7:         while (r != rc - 1)
-   8:         {
-   9:             r1 = r;
- 10:             var inc = 0;
- 11:             while (r1 != -1)
- 12:             {
- 13:                var val1 = spread.GetValue(r1, 1);
- 14:                var val2 = spread.GetValue(r1 + 1, 1);
- 15:                if (val1 == val2)
- 16:                {
- 17:                   inc++;
- 18:                   r1++;
- 19:                }
- 20:                else
- 21:                {
- 22:                   var cell = spread.GetCellByRowCol(r, 1);
- 23:                   cell.rowSpan = inc + 1;
- 24:                   r = r1 + 1;
- 25:                   r1 = -1;
- 26:                 }
- 27:              }
- 28:         }
- 29:      alert('Cells with same values merged');
- 30:   }
- 31: </script>
+    <script type="text/javascript">
+
+        function Button2_onclick()
+        {
+            var spread = document.getElementById("FpSpread1");
+            var rc = spread.GetTotalRowCount();
+            var r = 0;
+
+            while (r != rc - 1)
+            {
+                r1 = r;
+            var inc = 0;
+            while (r1 != -1)
+
+                {
+                    var val1 = spread.GetValue(r1, 1);
+                    var val2 = spread.GetValue(r1 + 1, 1);
+                    if (val1 == val2)
+                    {
+                        inc++;
+                        r1++;
+                    }
+                    else
+                    {
+                        var cell = spread.GetCellByRowCol(r, 1);
+                        cell.rowSpan = inc + 1;
+                        r = r1 + 1;
+                        r1 = -1;
+                    }
+                }
+            }
+
+            alert('Cells with same values merged');
+        }
+
+    </script>
 ```
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-5-1.gif)
