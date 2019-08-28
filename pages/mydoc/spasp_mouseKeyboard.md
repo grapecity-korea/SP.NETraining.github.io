@@ -23,12 +23,11 @@ Cell[0,0],Cell[0,1],Cell[0,2].....Cell[0,5]，Cell[1,0],Cell[1,1],Cell[1,2].....
 **C# 코드：**
 
 ```csharp
-protected override void Render(HtmlTextWriter writer)
-        {
-            Table tb = this.FpSpread1.FindControl("viewPort") as Table;
-
-            FpSpread1.Attributes.Add("onkeydown", "changefocus()");
-            base.Render(writer);
+    protected override void Render(HtmlTextWriter writer)
+    {
+        Table tb = this.FpSpread1.FindControl("viewPort") as Table;
+        FpSpread1.Attributes.Add("onkeydown", "changefocus()");
+        base.Render(writer);
 	}
 ```
 
@@ -36,12 +35,12 @@ protected override void Render(HtmlTextWriter writer)
 
 ```javascript
 <script type="text/javascript">
-        function changefocus() {
-            var button = this.document.getElementById("Button1");
-            event.cancelBubble = true;
-            return false;
-            button.focus();
-        }
+    function changefocus() {
+        var button = this.document.getElementById("Button1");
+        event.cancelBubble = true;
+        return false;
+        button.focus();
+    }
 </script>
 ```
 
@@ -62,12 +61,12 @@ protected override void Render(HtmlTextWriter writer)
 **2.  Page Render 메소드 오버라이딩을 통해 백그라운드에서 해당 Table을 받습니다. 코드는 다음과 같습니다.**
 
 ```csharp
-     protected override void Render(HtmlTextWriter writer)
-            {
-                Table viewPort = this.FpSpread1.FindControl("viewport") as Table;
-                viewPort.Attributes.Add("onclick", "clickOnSpread()");
-                base.Render(writer);
-    	}
+    protected override void Render(HtmlTextWriter writer)
+    {
+        Table viewPort = this.FpSpread1.FindControl("viewport") as Table;
+        viewPort.Attributes.Add("onclick", "clickOnSpread()");
+        base.Render(writer);
+    }
 ```
 
 3.  포그라운드에서 필요한 메소드를 추가합니다. 단, 여기에서는 단지 기능만을 표시합니다. 물론 복잡한 동작을 추가할 수도 있습니다. 코드는 다음과 같습니다.
@@ -96,20 +95,18 @@ Spread가 제공하는 GrayAreaCursorType 속성은 공백 영역에서의 마�
 주요 JS 코드는 아래와 같습니다.
 
 ```javascript
-<script type="text/javascript">
+    <script type="text/javascript">
         function SetSpreadCursor() {
             var cell = event.srcElement;
-
             while ((cell != null) && (cell.id.indexOf("<%=FpSpread1.ClientID %>")== -1))
- 	        {
+            {
                 cell = cell.parentElement;
             }
-
             if ((cell != null) && (cell.id.indexOf("<%=FpSpread1.ClientID %>") != -1)) {
                 event.srcElement.style.cursor = "help";
             }
         }
-</script>
+    </script>
 ```
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc9-3-1.gif)
@@ -133,11 +130,11 @@ Spread는 초기 설정상(default) 좌측 상단 모서리 부분(Corner)을 �
 
 ```csharp
     protected override void Render(HtmlTextWriter writer)
-        {
-            WebControl corner = this.FpSpread1.FindControl("corner") as WebControl;
-            corner.Attributes.Add("onmousedown", "return CornerClick()");
-            base.Render(writer);
-        }
+    {
+        WebControl corner = this.FpSpread1.FindControl("corner") as WebControl;
+        corner.Attributes.Add("onmousedown", "return CornerClick()");
+        base.Render(writer);
+    }
 ```
 
 <br />
@@ -168,26 +165,26 @@ Spread for ASP.NET 는 사용자 정의 포그라운드 단축기 기능을 지�
 **Spread의 포그라운드 AddKeyMap 메소드는 단축키 정보를 추가하는데 사용되며 해당 코드는 아래와 같습니다.**
 
 ```javascript
-<script language=javascript>
-   function setMap() {
-       var ss = document.getElementById("FpSpread1");
-       if (ss != null){
-          //IE9 or earlier
-         //ss.AddKeyMap(13,true,true,false,"this.MoveToLastColumn()");
-        ss.AddKeyMap(13,true,true,false,"element.MoveToLastColumn()");
-   }
-</script>
+    <script language=javascript>
+        function setMap() {
+        var ss = document.getElementById("FpSpread1");
+        if (ss != null){
+            //IE9 or earlier
+            //ss.AddKeyMap(13,true,true,false,"this.MoveToLastColumn()");
+            ss.AddKeyMap(13,true,true,false,"element.MoveToLastColumn()");
+        }
+    </script>
 ```
 
 <br />
 **Spread 포그라운드 RemoveKeyMap 메소드는 단축키 정보 제거에 사용되며 해당 코드는 아래와 같습니다.**
 
 ```javascript
-<script language=javascript>
-   function setMap() {
-       var ss = document.getElementById("FpSpread1");
-       if (ss != null){
-       ss.RemoveKeyMap(13,true,true,false);
-   }
-</script>
+    <script language=javascript>
+        function setMap() {
+            var ss = document.getElementById("FpSpread1");
+            if (ss != null){
+            ss.RemoveKeyMap(13,true,true,false);
+        }
+    </script>
 ```

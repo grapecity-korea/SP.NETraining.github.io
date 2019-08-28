@@ -53,8 +53,8 @@ Properties 폴더에 txt 형식의 파일(Licenses.licx)을 추가하여 프로�
 이와 동시에 아래와 같이 2개 행의 내용을 입력합니다.
 
 ```csharp
-1: FarPoint.Web.Spread.FpSpread, FarPoint.Web.Spread
-2: FarPoint.Mvc.Spread.FpSpread, FarPoint.Mvc.Spread
+  FarPoint.Web.Spread.FpSpread, FarPoint.Web.Spread
+  FarPoint.Mvc.Spread.FpSpread, FarPoint.Mvc.Spread
 ```
 
 이로써 MVC 4의 Spread ASP.net 설치환경이 정상적으로 완료되었습니다.
@@ -64,15 +64,15 @@ Properties 폴더에 txt 형식의 파일(Licenses.licx)을 추가하여 프로�
 Global.asax 파일을 더블 클릭하여 코드를 오픈하고 Application_Start 함수 내용을 아래와 같이 변경합니다.
 
 ```csharp
-  1: WebApiConfig.Register(GlobalConfiguration.Configuration);
-  2: BundleConfig.RegisterBundles(BundleTable.Bundles);
-  3: AuthConfig.RegisterAuth();
-  4:
-  5: FarPoint.Mvc.Spread.MvcSpreadVirtualPathProvider.AppInitialize();
-  6: AreaRegistration.RegisterAllAreas();
-  7:
-  8: FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-  9: RouteConfig.RegisterRoutes(RouteTable.Routes);
+  WebApiConfig.Register(GlobalConfiguration.Configuration);
+  BundleConfig.RegisterBundles(BundleTable.Bundles);
+  AuthConfig.RegisterAuth();
+
+  FarPoint.Mvc.Spread.MvcSpreadVirtualPathProvider.AppInitialize();
+  AreaRegistration.RegisterAllAreas();
+
+  FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+  RouteConfig.RegisterRoutes(RouteTable.Routes);
 ```
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc10-1-6.png)
@@ -96,17 +96,17 @@ Global.asax 파일을 더블 클릭하여 코드를 오픈하고 Application_Sta
 Controllers\HomeController.cs 파일에서 디폴트 값으로 설정되어 있는 Index 함수를 아래와 같이 변경합니다.
 
 ```csharp
-   1: public ActionResult Index([MvcSpread(true)]FarPoint.Mvc.Spread.FpSpread FpSpread1)
-   2: {
-   3:  FpSpread1.ActiveSheetView.Rows.Count = 30;
-   4:
-   5:  ViewBag.Message = "ComponentOne Spread MVC 4";
-   6:  if (FpSpread1 != null)
-   7:  {
-   8:    var value = FpSpread1.ActiveSheetView.Cells[0, 0].Value;
-   9:  }
-  10:    return View();
-  11: }
+  public ActionResult Index([MvcSpread(true)]FarPoint.Mvc.Spread.FpSpread FpSpread1)
+  {
+    FpSpread1.ActiveSheetView.Rows.Count = 30;
+
+    ViewBag.Message = "ComponentOne Spread MVC 4";
+    if (FpSpread1 != null)
+    {
+      var value = FpSpread1.ActiveSheetView.Cells[0, 0].Value;
+    }
+      return View();
+  }
 ```
 
 위의 과정이 마무리되면 F5 키를 통해 화면에서 Spread를 확인할 수 있습니다.
@@ -143,23 +143,24 @@ Compiler Error Message: CS0012: The type 'FarPoint.Web.Spread.FpSpread' is defin
 이에 Controllers\HomeController.cs파일에 이들을 각각 추가합니다.
 
 ```csharp
-   1: public void FpSpread1_Load(object sender, EventArgs e)
-   2: {
-   3:    FpSpread sp = sender as FpSpread;
-   4:    if (!sp.Page.IsPostBack)
-   5:    {
-   6:      sp.Cells[1, 1].Text = "hello, MVC!";
-   7:    }
-   8: }
-   9:
- 10: public void FpSpread1_PreRender(object sender, EventArgs e)
- 11: {
- 12: }
- 13:
- 14: [MvcSpreadEvent("Init", "FpSpread1")]
- 15: private void _init(object sender, EventArgs e)
- 16: {
- 17: }
+  public void FpSpread1_Load(object sender, EventArgs e)
+  {
+      FpSpread sp = sender as FpSpread;
+
+      if (!sp.Page.IsPostBack)
+      {
+        sp.Cells[1, 1].Text = "hello, MVC!";
+      }
+  }
+
+  public void FpSpread1_PreRender(object sender, EventArgs e)
+  {
+  }
+
+  [MvcSpreadEvent("Init", "FpSpread1")]
+  private void _init(object sender, EventArgs e)
+  {
+  }
 ```
 
 단축키 F5를 사용하여 프로그램을 실행시키면 MVC-Spread ASP.net의 “Hello World” 프로그램이 완성됩니다.
@@ -197,43 +198,41 @@ CommandArgument 속성과 CommandCode 속성은 클릭 메뉴 속성을 설정�
 **HTML 마크업 :**
 
 ```html
-1:
 <ContextMenus>
-  2:
   <FarPoint:ContextMenu Type="Viewport">
-    3:
     <Items>
-      4: <FarPoint:MenuItem Text="메뉴1"> 5: </FarPoint:MenuItem> 6:
-      <FarPoint:MenuItem Text="메뉴2"> 7: </FarPoint:MenuItem> 8:
-      <FarPoint:MenuItem Text="메뉴3"> 9: </FarPoint:MenuItem> 10:
+      <FarPoint:MenuItem Text="메뉴1"></FarPoint:MenuItem>
+      <FarPoint:MenuItem Text="메뉴2"></FarPoint:MenuItem>
+      <FarPoint:MenuItem Text="메뉴3"></FarPoint:MenuItem>
     </Items>
-    11:
   </FarPoint:ContextMenu>
-  12:
 </ContextMenus>
 ```
 
 **C# 코드：**
 
 ```csharp
- 1: if (this.IsPostBack) return;
- 2:
- 3: FpSpread1.EnableContextMenu = true;
- 4: // 기본 셀 메뉴 생성
- 5: FarPoint.Web.Spread.ContextMenu viewportMenu = FpSpread1.ContextMenus[FarPoint.Web.Spread.ContextMenuType.Viewport];
- 6: FarPoint.Web.Spread.MenuItem customViewportItem = new FarPoint.Web.Spread.MenuItem("2차 메뉴");
- 7: customViewportItem.ChildItems.Add(new FarPoint.Web.Spread.MenuItem("2차 메뉴 항목1"));
- 8: customViewportItem.ChildItems.Add(new FarPoint.Web.Spread.MenuItem("2차 메뉴 항목2”));
- 9: viewportMenu.Items.Add(customViewportItem);
-10:
-11: // 행 헤더 셀 메뉴 생성
-12: FarPoint.Web.Spread.ContextMenu rowHeaderContextMenu = new FarPoint.Web.Spread.ContextMenu();
-13: rowHeaderContextMenu.Type = FarPoint.Web.Spread.ContextMenuType.RowHeader;
-14: FarPoint.Web.Spread.MenuItem rowHeaderItem = new FarPoint.Web.Spread.MenuItem("행 헤더 메뉴");
-15: rowHeaderItem.ChildItems.Add(new FarPoint.Web.Spread.MenuItem("메뉴1"));
-16: rowHeaderItem.ChildItems.Add(new FarPoint.Web.Spread.MenuItem("메뉴2"));
-17: rowHeaderContextMenu.Items.Add(rowHeaderItem);
-18: FpSpread1.ContextMenus.Add(rowHeaderContextMenu);
+  if (this.IsPostBack) return;
+
+  FpSpread1.EnableContextMenu = true;
+
+  // 기본 셀 메뉴 생성
+  FarPoint.Web.Spread.ContextMenu viewportMenu
+  = FpSpread1.ContextMenus[FarPoint.Web.Spread.ContextMenuType.Viewport];
+
+  FarPoint.Web.Spread.MenuItem customViewportItem = new FarPoint.Web.Spread.MenuItem("2차 메뉴");
+  customViewportItem.ChildItems.Add(new FarPoint.Web.Spread.MenuItem("2차 메뉴 항목1"));
+  customViewportItem.ChildItems.Add(new FarPoint.Web.Spread.MenuItem("2차 메뉴 항목2”));
+  viewportMenu.Items.Add(customViewportItem);
+
+  // 행 헤더 셀 메뉴 생성
+  FarPoint.Web.Spread.ContextMenu rowHeaderContextMenu = new FarPoint.Web.Spread.ContextMenu();
+  rowHeaderContextMenu.Type = FarPoint.Web.Spread.ContextMenuType.RowHeader;
+  FarPoint.Web.Spread.MenuItem rowHeaderItem = new FarPoint.Web.Spread.MenuItem("행 헤더 메뉴");
+  rowHeaderItem.ChildItems.Add(new FarPoint.Web.Spread.MenuItem("메뉴1"));
+  rowHeaderItem.ChildItems.Add(new FarPoint.Web.Spread.MenuItem("메뉴2"));
+  rowHeaderContextMenu.Items.Add(rowHeaderItem);
+  FpSpread1.ContextMenus.Add(rowHeaderContextMenu);
 ```
 
 ---
@@ -270,49 +269,47 @@ CommandArgument 속성과 CommandCode 속성은 클릭 메뉴 속성을 설정�
 **1. Spread ButtonCommand 이벤트를 추가하고 사용자 정의 button 호출을 제공합니다.**
 **2. Render 오버라이딩을 통해 사용자 정의 버튼을 추가합니다.**
 
-    ```csharp
-     protected override void Render(HtmlTextWriter writer)
-            {
-                Table table = FpSpread1.FindControl("cmdTable") as Table;
-    	// 사용자 정의 버튼 포그라운드 호출 이벤트
-                DropDownList changepage = new DropDownList();
-                changepage.ID = "pageindex";
-                changepage.Items.Add("1");
-                changepage.Items.Add("2");
-                changepage.Items.Add("3");
-                changepage.Items.Add("4");
-                changepage.Items.Add("5");
-                changepage.Attributes.Add("onchange", "change()");
+```csharp
+  protected override void Render(HtmlTextWriter writer)
+  {
+    Table table = FpSpread1.FindControl("cmdTable") as Table;
 
-    	TableCell cell2 = new TableCell();
-                cell2.Controls.Add(changepage);
-                table.Rows[0].Cells.Add(cell2);
+    // 사용자 정의 버튼 포그라운드 호출 이벤트
+    DropDownList changepage = new DropDownList();
+    changepage.ID = "pageindex";
+    changepage.Items.Add("1");
+    changepage.Items.Add("2");
+    changepage.Items.Add("3");
+    changepage.Items.Add("4");
+    changepage.Items.Add("5");
+    changepage.Attributes.Add("onchange", "change()");
+    TableCell cell2 = new TableCell();
+    cell2.Controls.Add(changepage);
+    table.Rows[0].Cells.Add(cell2);
 
-    	// 사용자 정의 버튼 백그라운드 호출 이벤트
-
-    	TableCell cell1 = new TableCell();
-                Button btn1 = new Button();
-    	bn1.Text = " 사용자 정의 버튼";
-                 btn1.Text = "Button1";
-                btn1.Attributes.Add("onclick", ClientScript.GetPostBackEventReference(FpSpread1, "BtnCommand,-1,-1") + "; return false;");
-                cell1.Controls.Add(btn1);
-                table.Rows[0].Cells.Add(cell1);
-
-                base.Render(writer);
-            }
-    ```
+    // 사용자 정의 버튼 백그라운드 호출 이벤트
+    TableCell cell1 = new TableCell();
+    Button btn1 = new Button();
+    bn1.Text = " 사용자 정의 버튼";
+    btn1.Text = "Button1";
+    btn1.Attributes.Add("onclick", ClientScript.GetPostBackEventReference(FpSpread1, "BtnCommand,-1,-1") + ";   return false;");
+    cell1.Controls.Add(btn1);
+    table.Rows[0].Cells.Add(cell1);
+    base.Render(writer);
+  }
+```
 
 **3. DropDownList 포그라운드 함수 코드:**
 
-    ```javascript
-    <script type="text/javascript">
-            function change() {
-                var pageindex = document.getElementById("FpSpread1_pageindex").value-1;
-                FpSpread1.CallBack("Page,"+pageindex);
-                return false;
-            }
-    </script>
-    ```
+```javascript
+  <script type="text/javascript">
+          function change() {
+              var pageindex = document.getElementById("FpSpread1_pageindex").value-1;
+              FpSpread1.CallBack("Page,"+pageindex);
+              return false;
+          }
+  </script>
+```
 
 ---
 
@@ -333,37 +330,39 @@ Spread 컨트롤 대부분의 기능은 Mozilla Firefox를 지원합니다. Mozi
 
 **1. AllowHeaderResize는 사용자가 행 헤더, 열 헤더 셀 크기를 조정할 수 있습니다.**
 
-    AllowHeaderResize를 'true'로 설정하면 IE 사용자는 행 헤더의 폭과 열 헤더의 높이를 조정할 수 있지만 이 속성은 Firefox에서는 사용할 수 없습니다. 사용자는 마우스 끌어서 놓기(Drag&Drop) 방식을 사용하여 행 헤더의 높이와 열 헤더의 폭을 조정할 수 있습니다.
-
-    테스트 코드：
-
-    ```csharp
-    this.FpSpread1.AllowHeaderResize = true;
-    ```
-
-    IE
-
-    ![](https://www.grapecity.co.kr/images/training/spread/tc10-5-1.png)
-
-**2. UseClipboard - 클립보드 복사/붙여넣기 사용불가**
-
-    UseClipboard이 'true'로 설정되어 있는 경우 Spread는 다른 프로그램으로부터 내용을 복사/붙여넣기할 수 있지만 'false'일 경우에는 Spread 셀 간의 복사/붙여넣기만 가능합니다. 다른 응용프로그램 혹은 Spread와 복사/붙여넣기 기능을 사용할 수 없습니다.
-
-**3. 스크롤바 관련 속성:**
-
-    ScrollBarBaseColor, ScrollBarArrowColor 등의 속성은 Firefox에서 사용할 수 없습니다.
-
-**4. ShowEllipsis 속성**
-**5. UIVirtualization 속성**
-
-    UIVirtualization이 'false'로 설정되어 있는 경우 스크롤바를 끌어서 놓기(Drag&Drop)할 때 Spread 상단의 셀은 스크롤바와 함께 움직이지 않습니다. 드래그 앤 드롭을 해제하고 난 후(마우스를 누르지 않은 상태)에야 열 헤더를 현재 위치로 이동할 수 있습니다. 이 속성은 Firefox에서는 사용할 수 없습니다.
+AllowHeaderResize를 'true'로 설정하면 IE 사용자는 행 헤더의 폭과 열 헤더의 높이를 조정할 수 있지만 이 속성은 Firefox에서는 사용할 수 없습니다. 사용자는 마우스 끌어서 놓기(Drag&Drop) 방식을 사용하여 행 헤더의 높이와 열 헤더의 폭을 조정할 수 있습니다.
 
 <br />
 **테스트 코드：**
 
-    ```csharp
-    This.FpSpread1.UIVirtualization = false;
-    ```
+```csharp
+  this.FpSpread1.AllowHeaderResize = true;
+```
+
+<br />
+**Internet Explorer**
+
+![](https://www.grapecity.co.kr/images/training/spread/tc10-5-1.png)
+
+**2. UseClipboard - 클립보드 복사/붙여넣기 사용불가**
+
+UseClipboard이 'true'로 설정되어 있는 경우 Spread는 다른 프로그램으로부터 내용을 복사/붙여넣기할 수 있지만 'false'일 경우에는 Spread 셀 간의 복사/붙여넣기만 가능합니다. 다른 응용프로그램 혹은 Spread와 복사/붙여넣기 기능을 사용할 수 없습니다.
+
+**3. 스크롤바 관련 속성:**
+
+ScrollBarBaseColor, ScrollBarArrowColor 등의 속성은 Firefox에서 사용할 수 없습니다.
+
+**4. ShowEllipsis 속성**
+**5. UIVirtualization 속성**
+
+UIVirtualization이 'false'로 설정되어 있는 경우 스크롤바를 끌어서 놓기(Drag&Drop)할 때 Spread 상단의 셀은 스크롤바와 함께 움직이지 않습니다. 드래그 앤 드롭을 해제하고 난 후(마우스를 누르지 않은 상태)에야 열 헤더를 현재 위치로 이동할 수 있습니다. 이 속성은 Firefox에서는 사용할 수 없습니다.
+
+<br />
+**테스트 코드：**
+
+```csharp
+  This.FpSpread1.UIVirtualization = false;
+```
 
 <br />
 **Internet Explorer**
@@ -380,42 +379,44 @@ Spread 컨트롤 대부분의 기능은 Apple Safari를 지원합니다. Apple S
 <br />
 **테스트 코드：**
 
-    ```csharp
-    FpSpread1.Sheets[0].Cells[0, 0].ImeMode = FarPoint.Web.Spread.ImeMode.Auto;
-    FpSpread1.Sheets[0].Columns[1].ImeMode = FarPoint.Web.Spread.ImeMode.Disabled;
-    FpSpread1.Sheets[0].Rows[2].ImeMode = FarPoint.Web.Spread.ImeMode.Inactive
-    ```
+```csharp
+  FpSpread1.Sheets[0].Cells[0, 0].ImeMode = FarPoint.Web.Spread.ImeMode.Auto;
+  FpSpread1.Sheets[0].Columns[1].ImeMode = FarPoint.Web.Spread.ImeMode.Disabled;
+  FpSpread1.Sheets[0].Rows[2].ImeMode = FarPoint.Web.Spread.ImeMode.Inactive
+```
 
-    ![](https://www.grapecity.co.kr/images/training/spread/tc10-5-3.png)
+![](https://www.grapecity.co.kr/images/training/spread/tc10-5-3.png)
 
 <br /><br />
 **3. UIVirtualization 속성**
 
-    UIVirtualization이 'false'로 설정되어 있는 경우 스크롤바를 끌어서 놓기(Drag&Drop)할 때 Spread 상단의 셀은 스크롤바와 함께 움직이지 않습니다. 드래그 앤 드롭을 해제하고 난 후(마우스를 누르지 않은 상태)에야 열 헤더를 현재 위치로 이동할 수 있습니다. 이 속성은 Firefox에서는 사용할 수 없습니다.
+UIVirtualization이 'false'로 설정되어 있는 경우 스크롤바를 끌어서 놓기(Drag&Drop)할 때 Spread 상단의 셀은 스크롤바와 함께 움직이지 않습니다. 드래그 앤 드롭을 해제하고 난 후(마우스를 누르지 않은 상태)에야 열 헤더를 현재 위치로 이동할 수 있습니다. 이 속성은 Firefox에서는 사용할 수 없습니다.
 
-    ![](https://www.grapecity.co.kr/images/training/spread/tc10-5-4.png)
+![](https://www.grapecity.co.kr/images/training/spread/tc10-5-4.png)
 
 ### Google Chrome 브라우저 지원
 
 Spread 컨트롤 대부분의 기능은 Google Chrome을 지원합니다. Google Chrome과 호환되지 않는 기능은 아래 표와 같습니다.
 <br /><br />
+
 **1. FrozenRowCount 속성과 FrozenColumnCount 속성 - 행/열 고정 기능을 지원하지 않습니다.**
+
 **2. ImeMode 속성 - 셀 유형의 입력기 상태를 편집할 수 있습니다.**
 
 <br />
 **테스트 코드：**
 
-    ```csharp
-    FpSpread1.Sheets[0].Cells[0, 0].ImeMode = FarPoint.Web.Spread.ImeMode.Auto;
-    FpSpread1.Sheets[0].Columns[1].ImeMode = FarPoint.Web.Spread.ImeMode.Disabled;
-    FpSpread1.Sheets[0].Rows[2].ImeMode = FarPoint.Web.Spread.ImeMode.Inactive;
-    ```
+```csharp
+  FpSpread1.Sheets[0].Cells[0, 0].ImeMode = FarPoint.Web.Spread.ImeMode.Auto;
+  FpSpread1.Sheets[0].Columns[1].ImeMode = FarPoint.Web.Spread.ImeMode.Disabled;
+  FpSpread1.Sheets[0].Rows[2].ImeMode = FarPoint.Web.Spread.ImeMode.Inactive;
+```
 
-    ![](https://www.grapecity.co.kr/images/training/spread/tc10-5-5.png)
+![](https://www.grapecity.co.kr/images/training/spread/tc10-5-5.png)
 
 <br />
 **3. UIVirtualization 속성**
 
-    UIVirtualization이 'false'로 설정되어 있는 경우 스크롤바를 끌어서 놓기(Drag&Drop)할 때 Spread 상단의 셀은 스크롤바와 함께 움직이지 않습니다. 드래그 앤 드롭을 해제하고 난 후(마우스를 누르지 않은 상태)에야 열 헤더를 현재 위치로 이동할 수 있습니다. 이 속성은 Firefox에서는 사용할 수 없습니다.
+UIVirtualization이 'false'로 설정되어 있는 경우 스크롤바를 끌어서 놓기(Drag&Drop)할 때 Spread 상단의 셀은 스크롤바와 함께 움직이지 않습니다. 드래그 앤 드롭을 해제하고 난 후(마우스를 누르지 않은 상태)에야 열 헤더를 현재 위치로 이동할 수 있습니다. 이 속성은 Firefox에서는 사용할 수 없습니다.
 
-    ![](https://www.grapecity.co.kr/images/training/spread/tc10-5-6.png)
+![](https://www.grapecity.co.kr/images/training/spread/tc10-5-6.png)
