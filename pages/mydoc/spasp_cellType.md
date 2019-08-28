@@ -375,12 +375,14 @@ folder: mydoc
 
 <br />
 **1. 구현 방법:**
+
 A. BaseCellType 을 상속받은 후 사용자 지정 셀 유형을 생성합니다.
 
 B. PaintCell 및 GetEditorControl 메소드를 오버로딩하여 사용자 정의 컨트롤을 추가합니다.
 
 <br />
 **2. 세부 단계:**
+
 A. 사용자 정의 컨트롤(UserControl)을 생성합니다. 여기에서는 FileUpload와 Calendar 표준 컨트롤을 추가했습니다.
 
 <br />
