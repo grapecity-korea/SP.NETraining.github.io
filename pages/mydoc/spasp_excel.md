@@ -49,13 +49,13 @@ folder: mydoc
 <br /><br />
 
 ```csharp
-1: this.FpSpread1.SaveExcelToResponse(Server.UrlEncode("测试.xls"));
+1: this.FpSpread1.SaveExcelToResponse(Server.UrlEncode("test.xls"));
 ```
 
 서버에서 Spread 파일 내보내기:
 
 ```csharp
-1: this.FpSpread1.SaveExcel(Server.MapPath("测试.xls"));
+1: this.FpSpread1.SaveExcel(Server.MapPath("test.xls"));
 ```
 
 [샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread_SaveAsCNName.zip)
@@ -67,15 +67,11 @@ Spread 컨트롤에서 Excel 가져오기 후 테두리가 굵게 변하는 문�
 **원본 엑셀**
 <br /><br />
 
-```
 ![](https://www.grapecity.co.kr/images/training/spread/tc6-3-1.png)
-```
 
-<파일을 불러 왔을 때>
-
-```
+**파일을 불러 왔을 때**
+<br /><br />
 ![](https://www.grapecity.co.kr/images/training/spread/tc6-3-2.png)
-```
 
 아래 방법을 통해 Excel의 테두리 효과를 복원할 수 있습니다. 예제 코드는 아래와 같습니다.
 
@@ -114,7 +110,7 @@ Spread 컨트롤에서 Excel 가져오기 후 테두리가 굵게 변하는 문�
 
 <br /><br />
 **정상적으로 복구된 화면**
-
+<br /><br />
 ![](https://www.grapecity.co.kr/images/training/spread/tc6-3-3.png)
 
 [샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread_ASP_Border.zip)
