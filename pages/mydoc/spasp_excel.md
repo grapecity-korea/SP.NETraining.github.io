@@ -46,6 +46,7 @@ folder: mydoc
 클라이언트에서 Excel 파일 형식으로 Spread를 저장할 때 파일명을 다국어로 설정하면 내보내기를 한 후 파일명이 깨지는 문제가 발생할 수 있습니다. 해결방법은UrlEncode 메소드를 통해 다국어로 명칭을 전환하기만 하면 됩니다.
 
 **예제 코드**
+<br /><br />
 
 ```csharp
 1: this.FpSpread1.SaveExcelToResponse(Server.UrlEncode("测试.xls"));
@@ -63,7 +64,8 @@ folder: mydoc
 
 Spread 컨트롤에서 Excel 가져오기 후 테두리가 굵게 변하는 문제가 발생하는 경우가 있습니다. Spread는 Html Table 형식으로 브라우저에 렌더링되기 때문에 테두리가 겹치는 현상이 나타날 수 있습니다. 본 장에서는 Excel과 동일하게 테두리를 설정하는 방법에 대해 알아봅니다.
 
-<원본 엑셀>
+**원본 엑셀**
+<br /><br />
 
 ```
 ![](https://www.grapecity.co.kr/images/training/spread/tc6-3-1.png)
@@ -77,7 +79,8 @@ Spread 컨트롤에서 Excel 가져오기 후 테두리가 굵게 변하는 문�
 
 아래 방법을 통해 Excel의 테두리 효과를 복원할 수 있습니다. 예제 코드는 아래와 같습니다.
 
-<예제 코드>
+**예제 코드**
+<br /><br />
 
 ```csharp
 1: //공백이 아닌 마지막 행/열의 인덱스 가져오기
@@ -109,7 +112,8 @@ Spread 컨트롤에서 Excel 가져오기 후 테두리가 굵게 변하는 문�
 27: }
 ```
 
-<정상적으로 복구된 화면>
+<br /><br />
+**정상적으로 복구된 화면**
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc6-3-3.png)
 
