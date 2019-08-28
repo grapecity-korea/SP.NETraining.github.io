@@ -11,7 +11,7 @@ folder: mydoc
 
 ## Excel 에서 차트 가져오기
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/ExcelChartImport.zip)
+[Excel 에서 차트 가져오기 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/ExcelChartImport.zip)
 <br /><br />
 일상 업무 중에는 엑셀을 사용해서 차트를 추가하고 데이터를 직관적으로 표현하는 작업을 많이 하게 됩니다. Spread는 Excel의 대부분 기능과 호환되기 때문에 당연히 차트 또한 가져오기 할 수 있습니다. Spread 컨트롤은 차트, 파형(waveform), 조건부 서식 등 다양한 데이터 시각화 기능을 제공합니다.
 
@@ -42,9 +42,13 @@ folder: mydoc
     3: </httpHandlers>
     ```
 
+[Excel 에서 차트 가져오기 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/ExcelChartImport.zip)
+
+---
+
 ## 다국어 Excel 파일 내보내기
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread_SaveAsCNName.zip)
+[ 다국어 Excel 파일 내보내기 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread_SaveAsCNName.zip)
 <br /><br />
 클라이언트에서 Excel 파일 형식으로 Spread를 저장할 때 파일명을 다국어로 설정하면 내보내기를 한 후 파일명이 깨지는 문제가 발생할 수 있습니다. 해결방법은UrlEncode 메소드를 통해 다국어로 명칭을 전환하기만 하면 됩니다.
 
@@ -62,9 +66,13 @@ folder: mydoc
 1: this.FpSpread1.SaveExcel(Server.MapPath("test.xls"));
 ```
 
+[ 다국어 Excel 파일 내보내기 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread_SaveAsCNName.zip)
+
+---
+
 ## Excel 테두리 가져오기 설정
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread_ASP_Border.zip)
+[Excel 테두리 가져오기 설정 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread_ASP_Border.zip)
 <br /><br />
 Spread 컨트롤에서 Excel 가져오기 후 테두리가 굵게 변하는 문제가 발생하는 경우가 있습니다. Spread는 Html Table 형식으로 브라우저에 렌더링되기 때문에 테두리가 겹치는 현상이 나타날 수 있습니다. 본 장에서는 Excel과 동일하게 테두리를 설정하는 방법에 대해 알아봅니다.
 
@@ -119,3 +127,5 @@ Spread 컨트롤에서 Excel 가져오기 후 테두리가 굵게 변하는 문�
 **정상적으로 복구된 화면**
 <br />
 ![](https://www.grapecity.co.kr/images/training/spread/tc6-3-3.png)
+
+[Excel 테두리 가져오기 설정 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread_ASP_Border.zip)
