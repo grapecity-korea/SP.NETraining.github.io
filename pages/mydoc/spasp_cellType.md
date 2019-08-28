@@ -11,7 +11,7 @@ folder: mydoc
 
 ## Spread 셀 유형을 이용한 ComboBoxCellType
 
-[Spread 셀 유형을 이용한 ComboBoxCellType 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/ComboBoxCellType.zip)
+[Spread 셀 유형을 이용한 ComboBoxCellType - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/ComboBoxCellType.zip)
 <br /><br />
 본 장에서는 Spread for ASP.NET의 ComboBoxCellType 셀 유형 사용방법에 대해 알아봅니다.
 
@@ -93,32 +93,32 @@ folder: mydoc
 
 3.  ComboBoxCellType 포그라운드(foreground)에서 백그라운드 Spread 이벤트 ButtonCommand 트리거 변경을 선택하여 현재 선택한 항목의 Text Value값을 가져옵니다.
 
-            ```csharp
-            /// <summary>
-            /// ComboBoxCellType 현재 선택한 항목의 Text Value값 가져오기
-            /// </summary>
-            	/// <param name="sender"></param>
-              	/// <param name="e"></param>
-            	protected void FpSpread1_ButtonCommand(object sender, FarPoint.Web.Spread.SpreadCommandEventArgs e)
-                    {
-                        // 현재 셀의 행 및 열 인덱스 가져오기
-                        Point _test = (Point)e.CommandArgument;
-                        int _row = _test.X;
-                        int _col = _test.Y;
-                        string _value = this.FpSpread1.ActiveSheetView.Cells[_row, _col].Value.ToString() ;
-                        string _text = this.FpSpread1.ActiveSheetView.Cells[_row, _col].Text;
-                    }
+                ```csharp
+                /// <summary>
+                /// ComboBoxCellType 현재 선택한 항목의 Text Value값 가져오기
+                /// </summary>
+                	/// <param name="sender"></param>
+                  	/// <param name="e"></param>
+                	protected void FpSpread1_ButtonCommand(object sender, FarPoint.Web.Spread.SpreadCommandEventArgs e)
+                        {
+                            // 현재 셀의 행 및 열 인덱스 가져오기
+                            Point _test = (Point)e.CommandArgument;
+                            int _row = _test.X;
+                            int _col = _test.Y;
+                            string _value = this.FpSpread1.ActiveSheetView.Cells[_row, _col].Value.ToString() ;
+                            string _text = this.FpSpread1.ActiveSheetView.Cells[_row, _col].Text;
+                        }
 
-            ```
+                ```
 
-            ![](https://www.grapecity.co.kr/images/training/spread/tc7-1-1.png)
+                ![](https://www.grapecity.co.kr/images/training/spread/tc7-1-1.png)
 
-    <br />
-        [Spread 셀 유형을 이용한 ComboBoxCellType 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/ComboBoxCellType.zip)
+<br />
+[Spread 셀 유형을 이용한 ComboBoxCellType - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/ComboBoxCellType.zip)
 
 ## ComboBoxCellType을 통한 직렬데이터 입력 구현
 
-[ComboBoxCellType을 통한 직렬데이터 입력 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/CascadeComboBox.zip)
+[ComboBoxCellType을 통한 직렬데이터 입력 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/CascadeComboBox.zip)
 <br /><br />
 데이터 입력 시 종종 직렬데이터 입력 문제에 부딪힐 때가 있습니다. 예를 들면 상품 카테고리를 선택한 후 해당 카테고리에 해당하는 상품 전체를 표시할 때 발생하는 문제입니다. 본 장에서는 ComboBoxCellType를 결합하여 직렬데이터 입력을 구현하는 기능에 대해 알아봅니다.
 
@@ -217,11 +217,11 @@ protected void FpSpread1_ButtonCommand(object sender, FarPoint.Web.Spread.Spread
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc7-2-1.gif)
 
-[ComboBoxCellType을 통한 직렬데이터 입력 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/CascadeComboBox.zip)
+[ComboBoxCellType을 통한 직렬데이터 입력 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/CascadeComboBox.zip)
 
 ## 사용자 지정 이미지 버튼 링크
 
-[사용자 지정 이미지 버튼 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/7862_Link.zip)
+[사용자 지정 이미지 버튼 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/7862_Link.zip)
 <br /><br />
 응용 시스템 개발 중에는 테이블의 첫 열 혹은 마지막 열에 삭제, 수정, 데이터 상세보기 등의 기능을 가진 동작 버튼을 넣어야 할 경우가 있습니다. Spread for ASP.NET는 자체적으로 하이퍼링크 셀 유형HyperLinkCellTyp을 지원하지만 위와 같은 수요가 발생하는 경우에는 HyperLinkCellType 셀 유형의 행동(Behavior)을 확장할 수 있습니다.
 
@@ -355,20 +355,22 @@ protected void Page_Load(object sender, EventArgs e)
 ![](https://www.grapecity.co.kr/images/training/spread/tc7-3-1.png)
 
 <br />
-[사용자 지정 이미지 버튼 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/7862_Link.zip)
+[사용자 지정 이미지 버튼 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/7862_Link.zip)
 
 ## Cell에 사용자 지정 컨트롤 추가하기
 
-[사용자 지정 컨트롤 추가 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/usercontrol.zip)
+[사용자 지정 컨트롤 추가 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/usercontrol.zip)
 <br /><br />
 
 본 장에서는 Cell에 사용자 정의 컨트롤(컴포넌트)을 추가하는 방법에 대해 알아봅니다.
+<br />
 
 1.  구현 방법:
 
     A. BaseCellType 을 상속받은 후 사용자 지정 셀 유형을 생성합니다.
 
     B. PaintCell 및 GetEditorControl 메소드를 오버로딩하여 사용자 정의 컨트롤을 추가합니다.
+    <br />
 
 2.  세부 단계:
 
@@ -430,4 +432,4 @@ protected void Page_Load(object sender, EventArgs e)
 
     ![](https://www.grapecity.co.kr/images/training/spread/tc7-4-2.png)
 
-    [사용자 지정 컨트롤 추가 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/usercontrol.zip)
+    [사용자 지정 컨트롤 추가 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/usercontrol.zip)

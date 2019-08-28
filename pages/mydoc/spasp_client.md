@@ -1,6 +1,6 @@
 ---
 title: Spread.NET for ASP.NET 클라이언트
-tags: [spread.net,스프레드 닷넷, 클라이언트, client]
+tags: [spread.net, 스프레드 닷넷, 클라이언트, client]
 keywords: spread.net ASP.NET 클라이언트, 스프레드 닷넷
 last_updated: Aug 08, 2019
 summary: "Spread.NET for ASP.NET 클라이언트"
@@ -9,55 +9,59 @@ permalink: spasp_client.html
 folder: mydoc
 ---
 
-
 ## 코드를 이용하여 Spread 포그라운드 이벤트 추가하기
+
+[코드를 이용하여 이벤트 추가하기 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread ASP .NET (JavaScript Baisic).zip)
 
 Spread for ASP.NET 컨트롤은 일련의 포그라운드 메소드 및 이벤트를 지원함으로써 클라이언트에서의 Spread 컨트롤 사용에 대한 편의를 제공합니다. 특히 포그라운드의 속성 창에서 간편하게 이벤트를 추가할 수 있습니다. 그러나 백그라운드에서 Spread를 리셋해야 하는 경우에는 포그라운드에서 추가한 모든 이벤트들이 모두 리셋됩니다. 본 장에서는 포그라운드의 js 코드를 사용하여 Spread 클라이언트 이벤트를 추가하는 방법에 대해 알아봅니다.
 
 추가 코드는 아래와 같습니다.
-```
+
+```javascript
 <script type="text/javascript">
-    window.onload = function () { 
-        var ss = document.getElementById("FpSpread1"); 
-        ss.addEventListener("ActiveCellChanged", onActiveCellChanged, false); 
-        ss.addEventListener("EditStart", onEditStart, false); 
-        ss.addEventListener("EditStopped", onEditStop, false); 
-    } 
-    function onActiveCellChanged(event) { 
-        // Row changed 
-        // event.row doesn't work in FireFox 
-        alert(event.row); 
+    window.onload = function () {
+        var ss = document.getElementById("FpSpread1");
+        ss.addEventListener("ActiveCellChanged", onActiveCellChanged, false);
+        ss.addEventListener("EditStart", onEditStart, false);
+        ss.addEventListener("EditStopped", onEditStop, false);
+    }
+    function onActiveCellChanged(event) {
+        // Row changed
+        // event.row doesn't work in FireFox
+        alert(event.row);
     }
 
-    function onEditStart(event) { 
-        alert("EditStart"); 
+    function onEditStart(event) {
+        alert("EditStart");
     }
 
-    function onEditStop(event) { 
-        alert("EditStoped"); 
-    } 
+    function onEditStop(event) {
+        alert("EditStoped");
+    }
 </script>
 ```
-스크린샷:
 
+<br />
+스크린샷:
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-1-1.png)
 
 이제 Spread가 리셋되어 포그라운드의 Spread 이벤트를 저장할 수 있습니다.
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread ASP .NET (JavaScript Baisic).zip)
+[코드를 이용하여 이벤트 추가하기 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/Spread ASP .NET (JavaScript Baisic).zip)
 
-
+---
 
 ## JavaScript를 이용한 Spread 속성 가져오기/설정하기
 
-Web 항목에서 Spread를 사용하는 경우 JaveScript와 Spread 간의 상호작용(interaction)을 통하여 관련 속성을 가져오는 방법이 가장 자주 사용되고 있습니다. 물론 많은 사용자들이 이와 관련된 문제들을 제기하기도 합니다. 본 장에서는 비교적 자주 접하는 케이스를 예로 들어 JaveScript와 Spread의 intercation 방법을 소개합니다.
+[JavaScript로 Spread 속성 제어 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/SpreadforASPDemo.zip)
 
-  
+Web 항목에서 Spread를 사용하는 경우 JaveScript와 Spread 간의 상호작용(interaction)을 통하여 관련 속성을 가져오는 방법이 가장 자주 사용되고 있습니다. 물론 많은 사용자들이 이와 관련된 문제들을 제기하기도 합니다. 본 장에서는 비교적 자주 접하는 케이스를 예로 들어 JaveScript와 Spread의 intercation 방법을 소개합니다.
 
 ### Case 1: JavaScript에서 현재 활성화된 셀의 위치 및 셀 관련 속성 가져오기
 
 구현 경로: Spread ActiveRow와 ActiveColumn 속성을 통해 현재 활성화된 셀의 행/열 인덱스를 가져오고 다시 Spread 포그라운드 메소드 GetCellByRowCol를 통해 현재 활성화된 셀 오브젝트를 가져옵니다.
-```
+
+```csharp
 protected void Page_Load(object sender, EventArgs e)
 {
     if (!Page.IsPostBack)
@@ -98,15 +102,13 @@ protected void FpSpread1_ButtonCommand(object sender, .Web.Spread.SpreadCommandE
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-2-1.png)
 
-  
-
 ### Case 2: 마우스 커서의 셀 진입 후 서버와의 통신
 
 UpdatePanel 내 CellType 변경 또는 backColor 설정을 셀 클릭시 보여 줍니다. GetPostBackEventReference메소드를 통해 ButtonCommand 이벤트를 트리거시켰습니다.
 
 코드는 아래와 같습니다.
 
-```
+```javascript
 <script lang="javascript" type="text/javascript">
 window.onload = function () {
     var spread1 = document.getElementById("<%=FpSpread1.ClientID %>");
@@ -133,17 +135,14 @@ function cellChanged(event) {
 }
 
 function FpSpread1_EditStopped(event) {
-    //Add code to handle your event here. 
+    //Add code to handle your event here.
     var spread = document.getElementById("<%=FpSpread1.ClientID %>");
     spread.UpdatePostbackData();
-    spread.CallBack("Button");            
+    spread.CallBack("Button");
 }
 ```
-  
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-2-2.png)
-
-  
 
 ### Case 3: Spread 스크롤바 위치 get/set
 
@@ -151,13 +150,13 @@ function FpSpread1_EditStopped(event) {
 
 코드는 아래와 같습니다.
 
-```
+```javascript
 <script lang="javascript" type="text/javascript">
 function Button1_onClick(event) {
-     //Add code to handle your event here. 
+     //Add code to handle your event here.
     var spread = document.getElementById("<%=FpSpread1.ClientID %>");
     var RowPosition = 15, ColPosition = 2;
-    
+
     spread.ScrollTo(RowPosition, ColPosition);
 
     spread.EndEdit();
@@ -168,9 +167,9 @@ function Button1_onClick(event) {
     txBox.value = "Activcell Row Positon : " + RowPosition.toString() + "  /  Column  : " + ColPosition.toString();
 }
 </script>
+```
 
-  
-
+```csharp
 protected void Page_Load(object sender, EventArgs e)
 {
 
@@ -185,28 +184,29 @@ protected void Page_Load(object sender, EventArgs e)
     }
 }
 ```
-  
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-2-3.png)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/SpreadforASPDemo.zip)
+[JavaScript로 Spread 속성 제어 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/SpreadforASPDemo.zip)
 
+---
 
-## js를 이용한 Spread 높이 설정
+## JavaScript를 이용한 Spread 높이 설정
+
+[JavaScript로 Spread 높이 설정 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/9339.zip)
 
 JS를 통해 Spread Studio for ASP.NET 컨트롤의 Spread 높이를 설정하는 방법에 대한 문의가 게시판을 통해 자주 등장하고 있습니다. 본 장에서는 높이 설정 방법에 대해 알아봅니다.
-
+<br />
 구현 배경:  
 사용자가 Spread를 포함한 페이지에 대한 요청을 제기할 경우 Spread는 브라우저 내에서 HTML Table로 렌더링됩니다.
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-3-1.png)
 
-  
+따라서 포그라운드에서 Spread에 대한 동작을 실행할 경우 Spread에 내장된 일부 이벤트 및 메소드를 사용하는 것 외에 Table에 대한 모든 DOM 속성 및 js 동작을 Spread에 시험적용합니다.
 
-따라서 포그라운드에서 Spread에 대한 동작을 실행할 경우 Spread에 내장된 일부 이벤트 및 메소드를 사용하는 것 외에 Table에 대한 모든 DOM 속성 및 js 동작을 Spread에 시험적용합니다.  
 여기에서는 Spread 생성 테이블에 대한 구현 방법을 알아보겠습니다.
 
-```
+```cshtml
 <div id="spreadcontainer" style="width: 400px; height: 200px;">
         <FarPoint:FpSpread ID="FpSpread1" runat="server" BorderColor="Black" BorderStyle="Solid"
             BorderWidth="1px" Height="100%" Width="100%">
@@ -226,7 +226,7 @@ JS를 통해 Spread Studio for ASP.NET 컨트롤의 Spread 높이를 설정하�
 우선, Spread 외부에 Div 컨테이너(Container)를 네스팅합니다. HTML 코드는 아래와 같습니다.  
 Html Button 클릭 이벤트를 통해 Spread 크기 변경을 트리거해줍니다.
 
-```
+```javascript
 <script language="javascript" type="text/javascript">
 // <![CDATA[
         function Button1_onclick() {
@@ -243,16 +243,17 @@ Html Button 클릭 이벤트를 통해 Spread 크기 변경을 트리거해줍�
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-3-2.gif)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/9339.zip)
+[JavaScript로 Spread 높이 설정 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/9339.zip)
 
+## JavaScript를 이용한 Spread 행(row) 배경색 및 잠금 설정
 
-## JS를 이용한 Spread 행(row) 배경색 및 잠금 설정
-
+[ JavaScript로 행(row) 배경색 및 잠금 -샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/3615.zip)
+<br /><br />
 본 장에서는 JS를 이용한 행(row) 배경색 설정 및 행 잠금 방법에 대해 알아봅니다.
 
-JS 코드:
+**JS 코드:**
 
-```
+```javascript
 <script type="text/javascript">
 function Button1_onclick() {
 
@@ -273,14 +274,18 @@ function Button1_onclick() {
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-4-1.png)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/3615.zip)
-
+[ JavaScript로 행(row) 배경색 및 잠금 -샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/3615.zip)
 
 ## Spread for ASP.NET 컨트롤: JavaScript를 이용한 셀 병합
 
-최근 '동일 내용의 연속된 셀 병합'에 대한 필요성이 제기되고 있습니다. 예를 들면, 하나의 열에 속한 연속된 셀들이 동일한 값을 가지고 있을 때 하나의 셀로 병합하여 나타내는 방식을 말합니다. 본 장에서는 Cell 클라이언트 속성인 rowSpan와 colSpan를 사용하여 위의 기능을 구현하는 방법에 대해 알아봅니다.  
+[JavaScript를 이용한 셀 병합 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/MergeCells.zip)
+<br /><br />
+최근 '동일 내용의 연속된 셀 병합'에 대한 필요성이 제기되고 있습니다. 예를 들면, 하나의 열에 속한 연속된 셀들이 동일한 값을 가지고 있을 때 하나의 셀로 병합하여 나타내는 방식을 말합니다.
+본 장에서는 Cell 클라이언트 속성인 rowSpan와 colSpan를 사용하여 위의 기능을 구현하는 방법에 대해 알아봅니다.
+
 아래의 예제는 특정 열의 모든 행에 대한 루프를 통해 인접한 셀의 값에 따라 그룹화를 진행하는 방법을 나타내고 있습니다.
-```
+
+```javascript
    1: <script type="text/javascript">
    2:      function Button2_onclick()
    3:      {
@@ -316,4 +321,4 @@ function Button1_onclick() {
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc5-5-1.gif)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/MergeCells.zip)
+[JavaScript를 이용한 셀 병합 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/MergeCells.zip)
