@@ -15,7 +15,7 @@ folder: mydoc
 
 **[Visual Basic .NET Code]**
 
-```VB
+```vb
     FpSpread1.ActiveSheet.SheetCornerStyle.BackColor = Color.Blue
 ```
 
@@ -163,4 +163,4 @@ Spread Skin은 Spread Skin클래스를 통해 사용자 정의 될 수 있습니
 
 간단한 샘플을 참고해 주시기 바랍니다.
 
-[선택 셀 배경생 수정 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/Cell
+[선택 셀 배경생 수정 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/Cell Renderer.zip)
