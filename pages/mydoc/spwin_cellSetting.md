@@ -19,23 +19,28 @@ Spread Studio 표 컨트롤을 사용하면 특정 범위의 셀을 복사해 �
 FillRange 방법으로 해당 기능을 구현하겠습니다.
 
 ```csharp
-public void FillRange(
-   int row,
-   int column,
-   int rowCount,
-   int columnCount,
-   int fillCount,
-   FillDirection fillDirection
-)
+    public void FillRange(
+    int row,
+    int column,
+    int rowCount,
+    int columnCount,
+    int fillCount,
+    FillDirection fillDirection
+    )
 ```
 
 ### 매개 변수
 
 > _row_ : 복사 셀 범위의 시작 행 인덱스
+
 > _column_ : 복사 셀 범위의 시작 열 인덱스
+
 > _rowCount_ : 복사 셀 범위의 행 개수
+
 > _columnCount_ : 복사 셀 범위의 행 개수
+
 > _fillCount_ : 채우기 횟수
+
 > _fillDirection_ : 채우기 방향
 
 <br />
@@ -69,6 +74,7 @@ public void FillRange(
 
 <br />
 **결과:**
+
 ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms3-1-1.png)
 
 간단한 샘플을 참고해 주시기 바랍니다.
@@ -95,81 +101,48 @@ Excel을 사용하면서 어떤 한 셀의 데이터를 복사해 여러 셀에 
 ```
 
 **2. Spread에서 한 셀의 데이터를 복사해 여러 셀로 붙여 넣는 기능 구현:**
+Ctrl + C로 셀에 대입한 후 FpSpread1_ClipBoardPasting 이벤트에 아래 코드를 추가합니다.
 
-    Ctrl + C로 셀에 대입한 후 FpSpread1_ClipBoardPasting 이벤트에 아래 코드를 추가합니다.
-
-    ```csharp
-        private void fpSpread1_ClipboardPasting(object sender, FarPoint.Win.Spread.ClipboardPastingEventArgs e)
+```csharp
+    private void fpSpread1_ClipboardPasting(object sender, FarPoint.Win.Spread.ClipboardPastingEventArgs e)
+    {
+        FarPoint.Win.Spread.Model.CellRange cr = default(FarPoint.Win.Spread.Model.CellRange);
+        string textdata = null;
+        string[] a = null;
+        string[] b = null;
+        int rowcount = 0;
+        int colcount = 0;
+        cr = fpSpread1.Sheets[0].GetSelection(0);
+        if (cr.RowCount > 1 | cr.ColumnCount > 1)
         {
-
-                    FarPoint.Win.Spread.Model.CellRange cr = default(FarPoint.Win.Spread.Model.CellRange);
-
-                    string textdata = null;
-
-                    string[] a = null;
-
-                    string[] b = null;
-
-                    int rowcount = 0;
-
-                    int colcount = 0;
-
-                    cr = fpSpread1.Sheets[0].GetSelection(0);
-
-                    if (cr.RowCount > 1 | cr.ColumnCount > 1)
-
+            e.Handled = true;
+            if (System.Windows.Forms.Clipboard.GetDataObject().GetDataPresent(System.Windows.Forms.DataFormats.Text))
+            {
+                textdata = (string)System.Windows.Forms.Clipboard.GetDataObject().GetData(System.Windows.Forms.DataFormats.Text);
+                a = textdata.Split(new char[] { (char)13 });
+                rowcount = a.Length - 1;
+                b = a[0].Split(new char[] { (char)9 });
+                colcount = b.Length;
+                for (int i = cr.Row; i <= cr.Row + cr.RowCount - 1; i += rowcount)
+                {
+                    for (int x = 0; x <= rowcount - 1; x++)
                     {
-                        e.Handled = true;
-                        if (System.Windows.Forms.Clipboard.GetDataObject().GetDataPresent(System.Windows.Forms.DataFormats.Text))
+                        b = a[x].Split(new char[] { (char)9 });
+                        for (int j = cr.Column; j <= cr.Column + cr.ColumnCount - 1; j += colcount)
                         {
-                            textdata = (string)System.Windows.Forms.Clipboard.GetDataObject().GetData(System.Windows.Forms.DataFormats.Text);
-
-                            a = textdata.Split(new char[] { (char)13 });
-
-                            rowcount = a.Length - 1;
-
-                            b = a[0].Split(new char[] { (char)9 });
-
-                            colcount = b.Length;
-
-                            for (int i = cr.Row; i <= cr.Row + cr.RowCount - 1; i += rowcount)
-
+                            for (int y = 0; y <= colcount - 1; y++)
                             {
-
-                                for (int x = 0; x <= rowcount - 1; x++)
-
-                                {
-
-                                    b = a[x].Split(new char[] { (char)9 });
-
-                                    for (int j = cr.Column; j <= cr.Column + cr.ColumnCount - 1; j += colcount)
-
-                                    {
-
-                                        for (int y = 0; y <= colcount - 1; y++)
-
-                                        {
-
-                                            string myStr;
-
-                                            myStr = b[0];
-
-                                            fpSpread1.Sheets[0].SetValue(i + x, j + y, myStr.Trim((char)10, (char)30));
-
-                                        }
-
-                                    }
-
-                                }
-
+                                string myStr;
+                                myStr = b[0];
+                                fpSpread1.Sheets[0].SetValue(i + x, j + y, myStr.Trim((char)10, (char)30));
                             }
-
                         }
-
                     }
-
                 }
-    ```
+            }
+        }
+    }
+```
 
 간단한 샘플을 참고해 주시기 바랍니다.
 
@@ -188,64 +161,44 @@ Excel을 사용하면서 어떤 한 셀의 데이터를 복사해 여러 셀에 
 
 <br />
 **스크린샷 :**
+
 ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms3-3-1.png)
 
 <br />
 **1.  여러 줄의 열 헤더셀을 만들기**
 
-    ```csharp
-        fpSpread1.Sheets[0].ColumnHeaderRowCount = 3;
-
-        fpSpread1.Sheets[0].AddColumnHeaderSpanCell(1, 0, 1, 2);
-
-        fpSpread1.Sheets[0].AddColumnHeaderSpanCell(1, 2, 1, 2);
-
-        fpSpread1.Sheets[0].AddColumnHeaderSpanCell(1, 4, 1, 2);
-
-        fpSpread1.Sheets[0].AddColumnHeaderSpanCell(1, 6, 1, 2);
-
-        fpSpread1.Sheets[0].AddColumnHeaderSpanCell(0, 0, 1, 8);
-
-        fpSpread1.Sheets[0].ColumnHeader.Columns[0].Label = " 비용 금액 ";
-
-        fpSpread1.Sheets[0].ColumnHeader.Columns[1].Label = " 판매 금액 ";
-
-        fpSpread1.Sheets[0].ColumnHeader.Columns[2].Label = " 비용 금액 ";
-
-        fpSpread1.Sheets[0].ColumnHeader.Columns[3].Label = " 판매 금액 ";
-
-        fpSpread1.Sheets[0].ColumnHeader.Columns[4].Label = " 비용 금액 ";
-
-        fpSpread1.Sheets[0].ColumnHeader.Columns[5].Label = " 판매 금액 ";
-
-        fpSpread1.Sheets[0].ColumnHeader.Columns[6].Label = " 비용 금액 ";
-
-        fpSpread1.Sheets[0].ColumnHeader.Columns[7].Label = " 판매 금액 ";
-
-        fpSpread1.Sheets[0].ColumnHeader.Cells[0, 0].Text = "2012년";
-
-        fpSpread1.Sheets[0].ColumnHeader.Cells[1, 0].Text = " 1 분기 ";
-
-        fpSpread1.Sheets[0].ColumnHeader.Cells[1, 2].Text = "2 분기";
-
-        fpSpread1.Sheets[0].ColumnHeader.Cells[1, 4].Text = "3 분기";
-
-        fpSpread1.Sheets[0].ColumnHeader.Cells[1, 6].Text = "4 분기";
-    ```
+```csharp
+    fpSpread1.Sheets[0].ColumnHeaderRowCount = 3;
+    fpSpread1.Sheets[0].AddColumnHeaderSpanCell(1, 0, 1, 2);
+    fpSpread1.Sheets[0].AddColumnHeaderSpanCell(1, 2, 1, 2);
+    fpSpread1.Sheets[0].AddColumnHeaderSpanCell(1, 4, 1, 2);
+    fpSpread1.Sheets[0].AddColumnHeaderSpanCell(1, 6, 1, 2);
+    fpSpread1.Sheets[0].AddColumnHeaderSpanCell(0, 0, 1, 8);
+    fpSpread1.Sheets[0].ColumnHeader.Columns[0].Label = " 비용 금액 ";
+    fpSpread1.Sheets[0].ColumnHeader.Columns[1].Label = " 판매 금액 ";
+    fpSpread1.Sheets[0].ColumnHeader.Columns[2].Label = " 비용 금액 ";
+    fpSpread1.Sheets[0].ColumnHeader.Columns[3].Label = " 판매 금액 ";
+    fpSpread1.Sheets[0].ColumnHeader.Columns[4].Label = " 비용 금액 ";
+    fpSpread1.Sheets[0].ColumnHeader.Columns[5].Label = " 판매 금액 ";
+    fpSpread1.Sheets[0].ColumnHeader.Columns[6].Label = " 비용 금액 ";
+    fpSpread1.Sheets[0].ColumnHeader.Columns[7].Label = " 판매 금액 ";
+    fpSpread1.Sheets[0].ColumnHeader.Cells[0, 0].Text = "2012년";
+    fpSpread1.Sheets[0].ColumnHeader.Cells[1, 0].Text = " 1 분기 ";
+    fpSpread1.Sheets[0].ColumnHeader.Cells[1, 2].Text = "2 분기";
+    fpSpread1.Sheets[0].ColumnHeader.Cells[1, 4].Text = "3 분기";
+    fpSpread1.Sheets[0].ColumnHeader.Cells[1, 6].Text = "4 분기";
+```
 
 **2. 행 헤더셀에 여러 열을 만듭니다.**
 
-    Ctrl + C로 셀에 대입한 후 FpSpread1_ClipBoardPasting 이벤트에 아래 코드를 추가합니다.
+Ctrl + C로 셀에 대입한 후 FpSpread1_ClipBoardPasting 이벤트에 아래 코드를 추가합니다.
 
-    ```csharp
-        fpSpread1.Sheets[0].RowHeaderColumnCount = 2;
-
-        fpSpread1.Sheets[0].AddRowHeaderSpanCell(0, 0, 10, 1);
-
-        fpSpread1.Sheets[0].RowHeader.Columns[0].Width = 45;
-
-        fpSpread1.Sheets[0].RowHeader.Cells[0, 0].Text = "Co. #";
-    ```
+```csharp
+    fpSpread1.Sheets[0].RowHeaderColumnCount = 2;
+    fpSpread1.Sheets[0].AddRowHeaderSpanCell(0, 0, 10, 1);
+    fpSpread1.Sheets[0].RowHeader.Columns[0].Width = 45;
+    fpSpread1.Sheets[0].RowHeader.Cells[0, 0].Text = "Co. #";
+```
 
 <br/>
 **물론 제목 행이나 열 셀에 다음 코드를 사용하여 그에 따라 병합 할 수도 있습니다**
@@ -253,23 +206,23 @@ Excel을 사용하면서 어떤 한 셀의 데이터를 복사해 여러 셀에 
 <br/>
 **1.  헤더열의 셀 병합**
 
-    ```csharp
-        fpSpread1.Sheets[0].AddColumnHeaderSpanCell(1, 0, 1, 2);
+```csharp
+    fpSpread1.Sheets[0].AddColumnHeaderSpanCell(1, 0, 1, 2);
 
-        fpSpread1.Sheets[0].AddColumnHeaderSpanCell(1, 2, 1, 2);
+    fpSpread1.Sheets[0].AddColumnHeaderSpanCell(1, 2, 1, 2);
 
-        fpSpread1.Sheets[0].AddColumnHeaderSpanCell(1, 4, 1, 2);
+    fpSpread1.Sheets[0].AddColumnHeaderSpanCell(1, 4, 1, 2);
 
-        fpSpread1.Sheets[0].AddColumnHeaderSpanCell(1, 6, 1, 2);
+    fpSpread1.Sheets[0].AddColumnHeaderSpanCell(1, 6, 1, 2);
 
-        fpSpread1.Sheets[0].AddColumnHeaderSpanCell(0, 0, 1, 8);
-    ```
+    fpSpread1.Sheets[0].AddColumnHeaderSpanCell(0, 0, 1, 8);
+```
 
 **2. 헤더행의 셀 병합**
 
-    ```csharp
-        fpSpread1.Sheets[0].AddRowHeaderSpanCell(0, 0, 10, 1);
-    ```
+```csharp
+    fpSpread1.Sheets[0].AddRowHeaderSpanCell(0, 0, 10, 1);
+```
 
 [Spread 멀티헤더 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/Demo.zip)
 
