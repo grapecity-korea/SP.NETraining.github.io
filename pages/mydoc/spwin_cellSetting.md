@@ -20,12 +20,12 @@ FillRange 방법으로 해당 기능을 구현하겠습니다.
 
 ```csharp
     public void FillRange(
-    int row,
-    int column,
-    int rowCount,
-    int columnCount,
-    int fillCount,
-    FillDirection fillDirection
+        int row,
+        int column,
+        int rowCount,
+        int columnCount,
+        int fillCount,
+        FillDirection fillDirection
     )
 ```
 
@@ -49,26 +49,26 @@ FillRange 방법으로 해당 기능을 구현하겠습니다.
 ```csharp
     private void Form1_Load(object sender, EventArgs e)
     {
-                // Define the text to repeat.
-                fpSpread1.ActiveSheet.Cells[0, 0].Text = "A1-text";
-                fpSpread1.ActiveSheet.Cells[0, 1].Text = "A2-text";
-                fpSpread1.ActiveSheet.Cells[1, 0].Text = "B1-text";
-                fpSpread1.ActiveSheet.Cells[1, 1].Text = "B2-text";
+        // Define the text to repeat.
+        fpSpread1.ActiveSheet.Cells[0, 0].Text = "A1-text";
+        fpSpread1.ActiveSheet.Cells[0, 1].Text = "A2-text";
+        fpSpread1.ActiveSheet.Cells[1, 0].Text = "B1-text";
+        fpSpread1.ActiveSheet.Cells[1, 1].Text = "B2-text";
 
-                fpSpread1.ActiveSheet.Cells[0, 0].BackColor = Color.Cyan;
-                fpSpread1.ActiveSheet.Cells[0, 0].ForeColor = Color.DarkBlue;
-                fpSpread1.ActiveSheet.Cells[0, 1].BackColor = Color.Coral;
-                fpSpread1.ActiveSheet.Cells[0, 1].ForeColor = Color.DarkRed;
+        fpSpread1.ActiveSheet.Cells[0, 0].BackColor = Color.Cyan;
+        fpSpread1.ActiveSheet.Cells[0, 0].ForeColor = Color.DarkBlue;
+        fpSpread1.ActiveSheet.Cells[0, 1].BackColor = Color.Coral;
+        fpSpread1.ActiveSheet.Cells[0, 1].ForeColor = Color.DarkRed;
 
     }
     private void 오른쪽으로채우기ToolStripMenuItem_Click(object sender, EventArgs e)
     {
-    //오른쪽으로 채우기
-    fpSpread1.ActiveSheet.FillRange(0, 1, 2, 1, 3, FillDirection.Right);
+        //오른쪽으로 채우기
+        fpSpread1.ActiveSheet.FillRange(0, 1, 2, 1, 3, FillDirection.Right);
     }
     private void 아래쪽으로채우기ToolStripMenuItem_Click(object sender, EventArgs e)
     {
-    //아래쪽으로 채우기
+        //아래쪽으로 채우기
     }
 ```
 
