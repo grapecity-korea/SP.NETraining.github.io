@@ -67,7 +67,6 @@ Spread 표 컨트롤 시스템은 기본값으로 선택기 2종을 제공하며
   fpSpread1.ActiveSheet.SelectionUnit = FarPoint.Win.Spread.Model.SelectionUnit.Cell;
   fpSpread1.ActiveSheet.SelectionBackColor = Color.Yellow;
   fpSpread1.ActiveSheet.SelectionForeColor = Color.Green;
-
 ```
 
 **- 사용자 지정 선택기--그러데이션 색**
