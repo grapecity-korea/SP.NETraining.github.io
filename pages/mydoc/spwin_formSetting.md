@@ -19,67 +19,64 @@ Spread 테두리에는 사선 테두리가 없지만 다양한 도형 기능은 
 
 **1. Spread에 LineShape를 추가하는 방법은 아래와 같습니다.**
 
-    ```csharp
-        FarPoint.Win.Spread.DrawingSpace.LineShape lShape = new FarPoint.Win.Spread.DrawingSpace.LineShape();
-        lShape.Name = "line";
-        lShape.Top = 0;
-        lShape.Left = 0;
-        lShape.Thickness = 5;
-        lShape.ShapeOutlineColor = Color.Red;
-        this.fpSpread1.Sheets[0].AddShape(lShape);
-    ```
+```csharp
+    FarPoint.Win.Spread.DrawingSpace.LineShape lShape = new FarPoint.Win.Spread.DrawingSpace.LineShape();
+    lShape.Name = "line";
+    lShape.Top = 0;
+    lShape.Left = 0;
+    lShape.Thickness = 5;
+    lShape.ShapeOutlineColor = Color.Red;
+    this.fpSpread1.Sheets[0].AddShape(lShape);
+```
 
 **결과:**
 ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms4-1-1.png)
 
 **2. 셀의 길이와 너비를 계산해 LineShape의 시작 위치와 각도를 계산합니다.**
 
-    ```csharp
-        private Rectangle CaculateRectangle(int startRowIndex, int startColIndex
-        , int endRowIndex, int endColIndex)
+```csharp
+    private Rectangle CaculateRectangle(int startRowIndex, int startColIndex
+    , int endRowIndex, int endColIndex)
+    {
+        float height = 0;
+        float width = 0;
+        for (int i = startRowIndex; i <= endRowIndex; i++)
         {
-            float height = 0;
-            float width = 0;
-            for (int i = startRowIndex; i <= endRowIndex; i++)
-            {
-                height += this.fpSpread1.Sheets[0].Rows[i].Height;
-            }
-
-            for (int i = startColIndex; i <= endColIndex; i++)
-            {
-                width += this.fpSpread1.Sheets[0].Columns[i].Width;
-            }
-            Rectangle cellRec = this.fpSpread1.GetCellRectangle(0, 0, startRowIndex, startColIndex);
-            Point startPositoin = new Point(cellRec.Left - (int)this.fpSpread1.Sheets[0].SheetCorner
-        .Columns[0].Width, cellRec.Top - (int)this.fpSpread1.Sheets[0].SheetCorner.Rows[0].Height);
-
-            Rectangle rec = new Rectangle(startPositoin, new Size((int)width, (int)height));
-
-            return rec;
+            height += this.fpSpread1.Sheets[0].Rows[i].Height;
         }
-    ```
+        for (int i = startColIndex; i <= endColIndex; i++)
+        {
+            width += this.fpSpread1.Sheets[0].Columns[i].Width;
+        }
+        Rectangle cellRec = this.fpSpread1.GetCellRectangle(0, 0, startRowIndex, startColIndex);
+        Point startPositoin = new Point(cellRec.Left - (int)this.fpSpread1.Sheets[0].SheetCorner
+    .Columns[0].Width, cellRec.Top - (int)this.fpSpread1.Sheets[0].SheetCorner.Rows[0].Height);
+        Rectangle rec = new Rectangle(startPositoin, new Size((int)width, (int)height));
+        return rec;
+    }
+```
 
 **3. SetBounds 설정 방법으로 LineShpae 위치 정보를 설정합니다.**
 
-    ```csharp
-        FarPoint.Win.Spread.DrawingSpace.LineShape line =  new FarPoint.Win.Spread.DrawingSpace.LineShape();
-        line.Name = "mark";
-        line.ShapeOutlineColor = Color.Gray;
-        line.Width = 2;
-        line.Location = new Point(0, 0);
-        Rectangle rec = CaculateRectangle(0, 0, 2, 1);
-        line.SetBounds(rec);
-    ```
+```csharp
+    FarPoint.Win.Spread.DrawingSpace.LineShape line =  new FarPoint.Win.Spread.DrawingSpace.LineShape();
+    line.Name = "mark";
+    line.ShapeOutlineColor = Color.Gray;
+    line.Width = 2;
+    line.Location = new Point(0, 0);
+    Rectangle rec = CaculateRectangle(0, 0, 2, 1);
+    line.SetBounds(rec);
+```
 
-    이상이 설정의 핵심 코드입니다. 위 방법을 사용하면 다음과 같은 결과를 얻을 수 있습니다.
+이상이 설정의 핵심 코드입니다. 위 방법을 사용하면 다음과 같은 결과를 얻을 수 있습니다.
 
-    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms4-1-2.png)
+![](https://www.grapecity.co.kr/images/training/spread/tc_winforms4-1-2.png)
 
-    머리글 숨기기 및 테두리 설정 후 아래와 같은 결과를 얻을 수 있습니다.
+머리글 숨기기 및 테두리 설정 후 아래와 같은 결과를 얻을 수 있습니다.
 
-    ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms4-1-3.png)
+![](https://www.grapecity.co.kr/images/training/spread/tc_winforms4-1-3.png)
 
-    간단한 샘플을 참고해 주시기 바랍니다.
+간단한 샘플을 참고해 주시기 바랍니다.
 
 [교차표 보고서 구현하기 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/crossreport.zip)
 
