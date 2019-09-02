@@ -49,6 +49,8 @@ Spread 표 컨트롤은 PDF 파일로 인쇄하기 기능을 지원합니다. Pr
 ## 표 필터 사용
 
 [표 필터 사용 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/PrintToPDFWithBackGroundImage_CS.zip)
+<br /><br />
+
 표(Table)는 Excel의 데이터 필터와 비슷한 필터 도구를 제공합니다. 표의 필터 기능은 TablesView. FilterButtonVisible 속성에서 설정할 수 있습니다.
 
 ```csharp
@@ -80,10 +82,12 @@ Spread 표 컨트롤은 PDF 파일로 인쇄하기 기능을 지원합니다. Pr
 
 <br /><br />
 Spread의 인쇄와 인쇄 미리보기는 PrintInfo 유형으로 구현합니다.
+
 머리글과 바닥글에 이미지를 삽입하기 위해 먼저 Spread 제품에 내장된 인터페이스 문서(Spread Windows Forms 7.0 Product Documentation ---Customizing the Printed Page Header or Footer)를 살펴보겠습니다.
+
 [메뉴 경로: 시작-->모든 프로그램-->ComponentOne—>Spread Studio for .net 7.2—>Spread Winforms-->**Spread Help (CHM)**]
 
-이미지에 대응하는 속성을 찾을 수 있습니다: public Image[] Images {get; set;}
+**이미지에 대응하는 속성을 찾을 수 있습니다: public Image[] Images {get; set;}**
 
 ```csharp
   // Define the printer settings
@@ -109,6 +113,7 @@ Spread의 인쇄와 인쇄 미리보기는 PrintInfo 유형으로 구현합니�
 
 마지막으로 그대로 따라 코딩합니다. 아래의 demo 코드 소스는 머리글, 바닥글에 이미지 삽입을 구현합니다.
 
+<br />
 **스크린샷:**
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms6-2-3.png)
@@ -126,6 +131,7 @@ Spread의 인쇄와 인쇄 미리보기는 PrintInfo 유형으로 구현합니�
 
 사람들은 표 컨트롤이 Excel 인쇄처럼 머리글과 바닥글을 인쇄할 수 있기를 바랍니다. 놀랍게도 Spread는 이를 완벽히 지원합니다. 또한, 사용자가 원하는 대로 머리글, 바닥글에 표시 내용과 방식을 지정할 수 있습니다. 실제 예시로 연습해 보겠습니다!
 
+<br />
 **스크린샷**
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms6-3-1.png)
