@@ -70,29 +70,29 @@ Spread 컨트롤은 데이터 표시, 입력 및 확인에 많이 쓰입니다.
 
 **1. Spread PreviewKeyDown과 Change 이벤트 추가:**
 
-    ```csharp
+```csharp
     private void Form1_Load(object sender, EventArgs e)
     {
           this.fpSpread1.Change += new int.Win.Spread.ChangeEventHandler(fpSpread1_Change);
           this.fpSpread1.PreviewKeyDown += new ewKeyDownEventHandler(fpSpread1_PreviewKeyDown);
-    ```
+```
 
 **2. PreviewKeyDown 이벤트에서 Ctrl+V키 감지**
 
-    ```csharp
+```csharp
     if (e.Control&&e.KeyCode== Keys.V)
     {
 
     }
-    ```
+```
 
 **3. Change 이벤트 호출:**
 
-    ```csharp
+```csharp
     int row=this.fpSpread1.ActiveSheet.ActiveRowIndex;
     int col = this.fpSpread1.ActiveSheet.ActiveColumnIndex; FarPoint.Win.Spread.ChangeEventArgs param=new ChangeEventArgs(null,row,col);
     fpSpread1_Change(null, param);
-    ```
+```
 
 아래의 샘플을 참고해 주시기 바랍니다.
 
@@ -203,9 +203,9 @@ im.Put(k, FarPoint.Win.Spread.SpreadActions.None);
 
 **1. 사용자 지정 액션 만들기**
 
-    먼저 Spread Action 부분을 가져와서 현재 포커스가 되는 셀에 •을 추가하고 사이 공간을 주는 것으로 오버라이드 한다.
+먼저 Spread Action 부분을 가져와서 현재 포커스가 되는 셀에 •을 추가하고 사이 공간을 주는 것으로 오버라이드 한다.
 
-    ```
+```csharp
     public class myAction : FarPoint.Win.Spread.Action
     {
       public override void PerformAction(object sender)
@@ -223,13 +223,13 @@ im.Put(k, FarPoint.Win.Spread.SpreadActions.None);
           editor.Text = text;
        }
      }
-    ```
+```
 
 **2. 사용자 지정 액션을 스프레드에 적용하기**
 
-    사용자 지정액션을 스프레드의 Alt+Enter 키코드가 발생했을 때에 발생하도록 적용합니다.
+사용자 지정액션을 스프레드의 Alt+Enter 키코드가 발생했을 때에 발생하도록 적용합니다.
 
-    ```csharp
+```csharp
     FarPoint.Win.Spread.InputMap ancestorOfFocusedMap =
     Spread1.GetInputMap(FarPoint.Win.Spread.InputMapMode.WhenAncestorOfFocused);
     FarPoint.Win.Spread.ActionMap am = fpSpread1.GetActionMap();
@@ -240,7 +240,7 @@ im.Put(k, FarPoint.Win.Spread.SpreadActions.None);
     AltEnter");
     fpSpread1.SetInputMap(FarPoint.Win.Spread.InputMapMode.WhenAncestorOfFocused,
      ancestorOfFocusedMap);
-    ```
+```
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms11-5-1.png)
 
