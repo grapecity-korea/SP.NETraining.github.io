@@ -11,7 +11,11 @@ folder: mydoc
 
 ## 스파크라인 생성하기
 
-Spread 컨트롤은 사용자의 편의를 위해 계속 노력해왔습니다. 그 중 하나가 조건부 서식의 강화입니다. 스파크라인은 셀 안에 그려 넣는 미니 차트로 데이터를 시각화해서 나타나는 데 사용합니다. Spread는 열, 선형 및 승패형 스파크라인을 지원하며 Excel 2010 파일과 호환 및 전환을 할 수 있습니다. 아래 이미지에서 스파크라인의 3종 유형을 보실 수 있습니다.
+[스파크라인 생성하기 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/SparklinesDemo.zip)
+<br /><br />
+Spread 컨트롤은 사용자의 편의를 위해 계속 노력해왔습니다.
+
+그 중 하나가 조건부 서식의 강화입니다. 스파크라인은 셀 안에 그려 넣는 미니 차트로 데이터를 시각화해서 나타나는 데 사용합니다. Spread는 열, 선형 및 승패형 스파크라인을 지원하며 Excel 2010 파일과 호환 및 전환을 할 수 있습니다. 아래 이미지에서 스파크라인의 3종 유형을 보실 수 있습니다.
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms10-1-1.png)
 
@@ -19,9 +23,8 @@ Spread 컨트롤은 사용자의 편의를 위해 계속 노력해왔습니다. 
 
 또한, 스파크라인의 높음, 낮음, 승(+), 패(-), 첫 번째 및 마지막의 표시 색을 설정할 수 있습니다.
 
-I. 스파크라인 추가:
-
-코드로 추가:
+<br />
+**코드로 스파크 라인 추가:**
 
 C#:
 
@@ -43,7 +46,8 @@ C#:
     fpSpread1.Sheets[0].AddSparkline(data, data2, FarPoint.Win.Spread.SparklineType.Column, ex);
 ```
 
-디자이너로 스파크라인 추가:
+<br />
+**디자이너로 스파크라인 추가:**
 
 물론 Spread 디자이너로 스파크라인을 추가하는 방법도 있습니다.
 
@@ -55,28 +59,33 @@ C#:
 6. ‘OK’를 클릭합니다.
 7. 수정 내용을 저장하고 파일 메뉴에서 적용 후 닫기를 선택한 후 디자이너를 종료합니다.
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/SparklinesDemo.zip)
+[스파크라인 생성하기 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/SparklinesDemo.zip)
 
 ## 다양한 차트 유형
 
-ActiveChart를 이용하여 다양한 스타일의 2D & 3D 차트를 생성할 수 있습니다. ActiveChart는 최종 사용자에게 디자이너 기능을 제공합니다. 외부 데이터 소스를 바인딩할 때 최종 사용자는 런타임에 차트 유형과 스타일을 수정할 수 있습니다. 또한 최종사용자는 Spread 안에 차트를 생성 및 수정할 수 있습니다. MS-Excel과 유사한 방식으로 사용 가능합니다. 이처럼 다양하고 풍부한 기능이 제공됨으로써 최종 사용자의 사용 편의성 또한 크게 증대되었습니다.
+ActiveChart를 이용하여 다양한 스타일의 2D & 3D 차트를 생성할 수 있습니다.
 
-12가지 차트와 85가지 차트 유형:
+ActiveChart는 최종 사용자에게 디자이너 기능을 제공합니다. 외부 데이터 소스를 바인딩할 때 최종 사용자는 런타임에 차트 유형과 스타일을 수정할 수 있습니다. 또한 최종사용자는 Spread 안에 차트를 생성 및 수정할 수 있습니다. MS-Excel과 유사한 방식으로 사용 가능합니다.
 
-· 세로막대형  
-· 가로막대형  
-· 거품형  
-· 도넛형
+이처럼 다양하고 풍부한 기능이 제공됨으로써 최종 사용자의 사용 편의성 또한 크게 증대되었습니다.
 
-· 꺾은선형  
-· 영역형  
-· 주식형  
-· 방사형
+<br />
+**12가지 차트와 85가지 차트 유형:**
 
-· 원형  
-· XY(분산형)  
-· 표면형  
-· 극좌표형
+**· 세로막대형**
+**· 가로막대형**
+**· 거품형**  
+**· 도넛형**
+
+**· 꺾은선형**  
+**· 영역형**  
+**· 주식형**  
+**· 방사형**
+
+**· 원형**  
+**· XY(분산형)**  
+**· 표면형**  
+**· 극좌표형**
 
 ### 세로막대형
 
@@ -152,11 +161,15 @@ XY 분산형 차트유형: 표식이 있는 분산형, 직선이 있는 분산�
 
 ## 사용자 지정 스파크라인
 
-Spread for Winforms컨트롤은 스파크라인 기능을 제공하여 모든 분석 데이터마다 스파크라인을 추가할 수 있습니다. 스파크라인은 간단한 미니 차트로 데이터를 시각화해 셀 내에 표시할 때 사용합니다. 설정 가능한 스파크라인에는 열형, 꺾은선형 및 승패형이 있습니다. 스파크라인의 데이터는 스파크라인과 같은 폼에 있어야 합니다. 본문에서는 다른 폼의 데이터를 불러와 스파크라인을 생성하는 법을 소개합니다.
+[사용자 지정 스파크라인 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/SpreadSparkline.zip)
 
-1.  ExcelSparkLine 유형을 상속한 사용자 지정 스파크라인 생성:
+Spread for Winforms컨트롤은 스파크라인 기능을 제공하여 모든 분석 데이터마다 스파크라인을 추가할 수 있습니다. 스파크라인은 간단한 미니 차트로 데이터를 시각화해 셀 내에 표시할 때 사용합니다. 설정 가능한 스파크라인에는 열형, 꺾은선형 및 승패형이 있습니다.
 
-    ```
+스파크라인의 데이터는 스파크라인과 같은 폼에 있어야 합니다. 본문에서는 다른 폼의 데이터를 불러와 스파크라인을 생성하는 법을 소개합니다.
+
+**1. ExcelSparkLine 유형을 상속한 사용자 지정 스파크라인 생성:**
+
+```csharp
     class CustomExcelSparkline : ExcelSparkline
     {
         CellRangeSegmentData innerData;
@@ -170,11 +183,11 @@ Spread for Winforms컨트롤은 스파크라인 기능을 제공하여 모든 �
             return innerData;
         }
     }
-    ```
+```
 
-2.  사용자 지정으로 승패형 스파크라인 생성:
+**2. 사용자 지정으로 승패형 스파크라인 생성:**
 
-    ```
+```csharp
      private void Form1_Load(object sender, EventArgs e)
     {
         fpSpread1.SuspendLayout();
@@ -199,7 +212,8 @@ Spread for Winforms컨트롤은 스파크라인 기능을 제공하여 모든 �
                 type = SparklineType.Line;
             else if (r % 3 == 2)
                 type = SparklineType.Winloss;
-            FarPoint.Win.Spread.ExcelSparklineGroup esg = new int.Win.Spread.ExcelSparklineGroup(new FarPoint.Win.Spread.ExcelSparklineSetting(), ;
+            FarPoint.Win.Spread.ExcelSparklineGroup esg = new int.Win.Spread.ExcelSparklineGroup(new FarPoint.Win.Spread.ExcelSparklineSetting());
+
             for (int c = 0; c < fpSpread1.Sheets[0].ColumnCount; c++)
             {
                 CustomExcelSparkline es = new CustomExcelSparkline(r, c, sv);
@@ -209,10 +223,10 @@ Spread for Winforms컨트롤은 스파크라인 기능을 제공하여 모든 �
         }
         fpSpread1.ResumeLayout();
     }
-    ```
+```
 
-결과:
+**결과:**
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc_winforms10-3-1.png)
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/SpreadSparkline.zip)
+[사용자 지정 스파크라인 - 샘플 다운로드](https://www.grapecity.co.kr/files/SpreadNET/Samples/WinformsSample/SpreadSparkline.zip)
