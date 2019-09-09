@@ -1,6 +1,6 @@
 ---
 title: Spread.NET 출력
-tags: [출력, print]
+tags: [출력, print, 표, pdf, 머리글, 바닥글, 미리보기, 인쇄]
 keywords: spread.net 출력, 스프레드 닷넷, spread.net print
 last_updated: Aug 08, 2019
 summary: "Spread.NET 출력"

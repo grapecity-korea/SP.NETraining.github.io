@@ -1,6 +1,6 @@
 ---
 title: Spread.Net 배포 | Deploy
-keywords: Spread 배포, Spread deply, Spread distribution
+keywords: Spread 배포, Spread deploy, Spread distribution
 last_updated: Aug 26, 2019
 summary: "Spread.NET을 배포하는 방법에 대한 설명입니다."
 sidebar: mydoc_sidebar

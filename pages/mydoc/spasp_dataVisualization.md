@@ -1,6 +1,6 @@
 ---
 title: Spread.NET ASP.NET 데이터 시각화
-tags: [데이터 시각화, data visualization, ASP.NET]
+tags: [데이터 시각화, data visualization, ASP.NET, 차트, chart, 막대, 꺾은선, 원, 영역, 분산, 버블, 주식, 표면, 도넛, 방사, 극좌표, 동적 툴팁, tooltip, 스파크라인, sparkline]
 keywords: spread.net 데이터 시각화, 스프레드 닷넷, spread.net data visualization
 last_updated: Aug 08, 2019
 summary: "Spread.NET ASP.NET 데이터 시각화"

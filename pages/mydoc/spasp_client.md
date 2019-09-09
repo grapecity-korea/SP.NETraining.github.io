@@ -1,6 +1,6 @@
 ---
 title: Spread.NET for ASP.NET 클라이언트
-tags: [spread.net, 스프레드 닷넷, 클라이언트, client]
+tags: [spread.net, 스프레드 닷넷, 클라이언트, client, 포그라운드 이벤트, JavaScript, 자바스크립트, 속성, 높이, 배경색, 잠금, 셀 병합]
 keywords: spread.net ASP.NET 클라이언트, 스프레드 닷넷
 last_updated: Aug 08, 2019
 summary: "Spread.NET for ASP.NET 클라이언트"

@@ -1,6 +1,6 @@
 ---
 title: Spread.NET for ASP.NET 기타 기능
-tags: [툴팁, tooltip, memorystream, 저장, asp.net]
+tags: [mvc, context menu, 컨텍스트 메뉴, 페이징, paging, commandbar, 명령바, 브라우저, IE, Internet Explorer, mozila, firefox, apple safari, google chrome]
 keywords: spread.net tooltip, 스프레드 닷넷 툴팁, spread.net 저장
 last_updated: Aug 08, 2019
 summary: "Spread.NET for ASP.NET 기타 기능"

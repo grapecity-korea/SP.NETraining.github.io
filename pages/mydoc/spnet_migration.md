@@ -2,7 +2,7 @@
 title: Spread.NET 마이그레이션 | Migration
 keywords: Spread 마이그레이션, Spread migration
 last_updated: Aug 26, 2019
-summary: "Spread.NET의 DLL을 평가판에서 정식버전으로, 또는 구버전에서 최신버전으로 마이그리이션 하는 방법을 설명합니다."
+summary: "Spread.NET의 DLL을 평가판에서 정식버전으로, 또는 구버전에서 최신버전으로 마이그레이션 하는 방법을 설명합니다."
 sidebar: mydoc_sidebar
 permalink: spnet_migration.html
 folder: mydoc

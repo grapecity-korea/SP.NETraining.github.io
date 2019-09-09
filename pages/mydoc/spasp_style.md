@@ -1,6 +1,6 @@
 ---
 title: Spread.NET for ASP.NET 스타일
-tags: [spread.net, 스프레드 닷넷, 스타일, 배경색]
+tags: [spread.net, 스프레드 닷넷, 스타일, 배경색, 테두리, 템플릿, 스킨, skin]
 keywords: spread.net ASP.NET 스타일, 스프레드 닷넷
 last_updated: Aug 08, 2019
 summary: "Spread.NET for ASP.NET 스타일"

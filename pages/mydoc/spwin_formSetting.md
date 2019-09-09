@@ -1,6 +1,6 @@
 ---
 title: Spread.NET 폼 설정
-tags: [Form, 폼설정]
+tags: [Form, 폼설정, 표, table, 확장, 그림]
 keywords: spread.net 폼 설정, 스프레드 닷넷
 last_updated: Aug 08, 2019
 summary: "Spread.NET 폼 설정"

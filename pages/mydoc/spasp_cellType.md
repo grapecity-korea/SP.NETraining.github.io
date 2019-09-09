@@ -1,6 +1,6 @@
 ---
 title: Spread.NET for ASP.NET 셀 유형
-tags: [spread.net, 스프레드 닷넷, 셀 유형, Cell type]
+tags: [spread.net, 스프레드 닷넷, 셀 유형, Cell type, combobox, 콤보박스, 직렬 데이터, 이미지 버튼, 사용자 지정 컨트롤]
 keywords: spread.net ASP.NET 셀 유형, 스프레드 닷넷, spread.net ASP.NET cell type
 last_updated: Aug 08, 2019
 summary: "Spread.NET for ASP.NET 셀 유형"

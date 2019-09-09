@@ -1,6 +1,6 @@
 ---
 title: Spread.NET for ASP.NET Excel 호환
-tags: [spread.net, 스프레드 닷넷, Excel 호환, 엑셀 호환]
+tags: [spread.net, 스프레드 닷넷, Excel 호환, 엑셀 호환, 다국어, 테두리, 차트 가져오기]
 keywords: spread.net ASP.NET Excel 호환, 스프레드 닷넷, spread.net ASP.NET 엑셀 호환
 last_updated: Aug 08, 2019
 summary: "Spread.NET for ASP.NET Excel 호환"

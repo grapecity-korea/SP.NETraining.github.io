@@ -1,6 +1,6 @@
 ---
 title: Spread.NET for ASP.NET 함수
-tags: [spread.net, 스프레드 닷넷, 함수]
+tags: [spread.net, 스프레드 닷넷, 함수, 자동 계산, 교차 시트 함수]
 keywords: spread.net ASP.NET 함수, 스프레드 닷넷
 last_updated: Aug 08, 2019
 summary: "Spread.NET for ASP.NET 함수"

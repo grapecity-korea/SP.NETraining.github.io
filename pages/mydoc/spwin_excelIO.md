@@ -1,6 +1,6 @@
 ---
 title: Spread.NET Excel 입출력
-tags: [ExcelIO, Excel, 입출력]
+tags: [ExcelIO, Excel, 입출력, 이미지, 인쇄 설정, 테두리, 그림]
 keywords: spread.net excel 입출력, 스프레드 닷넷, spread.net excel IO
 last_updated: Aug 08, 2019
 summary: "Spread.NET Excel 입출력"

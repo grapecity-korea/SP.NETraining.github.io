@@ -1,6 +1,6 @@
 ---
 title: Spread.NET 셀 설정
-tags: [spread.net, 스프레드 닷넷, 셀 설정, 배경색]
+tags: [spread.net, 스프레드 닷넷, 셀 설정, 배경색, 매개변수, 멀티 헤더 셀, 프롬프트]
 keywords: spread.net 셀 설정, 스프레드 닷넷
 last_updated: Aug 08, 2019
 summary: "Spread.NET 셀 설정"

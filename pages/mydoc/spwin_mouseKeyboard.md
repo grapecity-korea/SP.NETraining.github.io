@@ -1,6 +1,6 @@
 ---
 title: Spread.NET 마우스 키보드 제어
-tags: [mouse, keyboard, 마우스, 키보드, 제어]
+tags: [mouse, keyboard, 마우스, 키보드, 제어, 엔터키, change 이벤트, 넓이, 높이, tab키, 리스트]
 keywords: spread.net 마우스 키보드 제어, 스프레드 닷넷
 last_updated: Aug 08, 2019
 summary: "Spread.NET 마우스 키보드 제어"

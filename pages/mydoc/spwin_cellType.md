@@ -1,6 +1,6 @@
 ---
 title: Spread.NET 셀 유형
-tags: [셀 유형, cell type]
+tags: [셀 유형, cell type, combobox, 콤보박스, 배경색, 이미지, image, 대각선, diagonal]
 keywords: spread.net 셀 유형, 스프레드 닷넷, spread.net cell type
 last_updated: Aug 08, 2019
 summary: "Spread.NET 셀 유형"

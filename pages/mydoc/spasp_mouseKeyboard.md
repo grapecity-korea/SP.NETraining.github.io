@@ -1,6 +1,6 @@
 ---
 title: Spread.NET for ASP.NET 마우스 키보드 제어
-tags: [mouse, keyboard, 마우스, 키보드, 제어, ASP.NET]
+tags: [mouse, keyboard, 마우스, 키보드, 제어, ASP.NET, 마우스 클릭 이벤트, 커서]
 keywords: spread.net 마우스 키보드 제어, 스프레드 닷넷
 last_updated: Aug 08, 2019
 summary: "Spread.NET for ASP.NET 마우스 키보드 제어"
