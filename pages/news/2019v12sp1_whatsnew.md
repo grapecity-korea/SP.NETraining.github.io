@@ -18,7 +18,7 @@ summary: "Excel과 유사하게 전문적이고 유연한 .NET 테이블 컨트�
 
 1. Windows Forms용 Spread Designer에는 다음과 같이 수식 탭이 새로 도입되었습니다.
 
-    [![New Formulas tab in WinForms Spread Designer Ribbon Bar](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/1.png "New Formulas tab in WinForms Spread Designer Ribbon Bar")](https://www.grapecity.com/blogs/spread-net-2019-v1-sp-1#)
+    ![New Formulas tab in WinForms Spread Designer Ribbon Bar](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/1.png "New Formulas tab in WinForms Spread Designer Ribbon Bar")
 
     WinForms Spread Designer 리본 메뉴에 새로 추가된 수식 탭
 
@@ -38,19 +38,19 @@ summary: "Excel과 유사하게 전문적이고 유연한 .NET 테이블 컨트�
 
 다음과 같이 수평으로 분할되는 배열을 하드 코딩하여 “={1,1,2,2,3}”과 같은 수식을 입력할 수 있습니다.
 
-[![Horizontal Array](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/2.png "Horizontal array using ',' separator spilled horizontally")](https://www.grapecity.com/blogs/spread-net-2019-v1-sp-1#)
+![Horizontal Array](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/2.png "Horizontal array using ',' separator spilled horizontally")
 
 (구분 기호 ','를 사용하는 배열이 수평으로 분할된 모습)
 
 또는 다음과 같이 수직으로 분할되는 배열을 하드 코딩하여 “={1;1;2;2;3}”과 같은 수식을 입력할 수 있습니다.
 
-[![Vertical Array](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/3.png "Vertical array using ';' separator spills vertically")](https://www.grapecity.com/blogs/spread-net-2019-v1-sp-1#)
+![Vertical Array](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/3.png "Vertical array using ';' separator spills vertically")
 
 (구분 기호 ';'를 사용하는 배열이 수직으로 분할된 모습)
 
 또는 다음과 같이 수평 및 수직으로 분할되는 2차원 값 배열을 하드 코딩하는 “={1,1,2,1,3;1,1,2,1,3;1,2,3,2,5;1,2,3,2,5;1,2,2,2,5}”와 같은 수식을 입력할 수 있습니다.
 
-[![Dynamic Arrays](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/4.png "2-dimensional array spills both vertically and horizontally")](https://www.grapecity.com/blogs/spread-net-2019-v1-sp-1#)
+![Dynamic Arrays](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/4.png "2-dimensional array spills both vertically and horizontally")
 
 (수직 및 수평으로 분할된 2차원 배열)
 
@@ -62,19 +62,19 @@ summary: "Excel과 유사하게 전문적이고 유연한 .NET 테이블 컨트�
 
 다음과 같이 SORTBY를 RANDARRAY와 함께 사용하여 목록을 무작위로 생성할 수 있습니다.
 
-[![Data Arrays](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/5.png "Randomize ordering for a list of values with SORTBY and RANDARRAY")](https://www.grapecity.com/blogs/spread-net-2019-v1-sp-1#)
+![Data Arrays](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/5.png "Randomize ordering for a list of values with SORTBY and RANDARRAY")
 
 (SORTBY와 RANDARRAY를 사용하여 값 목록을 무작위로 나열한 모습)
 
 다음과 같이 SEQUENCE와 NOW를 사용하여 10분 간격의 일정을 작성할 수 있습니다.
 
-[![Data Arrays](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/6.png "Schedule every tem minutes using SEQUENCE")](https://www.grapecity.com/blogs/spread-net-2019-v1-sp-1#)
+![Data Arrays](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/6.png "Schedule every tem minutes using SEQUENCE")
 
 (SEQUENCE를 사용하여 작성한 10분 간격의 일정)
 
 다음과 같이 3가지 수식과 TRANSPOSE, SORT, UNIQUE, SUMIFS만을 사용하여 셀에 직접 피벗 테이블 크로스탭 보고서를 작성할 수 있습니다.
 
-[![Pivot table crosstab report created with just three formulas!](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/7.png "Pivot table crosstab report created with just three formulas")](https://www.grapecity.com/blogs/spread-net-2019-v1-sp-1#)
+![Pivot table crosstab report created with just three formulas!](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/7.png "Pivot table crosstab report created with just three formulas")
 
 (3가지 수식만 사용하여 작성된 피벗 테이블 크로스탭 보고서)
 
@@ -86,8 +86,7 @@ Spread.NET 12 WinForms 계산에 관해 최근 연속해서 올린 블로그 게
 
 이번 Spread.NET 12 WinForms 버전에서는 이러한 수식 추적 도구를 다음과 같이 수식 검수 그룹의 참조된 셀 연결선, 참조된 셀 추적, 연결선 제거에서 사용할 수 있습니다.
 
-[ 
-![Formula Tracing in WinForms Spread Designer](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/8.png)](https://www.grapecity.com/blogs/spread-net-2019-v1-sp-1#)
+![Formula Tracing in WinForms Spread Designer](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/8.png)]
 
 ## 새로운 대체 스타일 지원
 
@@ -133,7 +132,7 @@ Spread.NET 12 WinForms는 [사용자 정의 계산 함수 작성](https://www.gr
 
 많은 고객들의 요청에 따라Spread.NET 12 SP1 버전에는 새로운 VB.NET 데모 샘플이 포함되었습니다! WinForms용 Spread.NET 12의 모든 유용한 데모 샘플을 C# 및 VB.NET으로 사용할 수 있습니다.
 
-[![Spread.NET 12 SP1 Windows Forms VB.NET Samples](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/Spread.NET-12-SP1-Windows-Forms-VB.NET-Samples.jpg)](https://www.grapecity.com/blogs/spread-net-2019-v1-sp-1#)
+![Spread.NET 12 SP1 Windows Forms VB.NET Samples](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/Spread.NET-12-SP1-Windows-Forms-VB.NET-Samples.jpg)
 
 새로운 샘플을 사용하시려면 지금 바로 WinForms용 Spread.NET 12를 다운로드하여 설치하십시오!
 
