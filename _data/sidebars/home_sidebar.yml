@@ -6,8 +6,12 @@ entries:
       - title: 새로운 기능
         output: web, pdf
         folderitems:
-          - title: 2019 V2
+          - title: 2019 V12
             url: /2019v12_whatsnew.html
+            output: web
+            type: homepage
+          - title: 2019 V12 Service Pack 1
+            url: /2019v12sp1_whatsnew.html
             output: web
             type: homepage
           # - title: 2019 V1
