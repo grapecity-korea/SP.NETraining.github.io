@@ -26,15 +26,15 @@ summary: "Excel과 유사하게 전문적이고 유연한 .NET 테이블 컨트�
 
 2. 코드를 사용하는 경우 다음과 같이 CalculationFeatures에서 새 플래그를 사용하여 동적 배열을 활성화할 수 있습니다.
 
-[C#]
-```
-    fpSpread1.AsWorkbook().WorkbookSet.CalculationEngine.CalcFeatures = GrapeCity.Spreadsheet.CalcFeatures.DynamicArray;
-```
+    [C#]
+    ```
+        fpSpread1.AsWorkbook().WorkbookSet.CalculationEngine.CalcFeatures = GrapeCity.Spreadsheet.CalcFeatures.DynamicArray;
+    ```
 
-[VB]
-```
-    FpSpread1.AsWorkbook().WorkbookSet.CalculationEngine.CalcFeatures = GrapeCity.Spreadsheet.CalcFeatures.DynamicArray
-```
+    [VB]
+    ```
+        FpSpread1.AsWorkbook().WorkbookSet.CalculationEngine.CalcFeatures = GrapeCity.Spreadsheet.CalcFeatures.DynamicArray
+    ```
 
 다음과 같이 수평으로 분할되는 배열을 하드 코딩하여 “={1,1,2,2,3}”과 같은 수식을 입력할 수 있습니다.
 
