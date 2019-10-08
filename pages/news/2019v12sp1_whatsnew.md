@@ -137,8 +137,6 @@ Spread.NET 12 WinForms는 [사용자 정의 계산 함수 작성](https://www.gr
 
 새로운 샘플을 사용하시려면 지금 바로 WinForms용 Spread.NET 12를 다운로드하여 설치하십시오!
 
----
-
 ## 기타 향상된 기능
 
 이번 출시 버전에서도 기타 기능이 향상되었습니다. 출시된 업데이트에 대한 자세한 사항은 [릴리스 정보를 참고하세요](http://help.grapecity.com/spread/SpreadNET12ReadMe/webframe.html#rnotes.html).
