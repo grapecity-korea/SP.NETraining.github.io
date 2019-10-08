@@ -18,11 +18,11 @@ summary: "Excel과 유사하게 전문적이고 유연한 .NET 테이블 컨트�
 
 1. Windows Forms용 Spread Designer에는 다음과 같이 수식 탭이 새로 도입되었습니다.
 
-[![New Formulas tab in WinForms Spread Designer Ribbon Bar](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/1.png "New Formulas tab in WinForms Spread Designer Ribbon Bar")](https://www.grapecity.com/blogs/spread-net-2019-v1-sp-1#)
+    [![New Formulas tab in WinForms Spread Designer Ribbon Bar](https://gccontent.blob.core.windows.net/gccontent/blogs/spread/20190513-spread-net-sp-1/1.png "New Formulas tab in WinForms Spread Designer Ribbon Bar")](https://www.grapecity.com/blogs/spread-net-2019-v1-sp-1#)
 
-WinForms Spread Designer 리본 메뉴에 새로 추가된 수식 탭
+    WinForms Spread Designer 리본 메뉴에 새로 추가된 수식 탭
 
-**_Calculation Engine_**에 있는 **_동적_** **_배열_**의 확인란을 선택하여 동적 배열을 활성화할 수 있습니다.
+    **_Calculation Engine_**에 있는 **_동적_** **_배열_**의 확인란을 선택하여 동적 배열을 활성화할 수 있습니다.
 
 2. 코드를 사용하는 경우 다음과 같이 CalculationFeatures에서 새 플래그를 사용하여 동적 배열을 활성화할 수 있습니다.
 
