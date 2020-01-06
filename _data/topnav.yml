@@ -3,7 +3,7 @@
 topnav:
   - title: Topnav
     items:
-      - title: 트레이닝 센터
+      - title: 튜토리얼 센터
         url: /index.html
       - title: 새로운 기능
         url: /2019v12_whatsnew.html
