@@ -12,6 +12,8 @@ summary: 해당 트레이닝 센터에서는 Spread.NET의 라이선스 인증 �
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0DdWslHq9_U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+[![Spread.NET 시작하기](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/embed/0DdWslHq9_U "Spread.NET 시작하기")
+
 사용중에 기술 문의 또는 구매에 대한 상담이 필요하실 경우, 언제든지 연락 부탁드립니다.
 
 > - **기술문의:** [support-kor@grapecity.com](support-kor@grapecity.com)
