@@ -10,9 +10,13 @@ summary: 해당 트레이닝 센터에서는 Spread.NET의 라이선스 인증 �
 
 해당 트레이닝 센터에서는 Spread.Net의 **라이선스 인증 방법 부터 배포**까지의 내용 뿐만 아니라, **다양한 .NET 플랫폼에서 Spread.Net Excel**을 구현하는 방법을 학습해 볼 수 있습니다.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0DdWslHq9_U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-[![Spread.NET 시작하기](http://i.imgur.com/Ot5DWAW.png)](https://www.youtube.com/embed/0DdWslHq9_U "Spread.NET 시작하기")
+<div style="position: relative; height:0; padding-bottom: 56.25%;">
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/0DdWslHq9_U?loop=1&rel=0" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen style="position: absolute; width:100%; height:100%;">
+    </iframe>
+</div>
 
 사용중에 기술 문의 또는 구매에 대한 상담이 필요하실 경우, 언제든지 연락 부탁드립니다.
 
