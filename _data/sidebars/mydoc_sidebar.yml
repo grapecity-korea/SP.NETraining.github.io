@@ -129,6 +129,7 @@ entries:
               - title: 시작하기2
                 url: /spasp_start.html
                 output: web, pdf
-              - title: 스타일
-                url: /spasp_style.html
-                output: web, pdfs
+                subfolderitems:
+                - title: 스타일
+                    url: /spasp_style.html
+                    output: web, pdfs
