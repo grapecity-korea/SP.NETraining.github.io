@@ -130,8 +130,6 @@ entries:
                 url: /spasp_style.html
                 output: web, pdf
               - title: 가이드2
-                url: /spasp_style.html
-                output: web, pdfs
                 subfolderitems:
                   - title: 가이드2-1
                     url: /spasp_style.html
