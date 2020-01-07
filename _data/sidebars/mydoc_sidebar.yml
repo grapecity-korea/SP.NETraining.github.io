@@ -125,11 +125,7 @@ entries:
         folderitems:
           - title: 시작하기
             output: web, pdf
-            subfolders:
-              - title: 시작하기2
-                output: web, pdf
-                subfolderitems:
-                  - title: Fuji apples
+            subfolderitems:
               - title: 스타일
                 url: /spasp_style.html
                 output: web, pdfs
