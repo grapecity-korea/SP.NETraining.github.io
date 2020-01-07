@@ -120,20 +120,16 @@ entries:
             url: /spasp_etc.html
             output: web, pdfs
 
-      - title: Sidebar
-        folders:
-          - title: Food
 
+      - title: ASP.NET 3 (웹폼)
+        output: web, pdf
+        folderitems:
+          - title: 시작하기            
+            output: web, pdf
             folderitems:
-              - title: Bananas
-                url: bananas.html
-
-                subfolders:
-                  - title: Apples
-
-                    subfolderitems:
-                      - title: Fuji apples
-                        url: fuji_apples.html
-
-                      - title: Gala apples
-                        url: gala_apples.html
+            - title: 시작하기2
+              url: /spasp_start.html
+              output: web, pdf
+            - title: 스타일
+            url: /spasp_style.html
+            output: web, pdfs
