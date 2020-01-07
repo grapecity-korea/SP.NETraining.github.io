@@ -14,8 +14,6 @@ folder: mydoc
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc-install-1.png)
 
-<img src="https://www.grapecity.co.kr/images/training/spread/tc-install-1.png" alt="text" width="50">
-
 다운로드 후 아래와 같은 모양의 설치파일을 실행시킵니다.
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc-install-2.png)
