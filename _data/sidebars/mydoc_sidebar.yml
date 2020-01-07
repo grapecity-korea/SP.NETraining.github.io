@@ -119,3 +119,21 @@ entries:
           - title: 기타
             url: /spasp_etc.html
             output: web, pdfs
+
+      - title: Sidebar
+        folders:
+          - title: Food
+
+            folderitems:
+              - title: Bananas
+                url: bananas.html
+
+                subfolders:
+                  - title: Apples
+
+                    subfolderitems:
+                      - title: Fuji apples
+                        url: fuji_apples.html
+
+                      - title: Gala apples
+                        url: gala_apples.html
