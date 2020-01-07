@@ -13,7 +13,7 @@ summary: 해당 트레이닝 센터에서는 Spread.NET의 라이선스 인증 �
 <br/>
 <div style="position: relative; height:0; padding-bottom: 56.25%;">
     <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/0DdWslHq9_U?loop=1&rel=0" frameborder="0"
+        src="https://www.youtube.com/embed/DrZo6gySKgw?loop=1&rel=0" frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen style="position: absolute; width:100%; height:100%;">
     </iframe>
