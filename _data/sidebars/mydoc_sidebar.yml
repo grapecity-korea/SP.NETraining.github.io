@@ -120,16 +120,15 @@ entries:
             url: /spasp_etc.html
             output: web, pdfs
 
-
       - title: ASP.NET 3 (웹폼)
         output: web, pdf
         folderitems:
-          - title: 시작하기            
+          - title: 시작하기
             output: web, pdf
-            folderitems:
-            - title: 시작하기2
-              url: /spasp_start.html
-              output: web, pdf
-            - title: 스타일
-            url: /spasp_style.html
-            output: web, pdfs
+            subfolders:
+              - title: 시작하기2
+                url: /spasp_start.html
+                output: web, pdf
+              - title: 스타일
+                url: /spasp_style.html
+                output: web, pdfs
