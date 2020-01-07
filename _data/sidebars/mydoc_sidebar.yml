@@ -125,9 +125,10 @@ entries:
         folderitems:
           - title: 시작하기
             output: web, pdf
+
             subfolders:
               - title: 시작하기2
+
                 subfolderitems:
                   - title: 스타일
                     url: /spasp_style.html
-                    output: web, pdfs
