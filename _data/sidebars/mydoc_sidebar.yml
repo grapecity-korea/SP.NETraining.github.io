@@ -127,8 +127,6 @@ entries:
             output: web, pdf
             subfolders:
               - title: 가이드1
-                url: /spasp_style.html
-                output: web, pdf
               - title: 가이드2
                 subfolderitems:
                   - title: 가이드2-1
