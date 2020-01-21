@@ -11,7 +11,7 @@ folder: mydoc
 
 아래 링크 혹은 구매 시 메일로 전달받은 링크를 통해 제품을 다운 받습니다.  
 다운로드 : [https://www.grapecity.co.kr/download/spreadnet](https://www.grapecity.co.kr/download/spreadnet)
-    
+
 ![](https://www.grapecity.co.kr/images/training/spread/tc-install-1.png)
 
 다운로드 후 아래와 같은 모양의 설치파일을 실행시킵니다.
@@ -30,7 +30,7 @@ folder: mydoc
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc-install-5.png)
 
-* 오프라인 설치 파일을 받고 싶으시다면, installer의 Options – Mode를 Offline으로 선택하신 후
+- 오프라인 설치 파일을 받고 싶으시다면, installer의 Options – Mode를 Offline으로 선택하신 후
 
 ![](https://www.grapecity.co.kr/images/training/spread/tc-install-6.png)
 
