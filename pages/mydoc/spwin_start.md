@@ -8,6 +8,6 @@ permalink: spwin_start.html
 folder: mydoc
 ---
 
-## Spread.Net Windorms(Winform, 윈폼) 시작하기
+## Spread.Net Winforms(Winform, 윈폼) 시작하기
 
 해당 페이지는 준비중에 있습니다.
