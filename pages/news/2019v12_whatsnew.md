@@ -1,5 +1,5 @@
 ---
-title: Spread.NET 2019 V12 새로운 기능
+title: Spread.NET V12 새로운 기능
 sidebar: home_sidebar
 keywords: news, blog, updates, release notes, announcements
 permalink: 2019v12_whatsnew.html

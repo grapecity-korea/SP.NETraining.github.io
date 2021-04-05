@@ -6,14 +6,19 @@ entries:
       - title: 새로운 기능
         output: web, pdf
         folderitems:
-          - title: 2019 V12
+          - title: Spread.NET V14
+            url: /2019v14_whatsnew.html
+            output: web
+            type: homepage
+          - title: Spread.NET V13
+            url: /2019v13_whatsnew.html
+            output: web           
+          - title: Spread.NET V12
             url: /2019v12_whatsnew.html
-            output: web
-            type: homepage
-          - title: 2019 V12 Service Pack 1
+            output: web            
+          - title: Spread.NET V12 Service Pack 1
             url: /2019v12sp1_whatsnew.html
-            output: web
-            type: homepage
+            output: web            
           # - title: 2019 V1
           #   url: /2019v1_whatsnew.html
           #   output: web

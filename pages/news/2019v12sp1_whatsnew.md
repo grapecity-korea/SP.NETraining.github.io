@@ -1,5 +1,5 @@
 ---
-title: Spread.NET 2019 V12 Service Pack 1 새로운 기능
+title: Spread.NET V12 Service Pack 1 새로운 기능
 sidebar: home_sidebar
 keywords: news, blog, updates, release notes, announcements
 permalink: 2019v12sp1_whatsnew.html
