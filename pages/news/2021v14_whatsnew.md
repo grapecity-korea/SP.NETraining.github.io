@@ -2,7 +2,7 @@
 title: Spread.NET V14 새로운 기능
 sidebar: home_sidebar
 keywords: news, blog, updates, release notes, announcements
-permalink: 2020v14_whatsnew.html
+permalink: 2021v14_whatsnew.html
 folder: news
 summary: "GrapeCity Spread. NET v14 릴리스를 발표하게 되어 기쁩니다. 이 릴리스에는 .NET 5 및 .NET Core 3.1 Windows Forms에 대한 새로운 플랫폼 지원뿐 아니라 다수의 새 기능과 향상된 기능이 포함되어 있습니다. 또한 이 릴리스에서는 Silverlight 및 Windows 8.1 Runtime 컴포넌트에 대한 지원을 중단했습니다. GrapeCity는 버전 13에서 이러한 컴포넌트를 계속 지원하고 내년에 필요에 따라 새로운 빌드를 릴리스할 것입니다."
 ---

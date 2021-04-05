@@ -7,11 +7,11 @@ entries:
         output: web, pdf
         folderitems:
           - title: Spread.NET V14
-            url: /2019v14_whatsnew.html
+            url: /2021v14_whatsnew.html
             output: web
             type: homepage
           - title: Spread.NET V13
-            url: /2019v13_whatsnew.html
+            url: /2020v13_whatsnew.html
             output: web           
           - title: Spread.NET V12
             url: /2019v12_whatsnew.html
